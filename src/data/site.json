@@ -1,0 +1,46 @@
+{
+  "origin": "https://www.cince-tercuman.com",
+  "brand": {
+    "name": "Çince Tercüman",
+    "tagline": {
+      "tr": "Türkiye ve Çin'de sözlü tercümanlık",
+      "zh-Hans": "中土口译服务",
+      "az": "Türkiyə və Çində şifahi tərcümə"
+    }
+  },
+  "contact": {
+    "whatsapp": "905550441141",
+    "whatsappDisplay": "+90 555 044 11 41",
+    "whatsappUrl": "https://wa.me/905550441141",
+    "phone": "+905075286187",
+    "phoneDisplay": "+90 507 528 61 87",
+    "phoneUrl": "tel:+905075286187",
+    "email": "info@cince-tercuman.com",
+    "emailUrl": "mailto:info@cince-tercuman.com"
+  },
+  "priceNote": {
+    "tr": "Hizmet günlük ücretlendirilir. Şehir içi ve şehir dışı ulaşım, konaklama ve yeme-içme bedelleri ayrıca hesaplanır.",
+    "zh-Hans": "口译服务按天计费。市内交通、城际交通、住宿及餐饮费用另计。",
+    "az": "Xidmət haqqı gün hesabı ilə müəyyən edilir. Şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərcləri ayrıca hesablanır."
+  },
+  "finalCta": {
+    "tr": {
+      "title": "Şehir ve tarih belli mi?",
+      "text": "Hangi hizmete ihtiyaç duyduğunuzu ve programınızı kısaca paylaşın. Tercüman uygunluğunu ve günlük çalışma koşullarını birlikte netleştirelim.",
+      "primary": "Uygunluk ve teklif sor",
+      "whatsapp": "WhatsApp'tan yaz"
+    },
+    "zh-Hans": {
+      "title": "已经确定城市和日期了吗？",
+      "text": "请简要说明所需服务和行程。我们将根据城市、日期和具体内容确认译员档期及每日服务安排。",
+      "primary": "咨询档期与报价",
+      "whatsapp": "WhatsApp 咨询"
+    },
+    "az": {
+      "title": "Şəhər və tarix bəllidir?",
+      "text": "Hansı xidmətə ehtiyacınız olduğunu və proqramınızı qısaca bildirin. Tərcüməçinin uyğunluğunu və günlük iş şərtlərini birlikdə dəqiqləşdirək.",
+      "primary": "Uyğunluq və qiymət soruş",
+      "whatsapp": "WhatsApp-dan yaz"
+    }
+  }
+}

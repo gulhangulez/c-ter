@@ -1,0 +1,3 @@
+old_url,source,http_status_now,indexed,inbound_links,notes
+# Fill from hosting/CMS export + Search Console (plan §21.2). Not delivered here.
+# One row per existing URL discovered. Do NOT guess; export from real sources.

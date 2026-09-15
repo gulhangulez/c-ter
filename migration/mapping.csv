@@ -1,0 +1,5 @@
+old_url,decision,new_url,http_code,approved_by,approved_at,notes
+# decision: keep | move | remove
+# keep  -> URL preserved, content updated in place (default, plan §21.1)
+# move  -> real 301/308 to a genuine equivalent new_url
+# remove-> real 410 (or 404) for services no longer offered

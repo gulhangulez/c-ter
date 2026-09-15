@@ -1,0 +1,24 @@
+{
+  "cta": {
+    "quote":    { "tr": "Uygunluk ve teklif sor", "zh-Hans": "咨询档期与报价", "az": "Uyğunluq və qiymət soruş" },
+    "whatsapp": { "tr": "WhatsApp'tan yaz",       "zh-Hans": "WhatsApp 咨询",   "az": "WhatsApp-dan yaz" },
+    "details":  { "tr": "Hizmeti incele",         "zh-Hans": "查看服务详情",    "az": "Xidmətə bax" },
+    "phone":    { "tr": "Ara",                     "zh-Hans": "拨打电话",       "az": "Zəng et" },
+    "email":    { "tr": "E-posta gönder",          "zh-Hans": "发送邮件",       "az": "E-poçt göndər" },
+    "copy":     { "tr": "Mesajı kopyala",          "zh-Hans": "复制咨询内容",    "az": "Mesajı kopyala" }
+  },
+  "ui": {
+    "skipToContent": { "tr": "İçeriğe geç",        "zh-Hans": "跳到正文",       "az": "Məzmuna keç" },
+    "menu":          { "tr": "Menü",               "zh-Hans": "菜单",          "az": "Menyu" },
+    "close":         { "tr": "Kapat",              "zh-Hans": "关闭",          "az": "Bağla" },
+    "languageLabel": { "tr": "Dil",                "zh-Hans": "语言",          "az": "Dil" },
+    "onThisPage":    { "tr": "Bu sayfada",         "zh-Hans": "本页内容",       "az": "Bu səhifədə" },
+    "faqHeading":    { "tr": "Sık sorulan sorular","zh-Hans": "常见问题",       "az": "Tez-tez verilən suallar" },
+    "copied":        { "tr": "Kopyalandı",         "zh-Hans": "已复制",         "az": "Kopyalandı" }
+  },
+  "langSwitch": {
+    "tr": "Türkçe",
+    "zh-Hans": "中文",
+    "az": "Azərbaycan dili"
+  }
+}

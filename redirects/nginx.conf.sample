@@ -1,0 +1,26 @@
+# nginx sample — real HTTP status codes (plan §20.4).
+# Serve the static build from dist/ and use a real 404 document.
+
+server {
+  listen 443 ssl;
+  server_name www.cince-tercuman.com;
+  root /var/www/cince-tercuman/dist;
+  index index.html;
+
+  # Directory-style clean URLs
+  location / {
+    try_files $uri $uri/ $uri/index.html =404;
+  }
+
+  # Real 404 (never a 200 error screen)
+  error_page 404 /404.html;
+
+  # Example: deliberately removed page -> real 410 (fill from mapping.csv)
+  # location = /yazili-ceviri/ { return 410; }
+
+  # Example: genuine move -> 301 (only after inventory approval)
+  # location = /eski-hakkimizda/ { return 301 /hakkimizda/; }
+
+  # Redirect apex to www (adjust to your DNS/host)
+  # if ($host = cince-tercuman.com) { return 301 https://www.cince-tercuman.com$request_uri; }
+}

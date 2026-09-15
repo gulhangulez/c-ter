@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "Q001",
+    "page": "services",
+    "publish": true,
+    "tr": {
+      "q": "Hangi işler için Çince tercümanlık hizmeti alabilirim?",
+      "a": "Çin’de planladığınız görüşmeler, fabrika ziyaretleri ve fuar programları için Çince–Türkçe sözlü tercümanlık sunuyoruz. Türkiye’de ise makine kurulumu, devreye alma ve bunlara bağlı teknik eğitim sırasında ekipler arasındaki iletişime destek veriyoruz. Hizmetinizi, şehrinizi ve tarihlerinizi paylaşarak programınıza uygun tercümanlık desteğini sorabilirsiniz."
+    },
+    "zh-Hans": {
+      "q": "哪些工作可以安排中土口译服务？",
+      "a": "我们为您在中国已安排的会面、工厂参访及展会行程提供中文与土耳其语双向口译。在土耳其，服务重点是设备安装、调试及相关技术培训中的现场沟通。请提供服务类型、城市与日期，以便确认适合您行程的口译安排。"
+    }
+  },
+  {
+    "id": "Q003",
+    "page": "services",
+    "publish": true,
+    "tr": {
+      "q": "Tercüman hem Çince’den Türkçe’ye hem Türkçe’den Çince’ye çeviri yapıyor mu?",
+      "a": "Evet. Hizmetimiz, aynı görüşmede Çince’den Türkçe’ye ve Türkçe’den Çince’ye sözlü iletişim desteğini kapsar. Kullanılacak dil veya lehçeye ilişkin özel bir ihtiyacınız varsa talep sırasında belirtin. Tercümanın bu ihtiyaca uygunluğu hizmet teyidinden önce netleştirilir."
+    },
+    "zh-Hans": {
+      "q": "口译是否同时包含中文译成土耳其语和土耳其语译成中文？",
+      "a": "是的，我们提供中文与土耳其语双向现场口译。如果对使用的语言或方言有特殊要求，请在咨询时说明，并在确认服务前核实译员是否符合该要求。"
+    }
+  },
+  {
+    "id": "Q004",
+    "page": "services",
+    "publish": true,
+    "tr": {
+      "q": "Yalnızca bir gün için tercüman tutabilir miyim?",
+      "a": "Evet, uygunluk bulunması hâlinde yalnızca bir gün için tercümanlık talep edebilirsiniz. Çalışma modelimiz günlüktür; görüşmeniz daha kısa sürse de yarım günlük veya saatlik bir paket sunmuyoruz. Talebinizde o günün şehrini, çalışma noktasını ve yaklaşık programını belirtmeniz yeterli."
+    },
+    "zh-Hans": {
+      "q": "只需要一天，也可以预约口译吗？",
+      "a": "可以，确认档期后可安排单日服务。我们的计费方式为按天，不提供半天或按小时的套餐，即使实际会面较短也按日服务方式评估。请提供当天的城市、实际地点及大致行程。"
+    }
+  },
+  {
+    "id": "Q049",
+    "page": "china",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de Türkçe bilen tercüman nasıl bulunur?",
+      "a": "Çin’de tercüman ararken yalnızca bulunduğu şehri değil, Türkçe–Çince iletişim becerisini, konuya uygunluğunu ve programınızdaki ulaşım ihtiyacını da değerlendirin. Guangzhou, Shanghai ve Beijing başta olmak üzere ağımız üzerinden talepleri inceliyoruz. Ziyaret edeceğiniz yerleri ve tarihleri paylaşırsanız sizin programınız için uygunluk araştırılabilir."
+    },
+    "zh-Hans": {
+      "q": "在中国如何寻找会土耳其语的口译员？",
+      "a": "除所在城市外，还应确认译员的中土沟通能力、主题适配度及行程中的交通需求。我们主要通过广州、上海、北京等城市的译员网络评估需求。请提供访问地点与日期，以便核实具体档期。"
+    }
+  },
+  {
+    "id": "Q050",
+    "page": "china",
+    "publish": true,
+    "tr": {
+      "q": "Çin’e iş için giderken tercüman tutmak gerekir mi?",
+      "a": "Her Çin iş seyahati için tercüman zorunludur demiyoruz. İhtiyacınızı, görüşeceğiniz kişilerin ortak diline, konuşmaların teknik ayrıntısına ve aynı gün ziyaret edeceğiniz noktalara göre değerlendirin. Üretim, numune, fiyat veya teslim koşullarını ayrıntılı konuşacaksanız programınızı bizimle paylaşın; hangi görüşmelerde sözlü dil desteği istediğinizi netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "去中国出差一定需要口译吗？",
+      "a": "并非所有中国商务行程都必须安排口译。应根据双方能否使用共同语言、技术细节及访问安排评估。如果需要深入讨论生产、样品、价格或交付条件，可向我们说明行程，明确哪些会面需要语言支持。"
+    }
+  },
+  {
+    "id": "Q051",
+    "page": "china",
+    "publish": true,
+    "tr": {
+      "q": "İngilizce biliyorum, Çin’de yine de Çince tercümana ihtiyacım olur mu?",
+      "a": "İngilizce bilmeniz tek başına bütün görüşmelerin İngilizce yürüyebileceği anlamına gelmez; karşı tarafta kimlerle ve hangi konularda konuşacağınız da önemlidir. Görüşmeleri İngilizce rahatça yürütebiliyorsanız ayrıca tercüman gerekmeyebilir. Üretim sahası, operatörler veya teknik ayrıntılar için ortak dilin yeterli olup olmadığını önceden teyit etmenizi öneriyoruz."
+    },
+    "zh-Hans": {
+      "q": "我会英语，在中国仍然需要中文口译吗？",
+      "a": "是否需要取决于对方人员及沟通主题，不能只根据您会英语来判断。如果双方能顺畅使用英语，未必需要额外口译。涉及生产现场、操作人员或技术细节时，建议提前确认共同语言是否足够。"
+    }
+  },
+  {
+    "id": "Q067",
+    "page": "china",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de birden fazla şehirde çalışabilecek tercüman nasıl bulunur?",
+      "a": "Talebinizi yalnızca ilk şehir için değil, bütün güzergâh için iletin. Her günün şehrini, çalışma noktasını ve planlanan geçişleri paylaşın; tek tercümanla devam etme ihtiyacı ile farklı şehirlerde ayrı görevlendirme seçenekleri uygunluğa göre değerlendirilebilir. Hiçbir seçeneği tüm programlarda otomatik olarak sağlayacağımızı söylemiyoruz."
+    },
+    "zh-Hans": {
+      "q": "如何寻找能在中国多个城市工作的译员？",
+      "a": "请提交完整路线，而不只是首个城市。逐日说明城市、工作地点及转场计划，再根据实际档期评估同一译员随行或不同城市分别安排的可能性。我们不承诺所有行程都能自动采用某一种方案。"
+    }
+  },
+  {
+    "id": "Q068",
+    "page": "china",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de ziyaret edeceğim fabrikaya yakın bir tercüman bulabilir miyim?",
+      "a": "Fabrikanın tam adresini veya harita konumunu paylaşırsanız tercümanınızın ulaşımını gerçek çalışma noktasına göre değerlendirebiliriz. Yalnızca şehir adı, fabrikanın merkezden ne kadar uzakta olduğunu anlamak için yeterli olmayabilir. Yakında uygun bir tercüman bulunacağı garanti değildir; konum, tarih ve konuya uygunluk birlikte ele alınır."
+    },
+    "zh-Hans": {
+      "q": "可以安排靠近我要访问工厂的译员吗？",
+      "a": "提供准确地址或地图位置后，可按实际工作地点评估译员交通。仅有城市名称不一定足以判断工厂距离市中心多远。我们不能保证附近一定有合适译员，需要同时考虑地点、日期及主题。"
+    }
+  },
+  {
+    "id": "Q084",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman makineyi kurar mı, yoksa teknik ekibin söylediklerini mi çevirir?",
+      "a": "Tercüman makineyi kurmaz. Çinli teknik ekibin açıklamalarını, işletmenizin sorularını ve taraflar arasındaki sözlü iletişimi aktarır. Montaj, bağlantı, ayar, arıza giderme ve teknik onay ilgili yetkili teknik ekiplerin sorumluluğundadır. Tercümanlık satın almak, teknik kurulum hizmeti veya makinenin çalışacağına ilişkin bir garanti satın almak değildir."
+    },
+    "zh-Hans": {
+      "q": "译员负责安装设备，还是只翻译技术团队的说明？",
+      "a": "译员不负责安装设备，而是传达中国技术团队的说明、工厂方的问题及双方口头交流。安装、接线、设置、故障处理和技术确认由相关授权技术团队负责。购买口译服务不等于购买安装服务或设备运行保证。"
+    }
+  },
+  {
+    "id": "Q022",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Makine kurulumu sırasında Çinli teknik ekiple iletişim için tercüman sağlayabiliyor musunuz?",
+      "a": "Evet. Makine kurulumu sırasında Çinli teknik ekip ile işletmenizdeki ekip arasındaki Çince–Türkçe sözlü iletişim için tercümanlık talep edebilirsiniz. Makine türünü, çalışma konumunu, tarihleri ve günlük programı paylaşın. Tercümanın görevi teknik açıklamaları ve soruları aktarmaktır; montajı gerçekleştirmek veya teknik uygulamaya karar vermek değildir."
+    },
+    "zh-Hans": {
+      "q": "设备安装期间，可以安排译员协助中国技术团队沟通吗？",
+      "a": "可以。您可为中国技术团队与土耳其现场团队之间的沟通申请中土口译。请提供设备类型、实际地点、日期及每日安排。译员负责传达技术说明与问题，不负责实施安装或作出技术操作决策。"
+    }
+  },
+  {
+    "id": "Q023",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Tercüman makine, elektrik, mekanik ve otomasyon terimlerine hâkim mi?",
+      "a": "Makine, elektrik, mekanik veya otomasyon ihtiyacınızı tek bir genel başlık altında değerlendirmiyoruz. Konuşulacak sistemleri, makine modelini ve örnek terimleri paylaşın; uygun tercüman ve hazırlık ihtiyacını buna göre değerlendirelim. Bir tercümanın her teknik alana hazır olduğunu varsaymak yerine, işinize özgü terminolojiyi önceden netleştirmek istiyoruz."
+    },
+    "zh-Hans": {
+      "q": "译员是否熟悉设备、电气、机械和自动化术语？",
+      "a": "我们不会将所有技术内容视为同一类需求。请提供涉及的系统、设备型号及术语示例，以便评估合适的译员和准备要求。不应默认一位译员熟悉所有技术领域，而应提前明确本次工作的具体术语。"
+    }
+  },
+  {
+    "id": "Q024",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Daha önce benzer bir makinenin veya üretim hattının kurulumunda görev aldı mı?",
+      "a": "Bu bilgi, görevlendirilebilecek tercümanın geçmiş çalışmalarına bağlıdır. Makinenizin türünü, marka ve modelini ya da üretim hattının işlevini paylaşın; benzer bir çalışmaya ilişkin deneyim olup olmadığını seçim aşamasında teyit edelim. Doğrulanmamış makine markaları veya geçmiş proje sayıları üzerinden deneyim iddiasında bulunmuyoruz."
+    },
+    "zh-Hans": {
+      "q": "译员之前参与过类似设备或生产线的安装口译吗？",
+      "a": "这取决于拟安排译员的具体经历。请提供设备类型、品牌型号或生产线用途，以便在选择阶段核实是否有相关经验。我们不会以未经核实的设备品牌或项目数量作出经验承诺。"
+    }
+  },
+  {
+    "id": "Q025",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Kurulumun yanında operatör eğitimi sırasında da tercümanlık yapıyor mu?",
+      "a": "Kuruluma bağlı operatör eğitimi ve kullanım açıklamaları, önceden belirlenen program içinde sözlü tercümanlık kapsamına alınabilir. Eğitim konularını, katılımcı sayısını ve uygulamalı bölümleri önceden paylaşın. Eğitimi veren ve teknik yetkinliği değerlendiren taraf teknik ekiptir; tercüman, anlatımı ve katılımcıların sorularını iki dil arasında aktarır."
+    },
+    "zh-Hans": {
+      "q": "除了安装，操作人员培训也可以提供口译吗？",
+      "a": "与安装相关的操作培训及使用说明，可在事先确认的行程中纳入口译范围。请提前提供培训主题、参加人数及实操环节。培训内容及技术能力评估由技术团队负责，译员负责双向传达讲解和提问。"
+    }
+  },
+  {
+    "id": "Q026",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Arıza, test ve devreye alma aşamalarındaki teknik görüşmelerde destek verebiliyor mu?",
+      "a": "Kurulum programına bağlı arıza değerlendirmesi, test ve devreye alma görüşmelerinde sözlü iletişim desteği talep edebilirsiniz. Konuyu ve gerekli teknik hazırlığı önceden değerlendirelim. Tercüman açıklamaları aktarır; arıza teşhisi koymaz, test sonucunu onaylamaz ve ekipmanın güvenli çalışmasına ilişkin teknik sorumluluk üstlenmez."
+    },
+    "zh-Hans": {
+      "q": "故障讨论、测试和调试阶段也可以提供口译吗？",
+      "a": "与已安排安装工作相关的故障讨论、测试和调试沟通，可提出口译需求，并提前评估主题及准备要求。译员负责传达信息，不负责诊断故障、批准测试结果或承担设备安全运行的技术责任。"
+    }
+  },
+  {
+    "id": "Q027",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Fabrikamızın iş güvenliği kurallarına uyum ve gerekli koruyucu ekipmanlar nasıl organize ediliyor?",
+      "a": "Tesisin giriş koşullarını, zorunlu iş güvenliği bilgilendirmesini ve gereken koruyucu ekipmanları çalışma öncesinde paylaşın. Ekipmanı kimin sağlayacağı ve giriş hazırlığının nasıl yapılacağı program teyidinde netleştirilsin. Tercümanlık planını tesisin kurallarıyla uyumlu kurmak gerekir; tercümanın bulunması teknik ekibin veya işyerinin güvenlik sorumluluklarını devraldığı anlamına gelmez."
+    },
+    "zh-Hans": {
+      "q": "工厂安全要求及个人防护用品如何安排？",
+      "a": "请提前提供工厂入场要求、必要的安全说明及所需防护用品清单，并在确认行程时明确由谁提供装备及如何完成入场准备。口译安排应符合现场规则；译员在场不代表其接替技术团队或工厂承担安全职责。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Koruyucu ekipmanın mevcut olduğu veya tamamının tercüman tarafından sağlanacağı iddia edilmez. İş güvenliği mevzuatı yorumu değil, planlama metnidir."
+    }
+  },
+  {
+    "id": "Q028",
+    "page": "machine",
+    "publish": true,
+    "tr": {
+      "q": "Kurulum planlanandan uzun sürerse tercümanlık süresini uzatabilir miyiz?",
+      "a": "Kurulumun uzayabileceğini gördüğünüzde yeni tarih ve saatleri mümkün olduğunca erken bildirin. Aynı tercümanın devam edebilmesi, sonraki günlerdeki uygunluğuna bağlıdır. Ek çalışma günleri, günlük ücretler ve ulaşım, konaklama, yeme-içme giderleri yeniden teyit edilmeden programın otomatik uzadığını varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "安装超出原计划时，可以延长口译安排吗？",
+      "a": "发现安装可能延期时，请尽早提供新增日期及时间。同一译员能否继续取决于后续档期。新增工作日、日费及交通、住宿、餐饮费用需重新确认，不能默认原安排自动延长。"
+    }
+  },
+  {
+    "id": "Q029",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de fabrika ziyaretlerimiz sırasında bize eşlik edecek bir tercüman sağlayabiliyor musunuz?",
+      "a": "Evet. Çin’de sizin belirlediğiniz fabrikalara yapacağınız ziyaretlerde Çince–Türkçe sözlü tercümanlık için talep oluşturabilirsiniz. Fabrikanın adını, tam konumunu, ziyaret tarihini ve görüşme konularını paylaşın. Hizmetimiz ziyaret sırasında iletişim desteğidir; sizin yerinize üretici bulma, satın alma organizasyonu veya fabrika denetimi yapma taahhüdü içermez."
+    },
+    "zh-Hans": {
+      "q": "在中国参观工厂时，可以安排译员同行吗？",
+      "a": "可以。您可为已选定工厂的参访申请中土现场口译。请提供工厂名称、准确地点、访问日期及沟通主题。服务是参访中的语言沟通，不包含代找制造商、采购组织或工厂审核承诺。"
+    }
+  },
+  {
+    "id": "Q030",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Aynı gün içinde birden fazla fabrikayı aynı tercümanla ziyaret edebilir miyiz?",
+      "a": "Fabrikaların konumları, randevu saatleri ve yolculuk süreleri uygunsa aynı gün birden fazla ziyaret planlanabilir. Programı değerlendirebilmemiz için ziyaretleri sırayla ve tam adresleriyle paylaşın. Her görüşmeye ayrılacak süre ile ulaşımı birlikte ele alalım; yalnızca fabrika sayısına bakarak yetişme garantisi vermiyoruz."
+    },
+    "zh-Hans": {
+      "q": "同一天能由同一位译员陪同参观多家工厂吗？",
+      "a": "如果工厂位置、预约时间和路程允许，可以评估同日多家参访。请按访问顺序提供准确地址，并为每次会面及交通预留时间。我们不会仅根据工厂数量保证行程一定能完成。"
+    }
+  },
+  {
+    "id": "Q031",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Farklı şehirlerdeki fabrika ziyaretlerinde aynı tercüman bizimle gelebilir mi?",
+      "a": "Aynı tercümanla farklı şehirlere geçme talebinizi değerlendirebiliriz; bunu her program için önceden garanti etmiyoruz. Şehir sırasını, ulaşım planını ve her günün çalışma noktasını paylaşın. Tercüman uygunluğu, seyahat günlerinin nasıl değerlendirileceği ve ayrıca alınacak giderler birlikte netleştirilir."
+    },
+    "zh-Hans": {
+      "q": "跨城市参观工厂时，同一位译员能全程同行吗？",
+      "a": "可以评估由同一位译员跨城市同行的需求，但不能预先保证所有行程都能如此安排。请提供城市顺序、交通计划及每天的工作地点，并共同确认档期、旅行日如何计费及相关支出。"
+    }
+  },
+  {
+    "id": "Q034",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanla otelimizde mi, fabrikada mı, yoksa başka bir noktada mı buluşacağız?",
+      "a": "Buluşma noktasını programınıza göre önceden netleştirelim. Otel, fabrika girişi veya başka bir nokta tercih ediliyorsa açık adresi, saati ve iletişim kurulacak kişiyi paylaşın. Otelde buluşma kararlaştırılması araç veya transfer hizmeti sağladığımız anlamına gelmez; tercümanın ulaşım giderleri ayrıca değerlendirilir."
+    },
+    "zh-Hans": {
+      "q": "应在酒店、工厂还是其他地点与译员会合？",
+      "a": "集合点需根据行程提前明确。如选择酒店、工厂入口或其他地点，请提供准确地址、时间及联系人。约定在酒店会合不代表我们提供车辆或接送服务；译员交通支出另行确认。"
+    }
+  },
+  {
+    "id": "Q032",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Üretim hattını gezerken teknik açıklamaları ve sorularımızı karşı tarafa aktarabiliyor mu?",
+      "a": "Üretim hattı gezisinde fabrikanın açıklamalarını ve sizin sorularınızı Çince–Türkçe olarak aktarmak, ziyaret tercümanlığının kapsamına alınabilir. Üretim sürecini ve özellikle konuşulacak teknik konuları önceden paylaşmanız hazırlığı kolaylaştırır. Tercüman, anlatılan bilgiyi aktarır; üretim kapasitesini doğrulayan veya teknik uygunluğu onaylayan denetçi rolünde değildir."
+    },
+    "zh-Hans": {
+      "q": "参观生产线时，译员可以传达技术说明和问题吗？",
+      "a": "可以在参访口译中安排生产线讲解及提问的双向传达。提前提供生产流程和重点技术主题，有助于准备。译员传达对方说明，不承担核实产能或确认技术合规的审核员角色。"
+    }
+  },
+  {
+    "id": "Q033",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Fiyat, minimum sipariş miktarı, numune, teslim süresi ve ödeme koşulları konuşulurken tercümanlık yapabiliyor mu?",
+      "a": "Evet. Fabrika ziyaretiniz sırasında fiyat, minimum sipariş miktarı, numune, teslim süresi ve ödeme koşulları gibi konuşulan başlıklarda sözlü tercümanlık talep edebilirsiniz. Bu hizmet, tarafların söylediklerini karşılıklı aktarmayı kapsar. Satın alma kararı vermek, ödeme koşullarını sizin adınıza kabul etmek veya ticari sonuç garantilemek tercümanlık kapsamına girmez."
+    },
+    "zh-Hans": {
+      "q": "价格、起订量、样品、交期和付款条件的讨论也可以口译吗？",
+      "a": "可以。工厂参访中的价格、最低订购量、样品、交期及付款条件讨论，可纳入双向口译。服务是传达双方表达，不包括代您作出采购决定、接受付款条件或保证交易结果。"
+    }
+  },
+  {
+    "id": "Q088",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de fiyat pazarlığında tercüman ne yapar?",
+      "a": "Fiyat görüşmesinde tercüman, sizin teklifinizi ve sorularınızı karşı tarafa; karşı tarafın yanıtını da size aktarır. Birim fiyat, miktar, teslim kapsamı ve konuşulan koşulların ne anlama geldiği belirsizse açıklama istenmesine yardımcı olur. Sizin adınıza pazarlık kararı almak, en düşük fiyatı sağlamak veya ticari anlaşmayı onaylamak tercümanlığın görevi değildir."
+    },
+    "zh-Hans": {
+      "q": "在中国谈价格时，译员具体做什么？",
+      "a": "译员双向传达您的报价、问题及对方答复。单价、数量、交付范围或讨论条件存在歧义时，可帮助提出澄清问题。译员不代您作议价决策，不保证最低价格，也不代为批准交易。"
+    }
+  },
+  {
+    "id": "Q089",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Minimum sipariş miktarı ve üretim süresi görüşmelerinde tercüman nasıl yardımcı olur?",
+      "a": "Minimum sipariş miktarı ve üretim süresi konuşulurken sorularınızı ve üreticinin açıklamalarını iki dil arasında aktarabiliriz. Miktarın hangi ürün veya varyant için geçerli olduğu, sürenin ne zaman başladığı ve hangi koşullara bağlı olduğu gibi noktaları görüşmede açıkça sordurabilirsiniz. Tercüman, üreticinin taahhüdünü aktarır; siparişin gerçekten o sürede üretileceğini garanti etmez."
+    },
+    "zh-Hans": {
+      "q": "讨论起订量和生产周期时，口译如何帮助我们？",
+      "a": "可双向传达您的问题与制造商说明，例如起订量适用于哪种产品或型号、生产周期从何时开始及附带条件。译员传达制造商的表述，不保证订单实际一定按该时间生产。"
+    }
+  },
+  {
+    "id": "Q085",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de fabrika ziyareti için tercüman gerekli mi?",
+      "a": "Fabrika ziyaretinde tercüman ihtiyacını, görüşeceğiniz kişilerin ortak diline ve konuşmanın ayrıntısına göre değerlendirin. Üretim süreci, teknik sorular ve ticari koşulları Türkçe olarak ayrıntılı konuşmak istiyorsanız sözlü tercümanlık talep edebilirsiniz. Her ziyaret için zorunluluk iddiasında bulunmuyoruz; programınızı ve iletişim beklentinizi birlikte netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "参观中国工厂一定需要口译吗？",
+      "a": "应根据双方共同语言及讨论深度评估。如果希望用土耳其语深入讨论生产流程、技术问题及交易条件，可申请口译。我们不声称所有参访都必须使用译员，而是先明确您的行程与沟通预期。"
+    }
+  },
+  {
+    "id": "Q086",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Çinli üreticiyle görüşürken bağımsız tercüman tutmalı mıyım?",
+      "a": "Bu kararı görüşmenin kapsamı ve tercümandan beklediğiniz rol üzerinden verebilirsiniz. Kendi seçtiğiniz bir tercümanla çalışırken hangi konuların aktarılacağını ve taraflarla varsa bağlantısını önceden netleştirme imkânınız olur. Bizden talep oluştururken bağımsızlık beklentinizi ve görüşeceğiniz firmayı belirtin; ilgili görevlendirme bu bilgilerle değerlendirilsin."
+    },
+    "zh-Hans": {
+      "q": "与中国制造商会面时，是否应自行安排独立译员？",
+      "a": "可根据会面范围及对译员角色的预期判断。自行选择译员时，可以提前明确沟通内容及其与相关企业的关系。向我们提交需求时，请说明独立性要求和对方企业名称，以便具体评估安排。"
+    }
+  },
+  {
+    "id": "Q087",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Fabrikanın kendi İngilizce bilen çalışanı yerine neden ayrı tercüman tutayım?",
+      "a": "Fabrikanın İngilizce bilen çalışanı ortak iletişim için yeterliyse ayrıca tercüman gerekmeyebilir. Fakat görüşmelerinizi Türkçe yürütmek, birden fazla üreticiyi aynı iletişim düzeniyle ziyaret etmek veya size ayrılmış dil desteği istemek farklı bir ihtiyaçtır. Tercihi, fabrika çalışanı hakkında peşin bir güvensizlik varsayımına değil, dil ve program gereksiniminize göre değerlendirmenizi öneriyoruz."
+    },
+    "zh-Hans": {
+      "q": "工厂已有会英语的员工，为什么还要单独安排译员？",
+      "a": "如果工厂员工能满足双方沟通需要，未必需要另请译员。但希望用土耳其语沟通、连续访问多家制造商或获得专门语言支持，属于不同需求。建议根据语言和行程选择，而不是预先假定工厂员工不可信。"
+    }
+  },
+  {
+    "id": "Q090",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Fabrika ziyaretine gelecek tercümana önceden hangi ürün bilgilerini göndermeliyim?",
+      "a": "Ürün grubunu, ziyaret edeceğiniz firmanın bilgilerini ve özellikle konuşmak istediğiniz teknik veya ticari başlıkları paylaşın. Varsa model adları, temel özellikler ve sık kullanılacak terimleri ekleyebilirsiniz. Gereksiz veya paylaşma yetkiniz olmayan gizli bilgileri göndermeyin. Bu hazırlık, görüşmedeki sözlü iletişimi destekler; ürün araştırması veya katalog çevirisi hizmeti değildir."
+    },
+    "zh-Hans": {
+      "q": "工厂参访前，应向译员提供哪些产品信息？",
+      "a": "请提供产品类别、访问企业资料及重点技术或交易主题。可补充型号、基本特性及常用术语，但不要发送不必要或未经授权的保密信息。这是口译准备，不属于产品研究或目录书面翻译服务。"
+    }
+  },
+  {
+    "id": "Q091",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanla Çin’de fabrika gezmek, fabrika denetimi yaptırmakla aynı şey mi?",
+      "a": "Hayır. Tercümanla fabrika ziyaret etmek, fabrika denetimi yaptırmakla aynı şey değildir. Biz ziyaret sırasında açıklamaların ve soruların Çince–Türkçe aktarılmasına destek veririz. Üretim kapasitesini doğrulama, kalite kontrol yapma, uygunluk raporu hazırlama veya tedarikçi denetleme ayrı uzmanlık ve hizmetlerdir; bu site üzerinden bunları sunmuyoruz."
+    },
+    "zh-Hans": {
+      "q": "由译员陪同参观工厂，等于工厂审核吗？",
+      "a": "不等于。我们负责参访中的中土沟通，包括讲解及提问的传达。核实产能、质量检验、出具合规报告或供应商审核属于其他专业服务，本网站不提供这些服务。"
+    }
+  },
+  {
+    "id": "Q092",
+    "page": "factory",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman üreticinin güvenilirliğini veya ürün kalitesini garanti eder mi?",
+      "a": "Hayır. Tercümanlık hizmetimiz, üreticinin güvenilirliği, ürün kalitesi, teslimat veya ödeme güvenliği için garanti içermez. Tercüman, görüşmede söylenenleri aktarır; açıklamaların gerçekliğini bağımsız bir denetimle doğrulamış sayılmaz. Satın alma ve tedarikçi değerlendirme kararlarınızı tercümanın görüşmeye katılmasından ayrı ele almalısınız."
+    },
+    "zh-Hans": {
+      "q": "口译服务能保证制造商可靠或产品质量吗？",
+      "a": "不能。口译服务不保证制造商可靠性、产品质量、交付或付款安全。译员传达会面中的表述，不代表已通过独立审核确认其真实性。采购及供应商评估决定，应与译员是否在场分开考虑。"
+    }
+  },
+  {
+    "id": "Q035",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı ve Çin’deki diğer fuarlar için Çince tercüman sağlayabiliyor musunuz?",
+      "a": "Kanton Fuarı ve Çin’de katılmayı planladığınız diğer fuarlar için Çince–Türkçe sözlü tercümanlık talep edebilirsiniz. Fuarın adını, şehri, ziyaret tarihlerinizi ve ürün grubunuzu paylaşın; uygunluğu buna göre değerlendirelim. Sunduğumuz hizmet, fuardaki stant ve firma görüşmelerinde tercümanlıktır; fuar turu veya seyahat paketi değildir."
+    },
+    "zh-Hans": {
+      "q": "广交会及中国其他展会可以安排中土口译吗？",
+      "a": "可以为广交会及您计划参加的中国其他展会咨询中土口译。请提供展会名称、城市、参观日期及产品类别，以便确认档期。服务重点是展位和企业会面中的语言沟通，不是展会旅游或旅行套餐。"
+    }
+  },
+  {
+    "id": "Q036",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Tercüman fuar boyunca bizimle stantları gezerek görüşmelere katılıyor mu?",
+      "a": "Önceden belirlenen fuar programında tercümanınız, ekibinizle stant ziyaretlerine ve görüşmelere katılabilir. Öncelikli ürün gruplarını, görüşmek istediğiniz firmaları ve günlük çalışma aralığını paylaşın. “Fuar boyunca” ifadesi, fuarın bütün günleri için otomatik hizmet değil, birlikte teyit edilen çalışma günleri ve saatleri anlamına gelir."
+    },
+    "zh-Hans": {
+      "q": "译员会陪同我们走访展位并参加洽谈吗？",
+      "a": "在事先确认的展会行程内，译员可以随团队走访展位并参加会面。请提供优先产品类别、拟会面企业及每天时段。“展会期间”指双方确认的工作日期和时间，不代表自动覆盖整届展会。"
+    }
+  },
+  {
+    "id": "Q037",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Bir tercüman şirketimizden birden fazla kişiye eşlik edebilir mi?",
+      "a": "Ekibiniz aynı görüşmelere birlikte katılıyorsa bir tercümanın birden fazla kişiye eşlik etmesi değerlendirilebilir. Katılımcı sayısını, konuşma düzenini ve herkesin aynı programı takip edip etmeyeceğini belirtin. Tek tercüman, farklı noktalarda aynı anda yapılan görüşmeleri eş zamanlı olarak yürütemez."
+    },
+    "zh-Hans": {
+      "q": "一位译员可以陪同我们公司多位人员吗？",
+      "a": "如果团队共同参加同一场会面，可以评估由一位译员陪同多人的安排。请说明人数、发言方式及是否全程一起行动。一位译员不能同时承担不同地点的多场会面。"
+    }
+  },
+  {
+    "id": "Q038",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Ekibimiz farklı stantlarda eş zamanlı görüşme yapacaksa kaç tercümana ihtiyacımız olur?",
+      "a": "İhtiyaç duyulan tercüman sayısını, aynı anda ayrı dil desteği gerektiren görüşme gruplarına göre belirleyelim. Örneğin iki ekip farklı stantlarda aynı anda görüşecekse tek tercüman iki noktada birden bulunamaz. Ekiplerinizin günlük programını paylaşın; eş zamanlı ihtiyaçları ve her grup için uygunluğu ayrı değerlendirelim."
+    },
+    "zh-Hans": {
+      "q": "团队在不同展位同时会谈时，需要几位译员？",
+      "a": "应按同时需要独立口译的会面小组评估人数。例如，两组人员在不同展位同时洽谈，一位译员无法兼顾两个地点。请提供各组行程，以便分别确认并行需求及译员档期。"
+    }
+  },
+  {
+    "id": "Q097",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Fuar turuna katılırsam ayrıca özel tercüman tutmam gerekir mi?",
+      "a": "Katıldığınız turun tercümanlık kapsamını tur sağlayıcınızdan öğrenin. Grup içinde genel bilgilendirme bulunması, sizin özel stant görüşmeleriniz için ayrı tercüman ayrıldığı anlamına gelmeyebilir. Kendi görüşme gündeminiz veya ayrı programınız varsa günlük özel tercümanlık ihtiyacını değerlendirebiliriz. Bizim bu hizmetimiz tur organizasyonu içermez."
+    },
+    "zh-Hans": {
+      "q": "参加展会团后，还需要单独安排私人译员吗？",
+      "a": "请先向旅行团提供方确认口译范围。团队的一般说明不一定包含专门陪同您的展位会谈。若有自己的议程或独立行程，可评估按天安排专属口译的需要。我们的该项服务不包含旅游团组织。"
+    }
+  },
+  {
+    "id": "Q098",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Grup tercümanı ile bana özel çalışan fuar tercümanı arasında ne fark vardır?",
+      "a": "Farkı hizmetin adı değil, tercümanın kimin programına ve hangi görüşmelere ayrıldığı belirler. Grup tercümanı birden fazla katılımcının ortak ihtiyacını takip ederken, size ayrılmış tercüman teyit edilen çalışma gününde sizin programınıza göre görev yapar. Yine de tek kişi farklı yerlerdeki eş zamanlı görüşmeleri yürütemez; kapsamı rezervasyon öncesinde açıkça netleştirin."
+    },
+    "zh-Hans": {
+      "q": "团体口译与专门为我安排的展会口译有何区别？",
+      "a": "关键在于译员服务谁的行程及哪些会面。团体口译跟进多位参加者的共同需求；为您安排的译员则在确认工作日内按您的行程服务。但同一人仍无法同时处理不同地点的会面，预约前应明确范围。"
+    }
+  },
+  {
+    "id": "Q039",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanın fuar giriş kaydı veya kartı için bizim bir işlem yapmamız gerekiyor mu?",
+      "a": "Gerekli giriş işlemleri fuara ve katılım biçimine göre değişebilir. Fuarın adını ve tarihini paylaştığınızda tercümanın hangi kayıt veya kartla giriş yapacağını, başvuruyu kimin tamamlayacağını ve varsa ücretini önceden netleştirelim. Tercümanın otomatik olarak giriş hakkı bulunduğunu veya kart bedelinin günlük ücrete dahil olduğunu varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "译员的展会入场登记或证件需要我们办理吗？",
+      "a": "入场要求可能因展会及参与身份而异。请提供展会名称和日期，提前明确译员所需登记或证件、办理方及可能的费用。不要默认译员自动具备入场资格，也不要默认证件费用已包含在日费内。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli fuarın kayıt kuralı veya kart ücreti verilmedi. Güncel organizatör koşulları gerçek etkinlik için ayrıca kontrol edilir; bu metin somut kural iddiası taşımaz."
+    }
+  },
+  {
+    "id": "Q040",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Fuarda tanıştığımız bir firmanın fabrikasını ziyaret etmek istersek tercümanlık programını buna göre değiştirebilir miyiz?",
+      "a": "Fuar sırasında yeni bir fabrika ziyareti planladığınızda firmanın konumunu, önerilen randevuyu ve kalan programınızı paylaşın. Değişiklik, tercümanın uygunluğu, yolculuk süresi ve günlük çalışma koşulları elverdiğinde değerlendirilebilir. Ek günler ve giderler ayrıca teyit edilir; fabrika randevusunun veya ulaşımın kendiliğinden organize edildiğini varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "想参观展会上认识的企业工厂，可以调整口译行程吗？",
+      "a": "请提供工厂位置、拟定预约时间及剩余行程。是否能调整，须结合译员档期、路程和每日工作条件评估。新增日期及费用需另行确认，不代表工厂预约或交通会自动由我们安排。"
+    }
+  },
+  {
+    "id": "Q099",
+    "page": "fair",
+    "publish": true,
+    "tr": {
+      "q": "Fuarın yalnızca belirli günleri için tercüman ayarlanabilir mi?",
+      "a": "Evet, uygunluk bulunması hâlinde fuarın yalnızca belirli günleri için tercümanlık talep edebilirsiniz. Hangi günleri istediğinizi ve o günlerin yaklaşık çalışma programını paylaşın. Seçtiğiniz günler günlük ücretlendirilir; birkaç saatlik görüşme için yarım günlük veya saatlik paket oluşturulmaz."
+    },
+    "zh-Hans": {
+      "q": "只在展会的部分日期需要译员，可以吗？",
+      "a": "可以，确认档期后可只安排指定日期。请提供所需日期及每天的大致行程。选定工作日按天计费，即使只安排数小时会面，也不提供半天或小时套餐。"
+    }
+  },
+  {
+    "id": "Q093",
+    "page": "canton",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı’na tercümansız gidilir mi?",
+      "a": "Görüşmelerinizi ortak bir dilde yürütebiliyor ve programınızı kendiniz takip edebiliyorsanız tercümansız ziyaret edebilirsiniz. Tercüman ihtiyacı, kaç firmayla görüşeceğiniz ve hangi ayrıntıları konuşacağınızla ilgilidir. Ürün, fiyat veya teslim koşullarını Türkçe üzerinden netleştirmek istiyorsanız ziyaret edeceğiniz günler için size ayrılmış sözlü dil desteği talep edebilirsiniz."
+    },
+    "zh-Hans": {
+      "q": "不带译员也可以参观广交会吗？",
+      "a": "如果双方能使用共同语言，且您能自行跟进行程，可以不带译员参观。是否需要取决于会面数量和讨论细节。如希望以土耳其语明确产品、价格或交付条件，可为计划参观的日期咨询专门口译。"
+    }
+  },
+  {
+    "id": "Q094",
+    "page": "canton",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı’nda İngilizce yeterli olur mu?",
+      "a": "İngilizcenin yeterli olup olmayacağını, görüşeceğiniz firmalar ve konular belirler. Her stantta, her ekip üyesiyle ve her teknik ayrıntıda aynı iletişim imkânı bulunacağını varsaymayın. Önceden belirlediğiniz firmalara görüşme dilini sorabilirsiniz. İlave Türkçe–Çince destek gerekiyorsa tercümanlık talebini bu ihtiyaç üzerinden planlayalım."
+    },
+    "zh-Hans": {
+      "q": "参观广交会只会英语够用吗？",
+      "a": "是否足够取决于拟会面的企业和主题，不能默认每个展位、每位人员及所有技术细节都具备相同沟通条件。可提前向目标企业确认会面语言；如果还需中土支持，再按实际需求规划口译。"
+    }
+  },
+  {
+    "id": "Q095",
+    "page": "canton",
+    "publish": true,
+    "tr": {
+      "q": "Canton Fair için Türkçe bilen tercüman nasıl bulunur?",
+      "a": "Canton Fair için Türkçe–Çince tercüman arıyorsanız fuar dönemini, ziyaret günlerinizi, ürün grubunu ve ekibinizin nasıl hareket edeceğini bize iletin. Kanton Fuarı tercümanlığı sayfamız üzerinden uygunluk ve günlük teklif talep edebilirsiniz. Bu hizmet, fuar organizatörünün resmî tercüman hizmeti veya ziyaret paketi olarak sunulmaz."
+    },
+    "zh-Hans": {
+      "q": "Canton Fair 如何寻找会土耳其语的译员？",
+      "a": "请向我们提供展会期别、参观日期、产品类别及团队行动方式，可通过广交会口译页面咨询档期和日费。我们的服务不以展会主办方官方口译或参观套餐名义提供。"
+    }
+  },
+  {
+    "id": "Q096",
+    "page": "canton",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı için tercümanı Türkiye’den mi ayarlamalıyım, Çin’e gidince mi bulmalıyım?",
+      "a": "Türkiye’deyken tarih ve ihtiyaçlarınız netleştiğinde tercümanlık planını görüşmenizi öneriyoruz; bunun için Çin’e varmayı beklemeniz gerekmez. Böylece konuya hazırlık, günlük program ve ücret koşulları önceden konuşulabilir. Çin’e vardıktan sonra da talep iletebilirsiniz, ancak o tarihler için uygun tercüman bulunacağını garanti etmiyoruz."
+    },
+    "zh-Hans": {
+      "q": "广交会口译应在出发前安排，还是到中国后再找？",
+      "a": "日期和需求明确后，建议在出发前沟通，无需等到抵达中国。这样可提前讨论准备内容、每日行程和费用条件。抵达后仍可咨询，但我们不保证相关日期一定有合适译员。"
+    }
+  },
+  {
+    "id": "Q100",
+    "page": "canton",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı’nın farklı fazlarında aynı tercümanla çalışılabilir mi?",
+      "a": "Kanton Fuarı’nın farklı fazlarında aynı tercümanla çalışma talebinizi, bütün tarihleri birlikte bildirerek iletin. Aynı kişinin devam edebilmesi, tüm günlerdeki uygunluğuna ve konuşulacak ürün gruplarına bağlıdır. Fazlar arasındaki boş günler, olası şehir geçişleri ve giderler ayrıca teyit edilir; bunların otomatik olarak ücretsiz veya rezerve olduğunu varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "广交会不同期别能安排同一位译员吗？",
+      "a": "请一次性提供所有所需日期。能否由同一人服务，取决于全部日期的档期及产品主题。期别之间的空档日、可能的转场和支出需另行确认，不应默认这些日期免费或已被保留。"
+    }
+  },
+  {
+    "id": "Q002",
+    "page": "areas",
+    "publish": true,
+    "tr": {
+      "q": "Hangi şehirlerde Çince tercüman sağlayabiliyorsunuz?",
+      "a": "Türkiye’de İstanbul, Tekirdağ, Düzce, Ankara, Kayseri ve Gaziantep; Çin’de Guangzhou, Shanghai ve Beijing başta olmak üzere birçok şehirdeki tercüman ağımızla talepleri değerlendiriyoruz. Gebze, Kocaeli ve bu merkezlere yakın bölgeler için de gerçek çalışma konumunu paylaşabilirsiniz. Hizmet uygunluğu şehir, tarih ve konu birlikte değerlendirilerek teyit edilir; bu liste her şehirde ofisimiz olduğu anlamına gelmez."
+    },
+    "zh-Hans": {
+      "q": "哪些城市可以咨询中土口译服务？",
+      "a": "我们通过多个城市的译员网络评估需求，主要包括土耳其的伊斯坦布尔、泰基尔达、迪兹杰、安卡拉、开塞利和加济安泰普，以及中国的广州、上海和北京。盖布泽、科贾埃利及邻近地区也可提供实际工作地点咨询。是否能安排服务须结合城市、日期及内容确认；服务地区不代表当地设有办公室。"
+    }
+  },
+  {
+    "id": "Q072",
+    "page": "areas",
+    "publish": true,
+    "tr": {
+      "q": "Tekirdağ’da makine montajı için Çince tercüman var mı?",
+      "a": "Tekirdağ’daki makine montajı sırasında ekipler arası sözlü iletişim için talebinizi değerlendirebiliriz. Yalnızca il adını değil, Çorlu, Çerkezköy veya başka bir çalışma noktasının tam konumunu ve tarihleri paylaşın. Uygunluk konu ve programa göre teyit edilir; şehirde her gün hazır ekip veya ayrı ofis bulunduğu iddiasında bulunmuyoruz."
+    },
+    "zh-Hans": {
+      "q": "泰基尔达设备安装可以咨询中文口译吗？",
+      "a": "可以评估泰基尔达设备安装期间的中土沟通需求。请不要只提供省名，还应说明 Çorlu、Çerkezköy 或其他实际工作点的准确位置及日期。是否能安排须结合主题和行程确认，不代表当地每天都有待命团队或独立办公室。"
+    }
+  },
+  {
+    "id": "Q073",
+    "page": "areas",
+    "publish": true,
+    "tr": {
+      "q": "Çerkezköy’de fabrika kurulumu için Çince tercüman nasıl bulunur?",
+      "a": "Çerkezköy’de fabrikanıza kurulacak makine veya üretim hattı için teknik ekipler arasındaki iletişime yönelik tercümanlık talep edebilirsiniz. Sanayi bölgesi, tesis girişi, ekipman konusu ve çalışma tarihlerini paylaşın. Buradaki hizmet, makine ve hat kurulumundaki sözlü iletişim desteğidir; fabrikanın inşasını veya teknik kurulum işlerini üstlenmek değildir."
+    },
+    "zh-Hans": {
+      "q": "Çerkezköy 工厂安装工作如何寻找中文口译？",
+      "a": "可为 Çerkezköy 工厂设备或生产线安装中的团队沟通申请口译。请提供工业区、工厂入口、设备内容及日期。这里的服务是安装相关的语言沟通，不是承包厂房建设或技术安装工作。"
+    }
+  },
+  {
+    "id": "Q007",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercümanlık için günlük ücret ne kadar ve neye göre belirleniyor?",
+      "a": "Günlük ücret; hizmetin konusu, şehir, tarihler, çalışma noktası ve günlük program netleştirildikten sonra belirlenir. Bu nedenle bütün talepler için tek bir rakam yayımlamıyoruz. Teklifte günlük tercümanlık bedeli ile şehir içi ve şehir dışı ulaşım, konaklama ve yeme-içme giderlerini ayrı değerlendirelim."
+    },
+    "zh-Hans": {
+      "q": "中土口译一天多少钱，费用如何确定？",
+      "a": "日费需结合服务内容、城市、日期、实际地点及每日安排确定，因此网站不公布适用于所有需求的统一价格。报价时应将口译日费与市内交通、城际交通、住宿及餐饮费用分别确认。"
+    }
+  },
+  {
+    "id": "Q013",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Net fiyat teklifi alabilmek için size hangi bilgileri iletmeliyim?",
+      "a": "Hizmet türünü, ülke ve şehri, gerçek çalışma noktasını, tarihleri ve kısa ihtiyacınızı iletin. Yaklaşık günlük çalışma saatleri, makine veya ürün grubu, katılımcı sayısı ve şehir değişiklikleri belli ise bunları da ekleyin. İlk mesajda hassas teknik dosyalar göndermeniz gerekmez; hazırlık için gerekli ayrıntıları sonrasında konuşabiliriz."
+    },
+    "zh-Hans": {
+      "q": "获得明确报价需要提供哪些信息？",
+      "a": "请提供服务类型、国家和城市、实际工作地点、日期及简要需求。若已确定每日时段、设备或产品类别、参加人数及跨城市安排，也请一并说明。首次咨询不必发送敏感技术文件，准备所需的细节可随后沟通。"
+    }
+  },
+  {
+    "id": "Q060",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman fiyat teklifleri neden farklı oluyor?",
+      "a": "Teklifleri karşılaştırırken aynı günlük saatleri, aynı hizmet kapsamını ve aynı gider kalemlerini karşılaştırmanızı öneriyoruz. Bir teklifte dahil görünen gider başka birinde ayrı olabilir; teknik hazırlık ve şehirler arası çalışma da farklı değerlendirilmiş olabilir. Bizden teklif alırken günlük bedeli ve ayrıca karşılanacak masrafları ayrı netleştirin; yalnızca en alttaki rakama bakmayın."
+    },
+    "zh-Hans": {
+      "q": "为什么不同中土口译报价差别较大？",
+      "a": "建议在相同工作时段、服务范围及费用项目基础上比较。一个报价包含的支出，另一个可能另计；技术准备及跨城市安排也可能不同。向我们询价时，请分别确认日费和额外支出，不要只比较总数字。"
+    }
+  },
+  {
+    "id": "Q055",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Çin’de günlük tercüman ücreti ne kadar?",
+      "a": "Çin’de günlük tercüman ücretini şehir, tarih, görüşme konusu ve günlük programınıza göre belirliyoruz. Guangzhou’daki bir fuar günü ile başka bir şehirdeki teknik fabrika ziyareti aynı koşulları taşımayabilir. Programınızı paylaşın; günlük bedeli ve ayrıca karşılanacak ulaşım, konaklama, yeme-içme giderlerini ayrı gösteren bir teklif değerlendirelim."
+    },
+    "zh-Hans": {
+      "q": "在中国安排中土口译，一天多少钱？",
+      "a": "中国口译日费需结合城市、日期、会面主题及每天安排确定。广州展会的一天与其他城市的技术工厂参访，不一定具有相同条件。请提供行程，并分别确认日费及另计的交通、住宿、餐饮支出。"
+    }
+  },
+  {
+    "id": "Q056",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Türkiye’de günlük Çince tercüman ücreti ne kadar?",
+      "a": "Türkiye’de makine kurulumu için günlük Çince tercümanlık teklifini, tesisin konumu, ekipman konusu, tarihler ve çalışma düzeni üzerinden hazırlıyoruz. Teklif, yalnızca şehir adına bakılarak kesinleşmez. Şehir içi ve şehir dışı ulaşım, konaklama ve yeme-içmenin günlük ücrete dahil olmadığını bütçenizde ayrıca dikkate alın."
+    },
+    "zh-Hans": {
+      "q": "在土耳其安排中文口译，一天多少钱？",
+      "a": "土耳其设备安装口译的日费需根据工厂位置、设备内容、日期及工作安排评估，不能仅凭城市名称确定。市内交通、城际交通、住宿及餐饮不包含在日费内，应在预算中另行考虑。"
+    }
+  },
+  {
+    "id": "Q057",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Guangzhou’da Türkçe Çince tercüman fiyatları ne kadar?",
+      "a": "Guangzhou için fiyat sorarken fuar, fabrika ziyareti veya planlanmış görüşme ihtiyacınızı; tarihlerinizi ve gerçek çalışma noktasını belirtin. Aynı şehirdeki farklı programların ulaşım ve günlük çalışma ihtiyacı değişebilir. Sabit bir şehir fiyatı yerine, sizin programınıza ait günlük ücret ve giderleri birlikte netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "广州中土口译的价格是多少？",
+      "a": "咨询广州费用时，请说明是展会、工厂参访还是已安排会面，并提供日期及实际地点。同一城市内，不同行程的交通和工作时段也可能不同。我们根据具体安排确认日费及支出，而不是套用统一城市价格。"
+    }
+  },
+  {
+    "id": "Q058",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Kanton Fuarı için tercüman tutmanın maliyeti nedir?",
+      "a": "Kanton Fuarı tercümanlığının maliyetini belirlemek için ziyaret edeceğiniz günleri, ürün grubunu, ekip düzenini ve günlük saatleri paylaşın. Günlük tercümanlık bedelinin yanında ulaşım, konaklama ve yeme-içme ayrıca değerlendirilir. Giriş kartı veya kayıtla ilgili bir gider oluşacaksa kimin karşılayacağını da önceden teyit edelim."
+    },
+    "zh-Hans": {
+      "q": "广交会中土口译的费用如何计算？",
+      "a": "请提供参观日期、产品类别、团队安排及每日时段，以便确认广交会口译费用。日费之外，交通、住宿和餐饮另计。若涉及入场证件或登记费用，也应事先明确由谁承担。"
+    }
+  },
+  {
+    "id": "Q059",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Makine kurulumu için Çince teknik tercüman ücreti ne kadar?",
+      "a": "Makine kurulumu için teklif; ekipmanın türü, teknik hazırlık ihtiyacı, tesisin konumu, tarihler ve günlük çalışma düzeni görülerek hazırlanır. İlk talebinizde makinenin marka ve modelini veya üretim hattının kısa açıklamasını paylaşabilirsiniz. Günlük tercümanlık ile ulaşım, konaklama ve yeme-içme kalemleri ayrı değerlendirilir; teknik konu görülmeden kesin fiyat söylemiyoruz."
+    },
+    "zh-Hans": {
+      "q": "设备安装中土技术口译的日费是多少？",
+      "a": "报价需结合设备类型、术语准备需求、工厂位置、日期及每日安排确定。首次咨询可提供设备品牌型号或生产线简述。口译日费与交通、住宿、餐饮分别评估，在不了解技术内容前不报确定价格。"
+    }
+  },
+  {
+    "id": "Q008",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Günlük tercümanlık hizmeti kaç saatlik çalışmayı kapsıyor?",
+      "a": "Günlük hizmetin başlangıç ve bitiş saatlerini, molaları ve varsa yolculuk düzenini teklif aşamasında birlikte netleştiriyoruz. “Bir gün” ifadesini sınırsız çalışma olarak değerlendirmeyin. Tüm işler için geçerli, bu sayfada ilan edilmiş sabit bir saat paketi bulunmadığından planladığınız çalışma aralığını talebinizde belirtin."
+    },
+    "zh-Hans": {
+      "q": "按天计费具体包含多少小时？",
+      "a": "每天的起止时间、休息及必要的出行安排需在报价阶段共同明确。“一天”不代表无限时工作。网站没有公布适用于所有工作的统一小时套餐，请在需求中写明计划工作时段。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Sabit günlük saat, mola veya seyahat süresinin mesaiye sayılması kullanıcı tarafından belirlenmedi. 8/9/10 saat gibi sayılar eklenmez."
+    }
+  },
+  {
+    "id": "Q009",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Belirlenen çalışma süresinin aşılması durumunda ek ücret alınıyor mu?",
+      "a": "Programın kararlaştırılan çalışma aralığını aşma ihtimalini mümkün olduğunca erken bildirin. Uzatma için tercümanın uygunluğu ve varsa ek ücret koşulları ayrıca teyit edilmelidir. Günlük ücretin sınırsız çalışma içerdiğini veya her uzatmanın ücretsiz olduğunu varsaymayın; uygulanacak koşulları hizmet başlamadan netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "超过约定工作时段会产生额外费用吗？",
+      "a": "如果可能超过约定时段，请尽早告知。是否可以延长及相应费用须另行确认。日费不等于无限时工作，也不能默认延时免费；具体条件应在服务开始前明确。"
+    }
+  },
+  {
+    "id": "Q011",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Birden fazla gün için tercümanlık aldığımda fiyat değişiyor mu?",
+      "a": "Birden fazla gün için programınızın tamamını birlikte değerlendirebiliriz; fiyatlandırma yine günlük yapılır. Toplam gün sayısı, şehir geçişleri, günlük çalışma düzeni ve giderler teklifin kapsamını etkiler. Çok günlük her işte otomatik indirim veya sabit bir indirim oranı uygulandığını söylemiyoruz; geçerli teklif, programınıza göre netleşir."
+    },
+    "zh-Hans": {
+      "q": "连续多天使用口译服务，价格会变化吗？",
+      "a": "可以将多天行程一并评估，但计费仍以工作日为基础。总天数、城市间转场、每日安排及相关支出会影响整体报价。我们不承诺多日服务自动享有折扣或固定优惠比例，具体费用以行程报价为准。"
+    }
+  },
+  {
+    "id": "Q012",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Hafta sonu veya resmî tatillerde ücret farklı oluyor mu?",
+      "a": "Hafta sonu veya resmî tatil tarihlerini talebinizde açıkça belirtin. Bu günler için tercüman uygunluğunu ve uygulanacak günlük ücret koşullarını ayrıca değerlendirelim. Tüm tarihler için aynı ücretin geçerli olduğunu ya da mutlaka belirli bir tatil farkı alındığını varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "周末或法定节假日的口译费用是否不同？",
+      "a": "请明确说明涉及的周末或法定节假日日期，以便单独确认档期及当日费用条件。不要默认所有日期价格相同，也不要默认一定收取某个固定比例的节假日附加费。"
+    }
+  },
+  {
+    "id": "Q010",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanın ulaşım, konaklama ve yemek masraflarını kim karşılıyor?",
+      "a": "Şehir içi ulaşım, şehir dışı ulaşım, konaklama ve yeme-içme günlük tercümanlık bedeline dahil değildir; bu giderler ayrıca karşılanır. Giderleri doğrudan sizin mi sağlayacağınız yoksa ayrıca mı ödeyeceğiniz teklif sırasında netleştirilir. Bütçenizi oluştururken yalnızca tercümanlık günlüğünü değil, programınızın gerektirdiği bu kalemleri de değerlendirin."
+    },
+    "zh-Hans": {
+      "q": "译员的交通、住宿和餐饮费用由谁承担？",
+      "a": "市内交通、城际交通、住宿及餐饮不包含在口译日费内，需要另行承担。由您直接安排还是另行支付，应在报价时明确。制定预算时，请同时考虑行程所需的这些费用，而不只计算译员日费。"
+    }
+  },
+  {
+    "id": "Q061",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman ücretine hangi masraflar dâhil değildir?",
+      "a": "Şehir içi ulaşım, şehir dışı ulaşım, konaklama ve yeme-içme günlük tercümanlık ücretine dahil değildir. Programınıza bağlı giriş, kayıt veya benzeri ek giderler oluşabilecekse bunların durumu ayrıca konuşulur. Teklifinizi onaylamadan önce her giderin kim tarafından ve nasıl karşılanacağını netleştirelim; belirsiz bir “her şey dahil” paket sunmuyoruz."
+    },
+    "zh-Hans": {
+      "q": "中土口译日费不包含哪些费用？",
+      "a": "市内交通、城际交通、住宿及餐饮不包含在日费内。若行程还可能涉及入场、登记等其他费用，也应另行明确。确认报价前，请核实各项支出由谁以及如何承担；我们不提供范围不明的“全包”承诺。"
+    }
+  },
+  {
+    "id": "Q062",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Türkiye’den tercüman götürmek mi, Çin’de tercüman tutmak mı daha ekonomik?",
+      "a": "Bunu yalnızca günlük ücreti karşılaştırarak söylemek doğru olmaz. Tercümanın bulunduğu yer, uluslararası veya şehirler arası ulaşım, konaklama, seyahat günleri ve bütün program boyunca aynı kişiyle çalışma ihtiyacı toplam maliyeti etkileyebilir. İki seçenek de gerçekten uygulanabiliyorsa, aynı kapsam ve gider kalemleri üzerinden değerlendirelim; Çin’de tercüman tutmanın her durumda daha ucuz olduğunu söylemiyoruz."
+    },
+    "zh-Hans": {
+      "q": "从土耳其带译员去中国，还是在中国安排译员更经济？",
+      "a": "不能仅比较日费。译员所在地、国际或城际交通、住宿、旅行日及全程由同一人服务的要求，都可能影响总费用。如果两种方案确实可行，应按相同范围及费用项目比较；我们不声称在中国安排译员一定更便宜。"
+    }
+  },
+  {
+    "id": "Q014",
+    "page": "rates",
+    "publish": true,
+    "tr": {
+      "q": "Ödeme ne zaman, hangi para biriminde ve nasıl yapılıyor?",
+      "a": "Ödeme zamanı, kullanılacak para birimi, ödeme yöntemi ve varsa ön ödeme koşulları teklifinizde netleştirilir. Bu sayfada bütün işler için geçerli bir kapora oranı veya ödeme kanalı ilan etmiyoruz. Hizmeti onaylamadan önce ödeme bilgilerini ve ödeme yapılacak tarafı doğrudan iletişim kanalımızdan teyit edin."
+    },
+    "zh-Hans": {
+      "q": "什么时候付款，使用什么币种和方式？",
+      "a": "付款时间、币种、方式及可能涉及的预付款条件，需在具体报价中明确。网站不公布适用于所有工作的统一订金比例或支付渠道。确认服务前，请通过我们的直接联系方式核实付款信息及收款方。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Gerçek ödeme kanalları, para birimleri ve ödeme alacak taraf belirlendikten sonra somutlaştırılır. Web sitesine ödeme altyapısı eklendiği anlamına gelmez."
+    }
+  },
+  {
+    "id": "Q015",
+    "page": "rates",
+    "publish": false,
+    "tr": {
+      "q": "Şirketimiz adına fatura düzenleyebiliyor musunuz?",
+      "a": "Şirket adına fatura düzenlenmesi sizin için gerekli ise bunu teklif talebinizde belirtin. Fatura düzenleme imkânı ve düzenleyici işletme bilgileri teyit edilmeden bu konuda kesin bir onay vermiyoruz. Rezervasyonunuzu kesinleştirmeden önce ihtiyaç duyduğunuz fatura veya ödeme belgesi koşullarını birlikte netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "可以向我们公司开具发票吗？",
+      "a": "如果公司发票是您的必要条件，请在询价时说明。在确认开票安排及开票主体之前，我们不会作出确定承诺。请在落实预约前，将所需发票或付款凭证的条件确认清楚。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Fatura düzenleyen gerçek işletme, ülke ve belge türü kullanıcı tarafından verilmedi. Bu cevap taslaktır; yayımdan önce işletme doğrulaması gerekir. Çince 发票 sözcüğü Çin vergi sistemiyle uyumlu özel fatura taahhüdü olarak kullanılmaz."
+    }
+  },
+  {
+    "id": "Q016",
+    "page": "about",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanınızın benim sektörümde deneyimi var mı?",
+      "a": "Sektörünüzü ve görüşmelerde ele alınacak teknik konuları paylaşın; görevlendirilebilecek tercümanın ilgili deneyimini buna göre değerlendirelim. Bütün tercümanların her sektörde aynı deneyime sahip olduğunu iddia etmiyoruz. Özellikle makine kurulumu ve üretim hattı çalışmalarında ekipman türü ile konuşulacak işlemleri önceden bilmemiz önemlidir."
+    },
+    "zh-Hans": {
+      "q": "译员是否具有我们行业的相关经验？",
+      "a": "请提供行业及需要沟通的技术主题，以便评估拟安排译员的相关经验。我们不会声称所有译员都熟悉所有行业。设备安装或生产线工作尤其需要提前说明设备类型及涉及的操作内容。"
+    }
+  },
+  {
+    "id": "Q017",
+    "page": "about",
+    "publish": true,
+    "tr": {
+      "q": "Görevlendirilecek tercümanla hizmet öncesinde tanışabilir veya kısa bir görüşme yapabilir miyim?",
+      "a": "Hizmet öncesinde kısa bir tanışma veya ihtiyaç görüşmesi talep edebilirsiniz. Bunun yapılıp yapılamayacağı, tercümanın uygunluğu ve planlamanın hangi aşamada olduğuna göre teyit edilir. Görüşmenin amacı çalışma konusunu, iletişim beklentinizi ve hazırlık ihtiyacını netleştirmektir; her talep için otomatik veya anlık görüşme sözü vermiyoruz."
+    },
+    "zh-Hans": {
+      "q": "服务开始前可以与拟安排的译员简单沟通吗？",
+      "a": "可以提出简短的介绍或需求沟通请求，是否能够安排取决于译员档期及当前安排进度。沟通重点是工作主题、交流预期及准备需求；我们不承诺每次咨询都能立即安排会面。"
+    }
+  },
+  {
+    "id": "Q019",
+    "page": "about",
+    "publish": false,
+    "tr": {
+      "q": "Görüşmelerde paylaşılan ticari ve teknik bilgilerin gizliliğini nasıl koruyorsunuz?",
+      "a": "Gizlilik gereksinimlerinizi işe başlamadan önce paylaşın. Hangi bilgilerin tercümana aktarılabileceğini, kimlerle paylaşılabileceğini ve saklama veya silme beklentilerinizi çalışma öncesinde netleştirelim. İlk talepte yalnızca ihtiyaç özeti gönderin; paylaşma yetkiniz olmayan dosyaları iletmeyin. Özel bir gizlilik protokolü gerekiyorsa belge paylaşımından önce bu koşulları konuşalım."
+    },
+    "zh-Hans": {
+      "q": "如何处理会面中的商业和技术保密要求？",
+      "a": "请在工作开始前说明保密要求，并事先明确哪些资料可提供给译员、可向谁共享，以及保存或删除方面的要求。首次咨询只需简要说明需求，请勿发送未经授权的资料。如需专门的保密安排，应在分享文件前讨论并确认。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Bu metin önerilen süreçtir; mevcut sertifikalı güvenlik, saklama süresi, üçüncü taraf kullanmama veya imzalı NDA politikası kanıtı değildir. İşletmenin gerçek veri akışıyla kontrol edilir."
+    }
+  },
+  {
+    "id": "Q020",
+    "page": "about",
+    "publish": false,
+    "tr": {
+      "q": "Şirketimizin gizlilik sözleşmesini imzalayabiliyor musunuz?",
+      "a": "Gizlilik sözleşmesi talebinizi hizmet başlamadan önce iletebilirsiniz. Metnin taraflarını, imza yetkisini ve çalışma koşullarıyla uyumunu değerlendirdikten sonra imzalama imkânını teyit etmemiz gerekir. Her sözleşmeyi incelemeden imzalayacağımızı söylemiyoruz; gizli belge paylaşımından önce bu konuyu netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "可以签署我们公司的保密协议吗？",
+      "a": "可以在服务开始前提出保密协议要求。我们需要先确认协议当事方、签署权限及条款与本次工作的适配情况，再答复是否可以签署。不会承诺未经审阅即签署所有协议；请在提供保密资料前明确相关安排。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > NDA imzalayacak kişi/kuruluş ve uygulanacak süreç doğrulanmadan kesin imza vaadi yayımlanmaz."
+    }
+  },
+  {
+    "id": "Q021",
+    "page": "about",
+    "publish": false,
+    "tr": {
+      "q": "Tercümanın görüşeceğimiz Çinli firma veya tedarikçiyle herhangi bir ticari ilişkisi bulunuyor mu?",
+      "a": "Görüşeceğiniz firmanın adını ve varsa bağımsızlık beklentinizi önceden paylaşın. Görevlendirilecek tercümanın bu firmayla geçmiş çalışma, ticari bağlantı veya komisyon ilişkisi bulunup bulunmadığını seçim aşamasında açıklığa kavuşturalım. Tüm tercümanlar için kontrol yapılmadan “hiçbir bağlantısı yoktur” şeklinde genel bir güvence vermiyoruz."
+    },
+    "zh-Hans": {
+      "q": "译员与我们将会面的中国企业或供应商存在商业关系吗？",
+      "a": "请提前提供对方企业名称及独立性要求。在选择译员时，应明确其是否与该企业有过合作、商业联系或佣金关系。在未进行具体核实前，我们不会对所有译员作出“绝无任何联系”的笼统保证。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Görevlendirme öncesi çıkar ilişkisi beyanı ve kontrol süreci işletme tarafından kabul edilmelidir; mevcut tüm ağ için araştırılmış ilişkisizlik iddiası yoktur."
+    }
+  },
+  {
+    "id": "Q005",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Tercüman rezervasyonunu ne kadar önceden yapmalıyım?",
+      "a": "Şehir ve tarih aralığınız belli olduğunda bizimle iletişime geçmenizi öneriyoruz. Teknik uzmanlık gerektiren işler, birden fazla şehir içeren programlar ve belirli fuar günleri için hazırlık ve uygunluk kontrolüne zaman ayırmak gerekir. Her iş için geçerli sabit bir son başvuru süremiz yok; son dakika talebinizi de mevcut uygunluğa göre değerlendirebiliriz."
+    },
+    "zh-Hans": {
+      "q": "应提前多久联系并预约口译？",
+      "a": "城市和日期范围确定后，建议尽早联系我们。涉及技术内容、多城市行程或特定展会日期的需求，需要预留准备及档期确认时间。我们不设适用于所有工作的统一提前天数；临时需求也可咨询，但须根据实际档期评估。"
+    }
+  },
+  {
+    "id": "Q006",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Acil veya ertesi gün için Çince tercüman bulabilir misiniz?",
+      "a": "Acil veya ertesi gün başlayacak bir iş için talebinizi iletebilirsiniz; ancak tercüman bulunacağını önceden garanti etmiyoruz. Şehri, tam çalışma noktasını, başlangıç saatini ve konuşulacak konuyu birlikte paylaşın. Uygunluk teyidi gelmeden tercümanınızın kesinleştiğini varsaymayın."
+    },
+    "zh-Hans": {
+      "q": "紧急需求或第二天开始的工作，可以安排口译吗？",
+      "a": "可以提交紧急或次日开始的需求，但我们不能预先保证一定有译员。请同时提供城市、准确地点、开始时间及沟通主题。在收到档期确认前，请不要将译员安排视为已经落实。"
+    }
+  },
+  {
+    "id": "Q041",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Rezervasyonun kesinleşmesi için hangi adımları tamamlamamız gerekiyor?",
+      "a": "Önce hizmet, şehir, tarihler, gerçek çalışma noktası ve günlük programı netleştiriyoruz. Ardından tercüman uygunluğu, günlük ücret, ayrıca karşılanacak giderler ve çalışma koşulları karşılıklı teyit edilir. Varsa ödeme veya belge adımları da tamamlanıp size açık bir hizmet teyidi verilmeden rezervasyonun kesinleştiğini varsaymayın. Form doldurmak veya WhatsApp mesajı göndermek tek başına rezervasyon değildir."
+    },
+    "zh-Hans": {
+      "q": "完成哪些步骤后，预约才算确定？",
+      "a": "先明确服务、城市、日期、实际地点及每天行程，再共同确认译员档期、日费、另计支出及工作条件。如有付款或文件要求，也须完成相应步骤并收到明确服务确认。填写表单或发送 WhatsApp 消息，本身不等于预约成功。"
+    }
+  },
+  {
+    "id": "Q042",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Birden fazla gün süren işlerde aynı tercümanla çalışabilecek miyiz?",
+      "a": "Birden fazla günlük işte aynı tercümanla devam etme tercihinizi baştan belirtin. Bunun mümkün olup olmadığı bütün tarih aralığındaki uygunluğa bağlıdır; yalnızca ilk günün teyit edilmesi sonraki günlerin de ayrıldığı anlamına gelmez. Program değişirse devamlılık ve olası alternatifler yeniden değerlendirilir."
+    },
+    "zh-Hans": {
+      "q": "多日工作能安排同一位译员吗？",
+      "a": "请在开始时说明希望由同一位译员连续服务。能否安排取决于整个日期范围的档期；确认首日并不代表后续日期也已保留。行程变更时，连续服务及可能的替代方案需重新评估。"
+    }
+  },
+  {
+    "id": "Q043",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Uçuşumuz, fabrika randevumuz veya iş programımız değişirse rezervasyonu güncelleyebilir miyiz?",
+      "a": "Uçuş, fabrika randevusu veya iş programınız değiştiğinde yeni bilgileri mümkün olduğunca erken iletin. Yeni tarihler, tercüman uygunluğu ve ulaşım veya konaklama gibi giderler yeniden değerlendirilir. Değişikliğin ücretsiz ya da otomatik kabul edildiğini varsaymayın; rezervasyonunuza ilişkin koşullar üzerinden karşılıklı teyit alalım."
+    },
+    "zh-Hans": {
+      "q": "航班、工厂预约或工作计划变化后，可以修改预约吗？",
+      "a": "请尽早提供变更信息，以便重新评估日期、译员档期及交通住宿等支出。不要默认修改免费或自动获批，应按该次预约约定的条件重新确认。"
+    }
+  },
+  {
+    "id": "Q044",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Rezervasyonu iptal etmemiz veya tarih değiştirmemiz gerekirse hangi koşullar geçerli?",
+      "a": "İptal ve tarih değişikliği koşulları, rezervasyonunuzu kesinleştirmeden önce teklifinizle birlikte netleştirilmelidir. Bildirim zamanı, ayrılan günler ve önceden oluşmuş giderler değerlendirmede önem taşıyabilir. Her rezervasyon için geçerli ücretsiz iptal süresi veya sabit iade oranı ilan etmiyoruz; işlem yapmadan önce size teyit edilen koşulları kontrol edin."
+    },
+    "zh-Hans": {
+      "q": "取消预约或更改日期适用什么条件？",
+      "a": "应在确认预约前，与报价一起明确取消及改期条件。通知时间、已预留日期及已发生支出可能影响处理。我们不公布适用于所有预约的统一免费取消期限或退款比例，请以已向您确认的条件为准。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Bu cevap hukuki iptal/iade politikası değildir. Gerçek sözleşme ve uygun hukuki inceleme olmadan yeni bağlayıcı kesinti/iade oranı üretilmez."
+    }
+  },
+  {
+    "id": "Q045",
+    "page": "faq",
+    "publish": false,
+    "tr": {
+      "q": "Görevlendirilen tercüman beklenmedik bir nedenle gelemezse nasıl bir çözüm sunuyorsunuz?",
+      "a": "Böyle bir durum oluşursa mevcut iletişim kanalımız üzerinden programı ve mümkün olan alternatifleri birlikte değerlendirelim. Başka bir tercümanın bulunması şehir, tarih ve işin konusuna bağlıdır; koşulsuz veya anlık yedek tercüman garantisi vermiyoruz. Bir değişiklik gerekiyorsa yeni görevlendirme ve çalışma koşulları ayrıca teyit edilmelidir."
+    },
+    "zh-Hans": {
+      "q": "已安排的译员因突发情况无法到场，怎么办？",
+      "a": "出现这种情况时，请通过现有联系渠道共同评估行程及可行替代方案。是否能找到其他译员取决于城市、日期和工作内容；我们不承诺无条件或即时替补。若需变更人员，应另行确认新的安排及工作条件。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > İşletme, aksama iletişim süreci ve alternatif araştırma sorumluluğunu onaylamalıdır. 24/7 destek, ücretsiz yedek veya kesintisizlik garantisi yoktur."
+    }
+  },
+  {
+    "id": "Q046",
+    "page": "faq",
+    "publish": true,
+    "tr": {
+      "q": "Hizmet sırasında bir sorun yaşarsak kiminle iletişime geçeceğiz?",
+      "a": "Hizmet sırasında bir sorun yaşarsanız WhatsApp üzerinden +90 555 044 11 41 numarasına, telefonla +90 507 528 61 87 numarasına veya info@cince-tercuman.com adresine ulaşabilirsiniz. Mesajınızda çalışma tarihini, konumu ve sorunun kısa açıklamasını belirtin. Sahadaki acil güvenlik durumlarında ise önce tesisin yetkili sorumlusuna haber verin."
+    },
+    "zh-Hans": {
+      "q": "服务过程中出现问题，应联系谁？",
+      "a": "可通过 WhatsApp 联系 +90 555 044 11 41，拨打 +90 507 528 61 87，或发送邮件至 info@cince-tercuman.com。请说明工作日期、地点及问题概要。现场紧急安全情况应先通知工厂的负责人员。"
+    }
+  },
+  {
+    "id": "Q069",
+    "page": "istanbul",
+    "publish": true,
+    "tr": {
+      "q": "İstanbul’da makine kurulumu için Çince tercüman nasıl bulunur?",
+      "a": "İstanbul’da makine kurulumu için Çince tercümanlık talebinizi, şirket merkezinizden çok makinenin bulunduğu gerçek tesis konumuyla iletin. Şirketiniz Kadıköy, Beşiktaş veya Üsküdar’da; kurulum başka bir ilçede ya da Gebze’de olabilir. Tesis konumu, tarihler, makine türü ve günlük program netleştiğinde uygun tercümanlık planını değerlendirelim."
+    },
+    "zh-Hans": {
+      "q": "伊斯坦布尔设备安装如何咨询中文口译？",
+      "a": "请优先提供设备所在工厂的实际地点，而不仅是公司总部地址。公司可能位于 Kadıköy、Beşiktaş 或 Üsküdar，而安装地点在其他城区或盖布泽。明确工厂位置、日期、设备类型及每天安排后，再评估合适的中土口译。"
+    }
+  },
+  {
+    "id": "Q074",
+    "page": "ankara",
+    "publish": true,
+    "tr": {
+      "q": "Ankara’da üretim hattı kurulumu için Çince tercüman nereden bulunur?",
+      "a": "Ankara’daki üretim hattı kurulumu için tesis konumu, hattın ne ürettiği, Çinli teknik ekibin programı ve tarihleriyle bize ulaşabilirsiniz. Hat üzerindeki başlıca sistemleri kısaca belirtmeniz, tercümanın hazırlık ihtiyacını değerlendirmemize yardımcı olur. Merkez dışı tesislerdeki ulaşımı ve günlük çalışma saatlerini tekliften önce ayrıca netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "安卡拉生产线安装如何咨询中文口译？",
+      "a": "请提供安卡拉工厂位置、生产线用途、中国技术团队安排及日期。简要说明主要系统，有助于评估译员准备需求。市区外工厂的交通与每日时段，应在报价前单独明确。"
+    }
+  },
+  {
+    "id": "Q071",
+    "page": "kocaeli",
+    "publish": true,
+    "tr": {
+      "q": "Kocaeli’nde Çinli mühendisler için tercüman nasıl bulunur?",
+      "a": "Kocaeli’nde Çinli mühendislerin makine kurulumu ve buna bağlı teknik görüşmeleri için Çince–Türkçe tercümanlık talep edebilirsiniz. İlçe, tesis veya sanayi bölgesi konumunu; ekipman konusunu ve günlük saatleri belirtin. Teknik ekibin konakladığı yer ile çalışma noktası farklıysa bu bilgileri ayrı paylaşmanız ulaşım planlamasını kolaylaştırır."
+    },
+    "zh-Hans": {
+      "q": "科贾埃利如何为中国工程师安排口译？",
+      "a": "可为科贾埃利的设备安装及相关技术会面申请中土口译。请说明区县、工厂或工业区位置、设备主题及每日时段。如果技术团队住宿地与工作地点不同，请分别提供，便于评估交通安排。"
+    }
+  },
+  {
+    "id": "Q070",
+    "page": "gebze",
+    "publish": true,
+    "tr": {
+      "q": "Gebze’de fabrikaya gelebilecek Çince teknik tercüman var mı?",
+      "a": "Gebze’deki fabrikanız için talep oluşturabilirsiniz. Tesisin açık konumunu, varsa organize sanayi bölgesi ve giriş bilgilerini, makine türünü ve tarihleri paylaşın. Talep, yakındaki hizmet ağımız ve tercüman uygunluğu üzerinden değerlendirilir; günlük hizmet bedeli ile şehir içi veya şehir dışı ulaşım giderleri ayrı teyit edilir."
+    },
+    "zh-Hans": {
+      "q": "盖布泽的工厂可以咨询中文技术口译上门吗？",
+      "a": "可以提交盖布泽工厂需求。请提供准确地点、所在工业区及入场信息（如适用）、设备类型和日期。我们根据邻近服务网络及译员档期评估，并分别确认日费与市内或城际交通支出。"
+    }
+  },
+  {
+    "id": "Q063",
+    "page": "guangzhou",
+    "publish": true,
+    "tr": {
+      "q": "Guangzhou’da Türkçe bilen tercüman nereden bulunur?",
+      "a": "Guangzhou’da fuar, fabrika ziyareti veya önceden planlanmış görüşmeleriniz için Türkçe–Çince tercümanlık talebinizi bize iletebilirsiniz. Fuar adı veya fabrika konumu, tarihler ve konuşulacak ürün grubu uygunluğu değerlendirmemizi kolaylaştırır. Guangzhou sayfamızdan başlayabilir, programınızı WhatsApp veya e-posta üzerinden paylaşabilirsiniz."
+    },
+    "zh-Hans": {
+      "q": "在广州哪里可以咨询会土耳其语的译员？",
+      "a": "可向我们咨询广州展会、工厂参访或既定会面的中土口译。提供展会名称或工厂位置、日期和产品类别，有助于评估安排。您可通过广州服务页面了解范围，再以 WhatsApp 或邮件发送行程。"
+    }
+  },
+  {
+    "id": "Q065",
+    "page": "shanghai",
+    "publish": true,
+    "tr": {
+      "q": "Şanghay’da iş görüşmesine katılacak Türkçe bilen tercüman var mı?",
+      "a": "Shanghai’de önceden planladığınız firma veya fabrika görüşmesine katılacak Türkçe–Çince tercümanlık için bize ulaşabilirsiniz. Toplantı konusunu, çalışma noktasını ve tarihleri paylaşın; konuya ve programa uygunluğu birlikte değerlendirelim. Görüşmeye eşlik etmek, sizin adınıza ticari karar alma veya danışmanlık verme anlamına gelmez."
+    },
+    "zh-Hans": {
+      "q": "上海商务会面可以安排会土耳其语的译员吗？",
+      "a": "可为您在上海已安排的企业或工厂会面咨询中土口译。请说明议题、实际地点及日期，以便评估主题适配度和档期。译员参加会面不代表代您作商业决定或提供商业咨询。"
+    }
+  },
+  {
+    "id": "Q066",
+    "page": "beijing",
+    "publish": true,
+    "tr": {
+      "q": "Pekin’de günlük Türkçe Çince tercüman nasıl bulunur?",
+      "a": "Beijing’de günlük Türkçe–Çince tercümanlık için görüşme veya ziyaret programınızı paylaşabilirsiniz. Günlük çalışma noktalarını, saatleri ve konuşulacak konuyu belirttiğinizde uygunluk değerlendirmesi yapılabilir. Şehir içindeki ulaşım ile varsa merkez dışı çalışma noktalarını günlük tercümanlık ücretinden ayrı ele alıyoruz."
+    },
+    "zh-Hans": {
+      "q": "北京如何咨询按天安排的中土口译？",
+      "a": "可提供您在北京的会面或参访行程，咨询按天安排的中土口译。请说明每日地点、时段及沟通主题，以便评估档期。市内交通及市区外工作地点涉及的出行费用，与口译日费分开确认。"
+    }
+  },
+  {
+    "id": "Q064",
+    "page": "shenzhen",
+    "publish": true,
+    "tr": {
+      "q": "Shenzhen’de fabrika ziyareti için Türkçe Çince tercüman nasıl bulunur?",
+      "a": "Shenzhen’de fabrika ziyareti için talebinizi değerlendirebiliriz; şehirde her tarihte hazır tercüman bulunduğunu garanti etmiyoruz. Fabrikanın adını, harita konumunu, ziyaret tarihini ve teknik konuyu paylaşın. Tercümanın hangi noktadan geleceği, ulaşım ihtiyacı ve günlük çalışma koşulları uygunlukla birlikte teyit edilir."
+    },
+    "zh-Hans": {
+      "q": "深圳工厂参访如何咨询中土口译？",
+      "a": "可以提交深圳工厂参访需求，但我们不保证当地所有日期都有现成译员。请提供工厂名称、地图位置、日期及技术主题，并共同确认译员出发地、交通需要、档期及每日工作条件。"
+    }
+  },
+  {
+    "id": "Q018",
+    "page": "request_guide",
+    "publish": true,
+    "tr": {
+      "q": "Tercümanın hazırlık yapabilmesi için önceden hangi bilgileri ve teknik dokümanları göndermeliyim?",
+      "a": "Kısa iş özeti, gündem, makine marka ve modeli, ilgili teknik başlıklar, ürün grubu ve sık kullanılacak terimler hazırlık için yararlıdır. Yalnızca paylaşma yetkiniz olan ve iş için gerekli bölümleri gönderin; hassas dosyaları ilk form mesajına eklemeyin. Bu belgeler sözlü tercümanlık hazırlığı içindir; ayrıca yazılı belge çevirisi teslimi anlamına gelmez."
+    },
+    "zh-Hans": {
+      "q": "为便于译员准备，应提前提供哪些资料？",
+      "a": "可提供工作概述、议程、设备品牌及型号、技术主题、产品类别和常用术语。请只分享有权提供且与本次工作有关的部分，不要在首次表单消息中提交敏感文件。这些资料用于口译准备，不代表另行交付书面翻译。"
+    }
+  },
+  {
+    "id": "Q075",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çin’den aldığım makinenin kurulumu için nasıl bir tercüman seçmeliyim?",
+      "a": "Makinenizin türünü ve kurulumda konuşulacak işlemleri anlayabilecek bir tercümanlık hazırlığını esas alın. Yalnızca dil bilgisine değil, ilgili teknik deneyime, açıklama isteme yöntemine ve günlük programla uyuma da bakın. Bize makine bilgilerinizi gönderin; uygunluk değerlendirmesinde hangi teknik başlıkların önceden hazırlanması gerektiğini netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "从中国购买的设备安装时，应如何选择译员？",
+      "a": "应重视针对设备类型及安装沟通内容的准备，而不只是语言水平。还需考虑相关技术经验、澄清问题的方法及每日安排。可向我们提供设备资料，以便评估适配度及需要提前准备的技术主题。"
+    }
+  },
+  {
+    "id": "Q076",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çinli teknik ekip İngilizce bilmiyorsa kurulum sırasında nasıl iletişim kurabilirim?",
+      "a": "Çinli teknik ekip ile fabrikanızdaki ekip arasında ortak dil yeterli değilse Türkçe–Çince sözlü tercümanlık planlayabiliriz. Teknik ekip gelmeden önce makine konusunu, sorumlu kişileri ve günlük gündemi paylaşın. Sahada kısa ve anlaşılır açıklamalarla ilerlemek, belirsiz terimleri durup teyit etmek ve teknik kararları yetkili ekibe bırakmak çalışma düzeninin parçası olmalıdır."
+    },
+    "zh-Hans": {
+      "q": "中国技术团队不会英语，安装期间如何沟通？",
+      "a": "如果中国技术团队与土耳其工厂团队缺少足够的共同语言，可评估中土口译安排。团队抵达前，请提供设备主题、负责人及每日议程。现场应采用清晰、分段的说明，遇到模糊术语及时核实，并由授权技术人员作决策。"
+    }
+  },
+  {
+    "id": "Q077",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince makine tercümanının teknik bilgi sahibi olması gerekir mi?",
+      "a": "Teknik konuya hazırlık ve ilgili terimleri doğru kavrama, makine kurulumundaki tercümanlık için önemlidir. Ancak teknik terimleri anlamak, tercümanın mühendis veya yetkili montaj personeli olduğu anlamına gelmez. Bizimle talebinizi paylaşırken makine türünü ve işlem adımlarını belirtin; dil desteğinin kapsamını teknik uygulama sorumluluğundan ayrı netleştirelim."
+    },
+    "zh-Hans": {
+      "q": "设备口译员需要技术知识吗？",
+      "a": "理解相关术语并做好主题准备，对设备安装口译很重要。但理解技术术语不等于译员具备工程师或授权安装人员身份。请提供设备类型及沟通环节，将语言支持范围与技术实施责任明确区分。"
+    }
+  },
+  {
+    "id": "Q078",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "CNC makine kurulumu için Çince tercüman bulunabilir mi?",
+      "a": "CNC makine kurulumu için talebinizi değerlendirebiliriz. Makinenin türünü, marka ve modelini, kontrol sistemiyle ilgili konuşulacak konuları, tesis konumunu ve tarihleri paylaşın. İlgili deneyime sahip uygun tercüman bulunması ayrıca teyit edilir; her CNC markasında geçmiş iş deneyimi veya makinenin devreye alınması konusunda teknik yetki iddia etmiyoruz."
+    },
+    "zh-Hans": {
+      "q": "CNC 设备安装可以咨询中文口译吗？",
+      "a": "可提交 CNC 设备安装需求。请提供设备类型、品牌型号、需要讨论的控制系统内容、地点及日期。是否有相关经验且有档期的译员须具体确认；我们不声称具备所有 CNC 品牌的项目经历或设备调试技术授权。"
+    }
+  },
+  {
+    "id": "Q079",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Plastik enjeksiyon makinesi kurulumu için Çince tercüman nasıl bulunur?",
+      "a": "Plastik enjeksiyon makinesi için makine bilgilerini ve kurulumda konuşulacak başlıkları paylaşarak bize ulaşabilirsiniz. Kalıp, makine ayarlarının açıklanması veya operatör eğitimi gibi bölümleri talepte belirtin. Bunlar tercümanın hazırlık konularıdır; proses parametrelerini belirlemek veya üretim ayarlarını onaylamak tercümanın görevi değildir. Uygunluk, ilgili teknik deneyimle birlikte değerlendirilir."
+    },
+    "zh-Hans": {
+      "q": "注塑机安装如何咨询中土口译？",
+      "a": "可提供设备资料及安装沟通主题联系我们，并说明是否涉及模具、设置讲解或操作培训。这些信息用于口译准备；确定工艺参数或批准生产设置不属于译员职责。是否适合安排需结合相关技术经验确认。"
+    }
+  },
+  {
+    "id": "Q080",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Ambalaj ve paketleme makineleri için Çince teknik tercüman var mı?",
+      "a": "Ambalaj veya paketleme makinesi kurulumuna yönelik talebinizi, makine türü ve ürün grubu bilgisiyle değerlendirebiliriz. Tek bir makine mi, birbirine bağlı bir hat mı olduğunu; konuşulacak kontrol ve operatör eğitimi başlıklarını belirtin. Her marka veya hatta hazır uzmanlık iddiası yerine, işinize uygun tercümanı ve hazırlık gereksinimini önceden teyit edelim."
+    },
+    "zh-Hans": {
+      "q": "包装机械安装可以咨询中文技术口译吗？",
+      "a": "可以结合设备类型及产品类别评估需求。请说明是单机还是联动生产线，以及涉及的控制和操作培训主题。我们不承诺熟悉所有品牌或生产线，而是事先核实具体译员及准备要求。"
+    }
+  },
+  {
+    "id": "Q081",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Tekstil makinelerinin kurulumunda çalışabilecek Çince tercüman nasıl bulunur?",
+      "a": "Tekstil makinesinin türünü ve hangi kurulum veya kullanım açıklamalarının yapılacağını belirterek tercümanlık talep edebilirsiniz. Makine marka ve modeli, üretim süreci ve teknik ekibin gündemi hazırlık için önemlidir. Uygun tercüman, tarih ve çalışma koşulları birlikte teyit edilir; bütün tekstil makinelerinde doğrulanmış deneyim bulunduğunu söylemiyoruz."
+    },
+    "zh-Hans": {
+      "q": "纺织机械安装如何寻找适合的中文口译？",
+      "a": "请说明纺织设备类型及涉及的安装或使用讲解内容。品牌型号、生产流程和技术团队议程有助于准备。译员、日期及工作条件需一起确认；我们不会声称已核实所有纺织设备领域的经验。"
+    }
+  },
+  {
+    "id": "Q082",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Endüstriyel otomasyon ve robot sistemleri için Çince tercüman bulunabilir mi?",
+      "a": "Endüstriyel otomasyon veya robot sistemi için talebinizi öncelikle teknik kapsamıyla değerlendirelim. Sistem, kontrol birimleri, konuşulacak entegrasyon konuları ve saha programını paylaşın. İlgili tercüman uygunluğu ayrıca doğrulanır. Tercümanlık; programlama, güvenlik değerlendirmesi, sistemi çalıştırma veya teknik onay verme hizmeti olarak sunulmaz."
+    },
+    "zh-Hans": {
+      "q": "工业自动化和机器人系统可以咨询中文口译吗？",
+      "a": "请先提供系统、控制单元、集成沟通主题及现场安排，以便评估技术范围和译员适配度。口译服务不等于编程、安全评估、系统操作或技术验收服务。"
+    }
+  },
+  {
+    "id": "Q083",
+    "page": "machine_guide",
+    "publish": true,
+    "tr": {
+      "q": "Fabrika operatörlerine verilecek Çince eğitim için hangi tür tercüman gerekir?",
+      "a": "Kuruluma bağlı operatör eğitiminde hem teknik terimleri hem de soru-cevap akışını takip edebilecek sözlü tercümanlık gerekir. Eğitim içeriğini, katılımcı sayısını ve uygulama düzenini önceden paylaşın. Tercüman açıklamaları aktarır; eğitimi hazırlayan, makine kullanımına izin veren veya operatör yeterliliğini onaylayan kişi yerine geçmez."
+    },
+    "zh-Hans": {
+      "q": "中国团队给工厂操作人员培训，需要什么样的口译？",
+      "a": "与安装相关的操作培训，需要能跟进技术术语和问答交流的口译。请提前提供培训内容、人数及实操安排。译员传达讲解，不代替培训设计者、设备使用授权人或操作能力评估人员。"
+    }
+  },
+  {
+    "id": "Q047",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman nasıl bulunur?",
+      "a": "Önce tercümana hangi iş için ihtiyaç duyduğunuzu, nerede ve hangi tarihlerde çalışılacağını belirleyin. Ardından dil çifti, konuya uygun deneyim, günlük çalışma kapsamı ve toplam giderleri birlikte değerlendirin. Bizimle çalışmayı düşünüyorsanız hizmetinizi, şehrinizi ve kısa programınızı iletin; ihtiyacınızı dört hizmetimizden uygun olanıyla eşleştirelim."
+    },
+    "zh-Hans": {
+      "q": "如何寻找合适的中文与土耳其语口译？",
+      "a": "先明确需要口译的工作、地点及日期，再核对语言组合、相关经验、每天的服务范围及总支出。如考虑我们的服务，请提供服务类型、城市及简要行程，以便判断是否符合我们的四类服务范围。"
+    }
+  },
+  {
+    "id": "Q048",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince Türkçe tercüman nereden bulunur?",
+      "a": "Çince–Türkçe sözlü tercüman arıyorsanız bize WhatsApp, telefon veya e-posta üzerinden ulaşabilirsiniz. Türkiye’de makine kurulumu; Çin’de planlanmış görüşme, fabrika ve fuar ziyaretleri için talep değerlendiriyoruz. Sadece “tercüman lazım” demek yerine şehir, tarihler ve konuşulacak konuyu paylaşmanız uygunluğun değerlendirilmesini kolaylaştırır."
+    },
+    "zh-Hans": {
+      "q": "在哪里可以咨询中文与土耳其语口译？",
+      "a": "可通过 WhatsApp、电话或邮件联系我们。我们评估土耳其设备安装，以及中国既定会面、工厂参访和展会行程的口译需求。请提供城市、日期与沟通主题，而不只是说明“需要译员”，以便确认是否适合安排。"
+    }
+  },
+  {
+    "id": "Q052",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman seçerken Mandarin veya Kantonca ayrımı önemli mi?",
+      "a": "Evet; görüşeceğiniz kişilerin hangi dili veya lehçeyi kullanacağını önceden belirtmeniz gerekir. Mandarin ve Kantonca ihtiyacını aynı kabul edip her tercümanın ikisini de karşılayacağını varsaymayın. Talebinizde Türkçe ile birlikte ihtiyaç duyulan konuşma dilini yazın; bu kapsam ve tercümanın uygunluğu ayrıca teyit edilsin. Sitedeki “Çince” ifadesi bütün lehçelerde otomatik hizmet garantisi değildir."
+    },
+    "zh-Hans": {
+      "q": "选择译员时，普通话与粤语的区别重要吗？",
+      "a": "重要。请提前说明会面人员使用的语言或方言，不要默认每位译员都能同时满足普通话和粤语需求。咨询时写明土耳其语之外所需的口语种类，并单独确认译员是否适合。网站使用“中文”一词，不代表自动保证所有方言服务。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Mandarin/Kantonca hizmet envanteri kullanıcı tarafından verilmedi; iki dil/lehçenin de kesin sunulduğu söylenmez."
+    }
+  },
+  {
+    "id": "Q053",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince bilen biriyle profesyonel Çince tercüman arasında ne fark vardır?",
+      "a": "Biz tercüman seçimini yalnızca “Çince biliyor” bilgisine dayandırmıyoruz. İki dilde konuşmayı takip edebilme, eksik noktada açıklama isteme, terimleri hazırlama ve tarafların söylediklerini kendi yorumundan ayırabilme becerilerini de önemsiyoruz. Özellikle teknik işlerde kişinin ilgili konudaki deneyimini ve çalışma yöntemini görüşme öncesinde değerlendirmek gerekir."
+    },
+    "zh-Hans": {
+      "q": "会中文的人与专业中土口译员有什么区别？",
+      "a": "我们不只依据“会中文”选择译员，还关注双向跟进交流、遇到不清楚内容时提问、准备术语，以及区分原话和个人意见的能力。技术工作尤其应在开始前评估相关经验及沟通方法。"
+    }
+  },
+  {
+    "id": "Q054",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince teknik tercüman ile fuar tercümanı arasındaki fark nedir?",
+      "a": "Teknik tercümanlık talebinde makine, süreç ve teknik terimlere hazırlık öne çıkar. Fuar tercümanlığında ise planlanan ürün grupları, stant görüşmeleri ve ziyaret akışı önemlidir. Fuar görüşmesi de teknik ayrıntı içerebilir; bu nedenle iki hizmeti birbirinden tamamen kopuk görmüyoruz. Size uygun tercümanı hizmet adı kadar konuşulacak konuya göre değerlendirelim."
+    },
+    "zh-Hans": {
+      "q": "设备技术口译与展会口译有什么区别？",
+      "a": "技术口译更侧重设备、流程及技术术语准备；展会口译更侧重产品类别、展位会面和参观安排。展会洽谈也可能涉及技术细节，因此不能完全割裂两者。应根据实际沟通内容，而不只是服务名称评估译员。"
+    }
+  },
+  {
+    "id": "Q101",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Güvenilir Çince tercüman nasıl seçilir?",
+      "a": "Güvenilirlik değerlendirmesini yalnızca “çok tecrübeli” veya “çok sayıda tercüman” gibi genel ifadelere dayandırmayın. İşinize uygun deneyimi, iletişim biçimini, taraflarla varsa bağlantıyı ve ücretin kapsamını sorgulayın. Bizimle görüşürken de aynı soruları sorabilirsiniz; özellikle hizmet sınırları, günlük program ve giderlerin açıkça netleşmesini önemsiyoruz."
+    },
+    "zh-Hans": {
+      "q": "如何选择可靠的中土口译？",
+      "a": "不要仅依据“经验丰富”或“译员很多”等笼统表述判断。应核实相关经验、沟通方式、与有关企业的联系及费用范围。向我们咨询时也欢迎提出同样的问题，尤其应明确服务边界、每日行程和支出。"
+    }
+  },
+  {
+    "id": "Q102",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercüman tutmadan önce hangi bilgileri doğrulamalıyım?",
+      "a": "Dil çifti ve varsa lehçe ihtiyacını, çalışma tarihlerini, gerçek konumu, konuya uygun deneyimi ve günlük saatleri doğrulayın. Ardından ulaşım, konaklama, yeme-içme, ödeme ve program değişikliği koşullarını netleştirin. Teklif sormanızın rezervasyon olmadığını unutmayın; kimle ve hangi kapsamda çalışacağınızı açık teyitle kesinleştirin."
+    },
+    "zh-Hans": {
+      "q": "聘请中土口译前，应核实哪些信息？",
+      "a": "应确认语言组合及方言要求、工作日期、实际地点、相关经验和每日时段，再明确交通、住宿、餐饮、付款及改期条件。询价不等于预约，应收到关于服务人员和工作范围的明确确认。"
+    }
+  },
+  {
+    "id": "Q103",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince tercümanın deneyimini ve referanslarını nasıl kontrol edebilirim?",
+      "a": "Genel bir “teknik tercüman” tanımı yerine, sizin ekipmanınız veya görüşme konunuzla benzer deneyimi sorun. Paylaşılabilecek ve izinli bir referans varsa bunun konuyla ilgisini değerlendirin; kişisel veya ticari gizlilik içeren bilgilerin izinsiz paylaşılmasını beklemeyin. Biz de doğrulanmamış referans, müşteri logosu veya geçmiş proje sayısı üzerinden güven iddiası üretmiyoruz."
+    },
+    "zh-Hans": {
+      "q": "如何核实译员的经验和客户参考信息？",
+      "a": "应询问与您的设备或主题相近的具体经验，而不是只看“技术译员”标签。如有获准分享的参考信息，可评估其相关性；不要要求未经授权披露个人或商业机密。我们也不以未经核实的客户标志、推荐或项目数量制造信任。"
+    }
+  },
+  {
+    "id": "Q104",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Serbest çalışan bir Çince tercüman mı, tercümanlık firması mı tercih etmeliyim?",
+      "a": "Tek başına serbest çalışma veya firma üzerinden hizmet alma modeli kaliteyi belirlemez. Size kimin tercümanlık yapacağını, işi kimin planladığını, ücret ve değişiklik koşullarını kimin teyit ettiğini değerlendirin. Bizimle çalışmada da yalnızca marka adına değil, sizin programınız için somutlaştırılmış tercümanlık kapsamına ve iletişim düzenine bakmanızı öneriyoruz."
+    },
+    "zh-Hans": {
+      "q": "应选择自由译员，还是口译服务机构？",
+      "a": "服务形式本身不能决定质量。应确认实际由谁口译、谁协调安排，以及谁确认费用和变更条件。选择我们的服务时，也建议关注为您行程明确的服务范围和沟通机制，而不只是品牌名称。"
+    }
+  },
+  {
+    "id": "Q105",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Türk tercüman mı, Türkçe bilen Çinli tercüman mı tercih etmeliyim?",
+      "a": "Milliyet tek başına tercümanın sizin işinize uygunluğunu göstermez. Türkçe ve Çinceyi karşılıklı kullanabilmesi, ilgili konuyu takip etmesi, terminoloji hazırlığı ve iletişim tarzı daha belirleyici değerlendirme başlıklarıdır. Tercihiniz varsa talebinizde belirtin; ancak görevlendirmeyi yalnızca milliyet üzerinden değil, programınızın gerçek ihtiyaçlarıyla birlikte ele alalım."
+    },
+    "zh-Hans": {
+      "q": "应该选择土耳其籍译员，还是会土耳其语的中国籍译员？",
+      "a": "国籍本身不能说明是否适合您的工作。更应关注中土双向沟通能力、主题理解、术语准备和交流方式。如有人员偏好可说明，但应结合实际行程需求评估，而不是只根据国籍决定。"
+    }
+  },
+  {
+    "id": "Q106",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Tedarikçinin önerdiği tercümanla çalışmak mı, kendi tercümanımı bulmak mı daha doğru?",
+      "a": "Tedarikçinin önerdiği tercümanı da kendi bulduğunuz tercümanı da aynı sorularla değerlendirin: Dil ve konuya uygunluğu nedir, kimin programına göre çalışacak ve taraflarla nasıl bir ilişkisi var? Bir önerinin kendisini otomatik risk veya güvence saymıyoruz. Bağımsızlık beklentinizi ve varsa ilişkiyi önceden açıkça konuşmanızı öneriyoruz."
+    },
+    "zh-Hans": {
+      "q": "供应商推荐的译员与自己寻找的译员，哪个更合适？",
+      "a": "两种方式都应采用相同标准：语言和主题是否合适、按谁的行程工作、与双方有何关系。推荐来源本身既不是自动风险，也不是可靠保证。建议提前明确独立性要求和可能的联系。"
+    }
+  },
+  {
+    "id": "Q107",
+    "page": "selection_guide",
+    "publish": false,
+    "tr": {
+      "q": "Çince tercümanın tedarikçiden komisyon alıp almadığını nasıl öğrenebilirim?",
+      "a": "Görüşeceğiniz firmanın adını belirtip doğrudan komisyon, yönlendirme bedeli veya başka bir ticari ilişki bulunup bulunmadığını sorun. Bizden tercüman talep ederken de bu beklentinizi yazılı olarak iletebilirsiniz. İlgili tercüman için teyit alınmadan tüm ağımız adına “hiç kimse komisyon almaz” şeklinde genel bir iddiada bulunmuyoruz."
+    },
+    "zh-Hans": {
+      "q": "如何了解译员是否从供应商收取佣金？",
+      "a": "请明确对方企业名称，直接询问是否涉及佣金、转介费或其他商业关系。向我们申请译员时，也可书面说明这项要求。在核实具体译员前，我们不会笼统声称整个网络中任何人都不收取佣金。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Mevcut komisyon/çıkar çatışması politikası verilmedi. İlgili kişi ve firma düzeyinde beyan ve kontrol süreci onaylanmalıdır; bağımsızlık garantisi eklenmez."
+    }
+  },
+  {
+    "id": "Q108",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Google Çeviri, yüz yüze ticari görüşmede Çince tercümanın yerini tutar mı?",
+      "a": "Basit ifadeler için bir çeviri uygulamasından destek alabilirsiniz; ancak bunu bütün yüz yüze ticari görüşmeler için otomatik olarak yeterli saymıyoruz. Seçiminizi teknik ayrıntı, görüşme akışı, yanlış anlaşılmanın sonucu ve gizlilik ihtiyacınıza göre yapın. İnsan tercüman kullanılması da sıfır hata garantisi değildir; kritik noktaları konuşma sırasında karşılıklı teyit etmek gerekir."
+    },
+    "zh-Hans": {
+      "q": "Google 翻译可以替代面对面商务会谈中的中土口译吗？",
+      "a": "简单表达可以借助翻译应用，但不能自动认定它适合所有面对面商务会谈。应根据技术细节、交流节奏、误解后果及保密需求选择。使用人工口译同样不代表零错误，关键内容仍应当场由双方核实。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli uygulama sürümüne ilişkin test, doğruluk oranı veya güncel yetenek karşılaştırması yapılmadı. Metin koşullu seçim yaklaşımıdır."
+    }
+  },
+  {
+    "id": "Q109",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Yapay zekâ çeviri cihazları makine kurulumu ve fabrika görüşmeleri için yeterli mi?",
+      "a": "Bir çeviri cihazını veya yapay zekâ uygulamasını, işinizdeki gerçek konuşmalarla değerlendirmeden makine kurulumu ve fabrika görüşmelerinin tamamı için yeterli kabul etmiyoruz. Teknik terimler, sayılar, birimler, ortam koşulları ve gizli bilginin işlenmesi ayrıca dikkate alınmalıdır. Hangi araç kullanılırsa kullanılsın, teknik kararları yetkili ekip vermeli; belirsiz açıklamalar teyit edilmeden uygulamaya geçilmemelidir."
+    },
+    "zh-Hans": {
+      "q": "AI 翻译设备足以应对设备安装和工厂会面吗？",
+      "a": "未用实际工作交流进行评估前，不宜认定某个设备或 AI 应用能够满足整个安装或参访过程。需要考虑术语、数字、单位、现场条件及保密信息处理。无论使用何种工具，技术决策均应由授权团队作出，说明存在歧义时应先核实再操作。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Cihaz önerisi, ölçülmüş hata oranı veya AI sistemlerinin tümü hakkında deneysel iddia yoktur. Genel iş akışı değerlendirmesidir."
+    }
+  },
+  {
+    "id": "Q110",
+    "page": "selection_guide",
+    "publish": true,
+    "tr": {
+      "q": "Çince bilmeden tercümanın söylediklerimi doğru aktardığını nasıl anlayabilirim?",
+      "a": "Tek bir yöntemle bütün çevirinin doğruluğunu garanti etmek mümkün değildir. Görüşmeleri kısa bölümler hâlinde yürütmenizi; önemli sayı, birim, miktar ve tarihleri tekrar ettirmenizi; karşı taraftan anladığını kendi sözleriyle açıklamasını istemenizi öneriyoruz. Anlaşılmayan terimlerde tercümanın durup açıklama istemesi de önemlidir. Teknik uygulama ve ticari kararları bu karşılıklı teyitlerden ayrı olarak yetkili kişiler onaylamalıdır."
+    },
+    "zh-Hans": {
+      "q": "我不懂中文，如何判断译员是否准确传达了我的意思？",
+      "a": "没有单一方法能保证所有口译都完全准确。建议分段交流，重复核对重要数字、单位、数量和日期，并请对方用自己的话说明理解内容。遇到不清楚的术语，译员应提出澄清。技术操作及商业决定仍须由授权人员另行确认。"
+    }
+  },
+  {
+    "id": "AZ001",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Hansı işlər üçün Çin dili tərcüməçisi ilə işləyə bilərəm?",
+      "a": "Çində əvvəlcədən planlaşdırdığınız görüşlər, zavod və sərgi ziyarətləri, həmçinin Türkiyədə avadanlıq quraşdırılması zamanı şifahi ünsiyyət üçün müraciət edə bilərsiniz. Əsas iş dillərimiz Çin dili və türk dilidir. İşin mövzusunu, şəhəri, tarixləri və sizin üçün uyğun ünsiyyət dilini əvvəlcədən dəqiqləşdiririk."
+    }
+  },
+  {
+    "id": "AZ002",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Çində azərbaycanca danışan tərcüməçi tapa bilərsinizmi?",
+      "a": "Belə bir tələbi ayrıca qiymətləndirməliyik. Əsas xidmətimiz Çin dili ilə türk dili arasında şifahi tərcümədir; bütün tərcüməçilərin azərbaycanca danışdığını bildirmirik. Azərbaycan dilində şifahi ünsiyyət sizin üçün mütləq şərtdirsə, bunu müraciətdə seçin. Namizədin həmin dil üzrə uyğunluğu və tarixlər yoxlanmadan sifarişi təsdiqləmirik."
+    }
+  },
+  {
+    "id": "AZ003",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Türk dili üzərindən ünsiyyət necə qurulur?",
+      "a": "Siz görüşdə türk dilində danışırsınız, tərcüməçi dediklərinizi Çin dilinə, qarşı tərəfin cavablarını isə türk dilinə çevirir. Bu qaydanın sizin üçün uyğun olduğunu əvvəlcədən dəqiqləşdiririk. Yalnız yazılı mətni anlamaq kifayət sayılmır: görüşün mövzusunu, sualları və cavabları türk dilində rahat izləyə bilməyiniz vacibdir."
+    }
+  },
+  {
+    "id": "AZ004",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Türk dilində rahat danışa bilmirəmsə, nə etməliyəm?",
+      "a": "Formada “Azərbaycan dilində şifahi ünsiyyət tələb edirəm” seçimini edin və ehtiyacınızı izah edin. Sizi avtomatik olaraq türk dilində işləməyə razı saymırıq. Azərbaycan dili üzrə uyğun tərcüməçi təsdiqlənməyibsə, bu tələbin qarşılanacağına söz vermirik; uyğunluğu əvvəlcə dəqiqləşdirməliyik."
+    }
+  },
+  {
+    "id": "AZ005",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Görüşdən əvvəl tərcüməçi ilə dil uyğunluğunu yoxlaya bilərəm?",
+      "a": "Bunu müraciətinizdə qeyd edin. Namizəd müəyyənləşdikdən sonra mümkün olduqda qısa tanışlıq və nümunə suallar üzərindən ünsiyyətin yoxlanmasını planlaşdırırıq. Görüşdə istifadə edəcəyiniz bir neçə texniki və ya məhsulla bağlı sualı əvvəlcədən paylaşmağınız faydalıdır. Belə bir danışıq bütün texniki mövzular üzrə təcrübə və ya mükəmməl tərcümə zəmanəti deyil."
+    }
+  },
+  {
+    "id": "AZ006",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Çinin hansı şəhərlərində tərcüməçi üçün müraciət edə bilərəm?",
+      "a": "Guangzhou, Şanxay (Shanghai) və Pekin (Beijing) üzrə tərcüməçi şəbəkəmiz var. Yaxın şəhərlər və bir neçə şəhəri əhatə edən səfərlər üçün məsafəni, tarixləri və tərcüməçinin uyğunluğunu ayrıca qiymətləndiririk. Ziyarət edəcəyiniz müəssisənin yeri şəhər mərkəzindən kənardadırsa, bunu da bildirin. Şəhərin adını görmək həmin tarixdə mütləq tərcüməçi ayrıldığı demək deyil."
+    }
+  },
+  {
+    "id": "AZ007",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Guangzhou və Canton Fair üçün tərcüməçi ilə işləmək mümkündürmü?",
+      "a": "Canton Fair və Guangzhou səfəriniz üçün şifahi tərcümə tələbinizi qiymətləndiririk. Sərginin hansı mərhələsində, hansı günlərdə və hansı məhsul qrupları üzrə görüşəcəyinizi bildirin. Tərcüməçinin uyğunluğu bu proqrama görə dəqiqləşdirilir. Xidmət stend görüşmələrində dil dəstəyidir; sərgiyə giriş, bilet və səfərin təşkili daxil deyil."
+    }
+  },
+  {
+    "id": "AZ008",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Çində zavod ziyarəti üçün tərcüməçi hansı görüşlərə qatıla bilər?",
+      "a": "Sizin müəyyən etdiyiniz zavodda istehsal xəttinin izahı, məhsul xüsusiyyətləri, nümunə, minimum sifariş miqdarı, qiymət və təhvil müddəti barədə söhbətlərdə şifahi tərcümə edə bilər. Hazırlıq üçün zavodun yerini, məhsul qrupunu və əsas suallarınızı əvvəlcədən paylaşın. Yeni zavod və ya məhsul axtarışı bu xidmətə daxil deyil."
+    }
+  },
+  {
+    "id": "AZ009",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçi zavodu yoxlayır və məhsulun keyfiyyətinə zəmanət verirmi?",
+      "a": "Xeyr. Zavod ziyarətində xidmətimiz şifahi ünsiyyətdir; bu, audit, məhsul sınağı və ya istehsalçının etibarlılığına zəmanət deyil. Tərcüməçi suallarınızı və qarşı tərəfin cavablarını çatdırır. Satınalma, qiymət razılaşması və ticarət qərarları sizə aiddir."
+    }
+  },
+  {
+    "id": "AZ010",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Eyni gün bir neçə zavodu və ya fərqli şəhərləri ziyarət edə bilərəm?",
+      "a": "Zavodların yerlərini, görüş saatlarını və təxmini yol müddətlərini bildirin. Proqramın bir gündə mümkün olub-olmadığını və eyni tərcüməçinin iştirakını birlikdə dəqiqləşdirək. Müxtəlif şəhərlər arasındakı gediş-gəlişi görüş vaxtı kimi qəbul etməmək lazımdır; əlavə gün ehtiyacı yarana bilər. Şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərcləri ayrıca hesablanır."
+    }
+  },
+  {
+    "id": "AZ011",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Çindən gələn mühəndislər üçün tərcüməçi təmin edirsinizmi?",
+      "a": "Türkiyədə avadanlıq quraşdırılması və istismara verilməsi zamanı Çinli texniki heyətlə müəssisə əməkdaşları arasında şifahi ünsiyyət üçün müraciət edə bilərsiniz. Avadanlığın növünü, mərhələni, iş yerini və tarixləri bildirin. Əsas iş dilləri Çin dili və türk dilidir; sizin bu dildə ünsiyyətinizin uyğunluğu da əvvəlcədən dəqiqləşdirilir."
+    }
+  },
+  {
+    "id": "AZ012",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçi avadanlığı quraşdırır, yoxsa deyilənləri tərcümə edir?",
+      "a": "Tərcüməçi texniki heyətin izahlarını və müəssisə əməkdaşlarının suallarını qarşılıqlı çatdırır. Razılaşdırılmış proqram çərçivəsində sınaq, istismara vermə və operatorlara təlimatların izahında da şifahi tərcümə nəzərdə tutula bilər. Avadanlığı tərcüməçi quraşdırmır; texniki qərar, montaj və təhlükəsizlik üzrə mühəndislik məsuliyyəti aidiyyəti mütəxəssislərdə qalır."
+    }
+  },
+  {
+    "id": "AZ013",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçinin bizim avadanlıq üzrə təcrübəsi olacaqmı?",
+      "a": "Avadanlığın növünü və işin mərhələsini öyrəndikdən sonra namizədin uyğunluğunu qiymətləndiririk. Bütün tərcüməçilərin hər texniki sahədə eyni təcrübəyə malik olduğunu demirik. Mövcud texniki materialları və əsas terminləri əvvəlcədən paylaşın; konkret namizədin təcrübəsi və hazırlıq ehtiyacı barədə dəqiqləşdirmə aparaq."
+    }
+  },
+  {
+    "id": "AZ014",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "İstanbul və Türkiyənin digər şəhərləri üçün müraciət edə bilərəm?",
+      "a": "İstanbul, Tekirdağ, Düzce, Ankara, Kayseri və Gaziantepdə, həmçinin yaxın bölgələrdəki işlər üçün müraciət edə bilərsiniz. Fabrikanın dəqiq yerini və tarixləri bildirin; uyğunluğu həmin məlumatlarla yoxlayırıq. Şirkətiniz İstanbulda, işin görüləcəyi zavod isə Gebzedədirsə, proqramı faktiki iş yerinə görə planlaşdırırıq. Bu şəhərlərin hər birində ofisimiz olduğu iddia edilmir."
+    }
+  },
+  {
+    "id": "AZ015",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Azərbaycandakı müəssisəmizdə quraşdırma üçün də tərcüməçi istəyə bilərəm?",
+      "a": "İş yerini və tarixləri birbaşa mesajınızda bildirin. Hazırda təsdiqlənmiş xidmət coğrafiyamız Türkiyə və Çindir. Azərbaycanda görüləcək iş ayrıca qiymətləndirilməlidir; həmin ölkədə yerli ofis, hazır heyət və ya təmin edilmiş xidmət vədi vermirik. Azərbaycan dilində saytımızın olması xidmətin Azərbaycanda avtomatik mövcud olduğu demək deyil."
+    }
+  },
+  {
+    "id": "AZ016",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Çində günlük tərcüməçi qiyməti necə müəyyən edilir?",
+      "a": "İşin şəhəri, tarixləri, mövzusu, tələb olunan hazırlıq və tərcüməçinin uyğunluğu qiymət təklifində nəzərə alınır. Ona görə bütün proqramlar üçün eyni sabit məbləğ göstərmirik. Xidmət haqqı gün hesabı ilə verilir; ayrıca xərcləri də təklifdə dəqiqləşdiririk. Səfərinizin proqramını paylaşın ki, həmin işə uyğun qiymət barədə danışaq."
+    }
+  },
+  {
+    "id": "AZ017",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçinin yol, qalma və yemək-içmək xərcləri qiymətə daxildirmi?",
+      "a": "Xeyr. Şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərcləri günlük tərcüməçi haqqından ayrıca hesablanır. Bu xərclərin hansı qaydada qarşılanacağını və proqramla bağlı nəqliyyat ehtiyacını sifariş təsdiqlənməzdən əvvəl dəqiqləşdiririk."
+    }
+  },
+  {
+    "id": "AZ018",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçini bir gün və ya yarım gün üçün tuta bilərəm?",
+      "a": "Uyğunluq təsdiqləndikdə yalnız bir gün üçün də işləmək mümkündür. Xidmətimizi günlük əsasda planlaşdırırıq; yarım günlük və saatlıq tarif təqdim etmirik. Görüşünüz qısa olsa belə, həmin günün çalışma şərtlərini əvvəlcədən razılaşdırmaq lazımdır."
+    }
+  },
+  {
+    "id": "AZ019",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Günlük xidmət neçə saatı əhatə edir və əlavə vaxt necə hesablanır?",
+      "a": "İşin başlanma və bitmə saatlarını, fasilələri və vaxt uzandıqda tətbiq olunacaq şərtləri təklif zamanı dəqiqləşdiririk. Bütün işlər üçün eyni saat sayı və ya sabit əlavə vaxt haqqı göstərmirik. Planlaşdırdığınız görüş və quraşdırma saatlarını əvvəlcədən bildirin."
+    }
+  },
+  {
+    "id": "AZ020",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Bir neçə gün, həftəsonu və ya uzanan proqram üçün qiymət dəyişirmi?",
+      "a": "Bütün günləri, həftəsonuna və bayrama düşən tarixləri əvvəlcədən bildirin. Proqramın günlük qiymətini və ayrıca xərclərini bütöv şəkildə dəqiqləşdiririk; avtomatik endirim və ya sabit bayram əlavəsi vəd etmirik. İş uzanarsa, əlavə günlər üçün tərcüməçinin uyğunluğu və yeni şərtlər yenidən təsdiqlənməlidir."
+    }
+  },
+  {
+    "id": "AZ021",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Ödəniş hansı valyutada və nə vaxt edilir?",
+      "a": "Ödəniş valyutasını, üsulunu və vaxtını konkret təklif üzrə əvvəlcədən razılaşdırırıq. Saytın Azərbaycan dilində olması qiymətin mütləq manatla verildiyi və ya müəyyən ödəniş üsulunun qəbul edildiyi demək deyil. Şirkətinizin ödənişlə bağlı tələbləri varsa, müraciətinizdə qeyd edin."
+    }
+  },
+  {
+    "id": "AZ022",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Nə qədər əvvəl müraciət etməliyəm? Təcili tərcüməçi tapa bilərəm?",
+      "a": "Tarixləriniz və proqramınız müəyyənləşən kimi yazmağınız daha məqsədəuyğundur. Təcili və ya ertəsi gün üçün müraciətdə şəhəri, saatı və mövzunu bir mesajda paylaşın. Uyğunluğu yoxlamadan tərcüməçi ayırdığımızı və ya mütləq həmin gün xidmət göstərəcəyimizi bildirmirik."
+    }
+  },
+  {
+    "id": "AZ023",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Sifariş nə vaxt təsdiqlənmiş sayılır?",
+      "a": "Əvvəlcə proqramı, iş dilini, tərcüməçinin uyğunluğunu, günlük şərtləri və ayrıca xərcləri dəqiqləşdiririk. Sonra sifarişin təsdiqi üçün tamamlanmalı addımları sizinlə razılaşdırırıq. Formanı doldurmaq, WhatsApp-ı açmaq və ya ilkin mesaj göndərmək öz-özlüyündə təsdiqlənmiş sifariş deyil."
+    }
+  },
+  {
+    "id": "AZ024",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Uçuşum və ya görüş tarixim dəyişərsə, nə etməliyəm?",
+      "a": "Dəyişiklik məlum olan kimi bizimlə əlaqə saxlayın. Yeni tarixlərdə eyni tərcüməçinin uyğunluğu yenidən yoxlanmalıdır. Tarix dəyişikliyi, ləğv və yaranmış xərclərlə bağlı şərtlər əvvəlcədən razılaşdırılmış təklifə əsasən dəqiqləşdirilir; bütün sifarişlər üçün pulsuz dəyişiklik və ya sabit geriödəmə vədi vermirik."
+    }
+  },
+  {
+    "id": "AZ025",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Bir tərcüməçi bütün komandamıza və fərqli stendlərdəki görüşlərə çatarmı?",
+      "a": "Komandanız eyni görüşdə birlikdə iştirak edirsə, bir tərcüməçi ilə işləmək proqramınıza uyğun ola bilər. Müxtəlif stendlərdə və ya ayrı məkanlarda eyni vaxtda görüşlər varsa, bir nəfər onların hamısında iştirak edə bilməz. Komanda sayını və paralel görüşləri əvvəlcədən bildirin; lazım olan tərcüməçi sayını dəqiqləşdirək."
+    }
+  },
+  {
+    "id": "AZ026",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçinin sərgiyə giriş kartını kim təşkil edir?",
+      "a": "Hər sərginin iştirak və giriş qaydası fərqli ola bilər. Sərginin adını və tarixlərini bildirdikdən sonra tərcüməçinin girişinə dair tələbləri təşkilatçının qüvvədə olan qaydalarına əsasən dəqiqləşdirmək lazımdır. Girişin əvvəlcədən hazır, pulsuz və ya günlük xidmət haqqına daxil olduğunu qəbul etməyin. İştirakın və girişin necə təşkil olunacağı görüşdən əvvəl aydınlaşdırılır."
+    }
+  },
+  {
+    "id": "AZ027",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçiyə əvvəlcədən hansı məlumatları göndərim?",
+      "a": "Görüşün məqsədini, iş yerini, tarixləri, iştirakçı sayını, məhsul və ya avadanlığın növünü, əsas sual və terminləri paylaşın. Mövcud texniki sənədlər hazırlıq üçün faydalı ola bilər; bu, onların yazılı tərcüməsini sifariş etdiyiniz mənasına gəlmir. Məxfi materialların göndərilməsindən əvvəl paylaşım qaydasını ayrıca dəqiqləşdirin."
+    }
+  },
+  {
+    "id": "AZ028",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Tərcüməçi ilə oteldə, sərgidə, yoxsa zavodda görüşəcəyəm?",
+      "a": "Görüş yerini proqramınıza uyğun əvvəlcədən razılaşdırırıq. Otel, sərgi salonu və zavod bir-birindən uzaqdırsa, ünvanları ayrıca bildirin. Tərcüməçinin sizinlə oteldə görüşməsi otel rezervasiyası, transfer və ya nəqliyyat təşkilatı xidməti göstərdiyimiz demək deyil. Nəqliyyat xərcləri ayrıca hesablanır."
+    }
+  },
+  {
+    "id": "AZ029",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Qiymət təklifi almaq üçün sizə necə yaza bilərəm?",
+      "a": "Əlaqə formasında xidməti, ölkəni, şəhəri, tarixləri və dil tələbinizi seçin, ehtiyacınızı qısaca yazın. Hazırlanan mətni nəzərdən keçirərək WhatsApp-a keçə, e-poçtla paylaşa və ya kopyalaya bilərsiniz. Formadan istifadə etmək istəmirsinizsə, birbaşa WhatsApp və e-poçt məlumatlarımız da görünür. Mesajı son mərhələdə özünüz göndərirsiniz."
+    }
+  },
+  {
+    "id": "AZ030",
+    "page": "az-faq",
+    "publish": true,
+    "az": {
+      "q": "Müraciətimi Azərbaycan dilində yaza bilərəm?",
+      "a": "Bəli, müraciətinizi Azərbaycan dilində yaza bilərsiniz; bu bölmədəki forma və hazır mesajlar da həmin dildədir. Bu, görüşdə işləyəcək tərcüməçinin mütləq azərbaycanca danışacağına dair təsdiq deyil. Şifahi ünsiyyət üçün türk dilinin sizin üçün uyğun olub-olmadığını və ya Azərbaycan dilində danışan tərcüməçi tələb etdiyinizi ayrıca qeyd edin."
+    }
+  }
+]

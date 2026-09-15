@@ -1,0 +1,16 @@
+{
+  "name": "cince-tercuman",
+  "version": "1.3.0",
+  "private": true,
+  "type": "module",
+  "description": "cince-tercuman.com — static trilingual (TR / zh-Hans / AZ) interpreter site. Dependency-free static generator per the single-file site plan v1.3.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "npm run build && npm run test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "main": {
+    "tr": [
+      { "label": "Hizmetler", "href": "/cince-tercuman/" },
+      { "label": "Hizmet bölgeleri", "href": "/hizmet-bolgeleri/" },
+      { "label": "Günlük ücret", "href": "/cince-tercuman-fiyatlari/" },
+      { "label": "Hakkımızda", "href": "/hakkimizda/" },
+      { "label": "İletişim", "href": "/iletisim/" }
+    ],
+    "zh-Hans": [
+      { "label": "口译服务", "href": "/zh/interpreting-services/" },
+      { "label": "服务地区", "href": "/zh/service-areas/" },
+      { "label": "日费说明", "href": "/zh/daily-rates/" },
+      { "label": "关于我们", "href": "/zh/about/" },
+      { "label": "联系我们", "href": "/zh/contact/" }
+    ],
+    "az": [
+      { "label": "Ana səhifə", "href": "/az/" },
+      { "label": "Suallar və cavablar", "href": "/az/suallar/" },
+      { "label": "Əlaqə", "href": "/az/elaqe/" }
+    ]
+  },
+  "servicesSub": {
+    "tr": [
+      { "label": "Çin'de tercüman", "href": "/cinde-tercuman/" },
+      { "label": "Makine kurulumu tercümanı", "href": "/makine-kurulumu-cince-tercuman/" },
+      { "label": "Fabrika ziyareti tercümanı", "href": "/cinde-fabrika-ziyareti-tercuman/" },
+      { "label": "Fuar tercümanı", "href": "/cinde-fuar-tercumani/" }
+    ],
+    "zh-Hans": [
+      { "label": "中国现场口译", "href": "/zh/interpreter-in-china/" },
+      { "label": "设备安装口译", "href": "/zh/machine-installation-interpreter/" },
+      { "label": "工厂参访口译", "href": "/zh/factory-visit-interpreter/" },
+      { "label": "展会口译", "href": "/zh/trade-fair-interpreter/" }
+    ]
+  },
+  "footerLinks": {
+    "tr": [
+      { "label": "Dört hizmet", "href": "/cince-tercuman/" },
+      { "label": "Hizmet bölgeleri", "href": "/hizmet-bolgeleri/" },
+      { "label": "Günlük ücret", "href": "/cince-tercuman-fiyatlari/" },
+      { "label": "Hazırlık rehberleri", "href": "/hazirlik-rehberleri/" },
+      { "label": "Sık sorulan sorular", "href": "/sik-sorulan-sorular/" },
+      { "label": "Hakkımızda", "href": "/hakkimizda/" },
+      { "label": "İletişim", "href": "/iletisim/" }
+    ],
+    "zh-Hans": [
+      { "label": "四项服务", "href": "/zh/interpreting-services/" },
+      { "label": "服务地区", "href": "/zh/service-areas/" },
+      { "label": "日费说明", "href": "/zh/daily-rates/" },
+      { "label": "准备指南", "href": "/zh/preparation-guides/" },
+      { "label": "常见问题", "href": "/zh/faq/" },
+      { "label": "关于我们", "href": "/zh/about/" },
+      { "label": "联系我们", "href": "/zh/contact/" }
+    ],
+    "az": [
+      { "label": "Xidmətlər", "href": "/az/" },
+      { "label": "Suallar", "href": "/az/suallar/" },
+      { "label": "Əlaqə", "href": "/az/elaqe/" }
+    ]
+  }
+}

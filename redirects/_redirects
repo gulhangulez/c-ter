@@ -1,0 +1,15 @@
+# Netlify / Cloudflare Pages redirect rules.
+# Real HTTP codes only. Add APPROVED rows from migration/mapping.csv below.
+# Never redirect removed pages to "/" en masse (soft-404 risk, plan §21.1).
+#
+# Trailing-slash canonical (directory-style URLs used by this build):
+#   /cince-tercuman     /cince-tercuman/    301
+#
+# Example of a genuine moved page (only after inventory approval):
+#   /eski-hakkimizda    /hakkimizda/        301
+#
+# Deliberately removed service (written translation, tours, etc.): serve 410.
+#   /yazili-ceviri      410
+#
+# 404 fallback (real 404 status):
+/*    /404.html    404

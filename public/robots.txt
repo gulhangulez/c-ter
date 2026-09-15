@@ -1,0 +1,7 @@
+# cince-tercuman.com — robots
+# Search crawling is allowed for published pages. Draft/owner-review content
+# is never emitted to HTML, so there is nothing to disallow for it here.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cince-tercuman.com/sitemap.xml
