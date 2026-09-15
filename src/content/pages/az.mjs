@@ -38,10 +38,10 @@ const landing = {
           heading: "Hansı iş üçün tərcüməçi axtarırsınız?",
           columns: 4,
           items: [
-            { title: "Çində şifahi tərcümə", text: "Əvvəlcədən planlaşdırdığınız görüş və səfər proqramında Çin dilində ünsiyyət üçün tərcüməçi dəstəyi. Şəhəri, görüşün mövzusunu və iş dilini əvvəlcədən dəqiqləşdiririk." },
-            { title: "Avadanlıq quraşdırılması zamanı tərcümə", text: "Çinli mühəndislərlə müəssisənizin əməkdaşları arasında quraşdırma, sınaq və istismara vermə mərhələlərində şifahi ünsiyyət. Tərcüməçi texniki heyətin yerini tutmur." },
-            { title: "Çində zavod ziyarəti", text: "Seçdiyiniz zavodda istehsal prosesi, məhsul və sifariş şərtləri barədə görüşlərə tərcüməçi ilə qatılın. Ziyarətin məqsədini və görüşəcəyiniz müəssisəni əvvəlcədən paylaşın." },
-            { title: "Çində sərgi ziyarəti", text: "Canton Fair və Çindəki digər sərgilərdə stend görüşmələri üçün şifahi tərcümə. Məhsul qrupunu, iştirak edəcəyiniz sərgini və günləri bildirin." }
+            { icon: "chat", title: "Çində şifahi tərcümə", text: "Əvvəlcədən planlaşdırdığınız görüş və səfər proqramında Çin dilində ünsiyyət üçün tərcüməçi dəstəyi. Şəhəri, görüşün mövzusunu və iş dilini əvvəlcədən dəqiqləşdiririk." },
+            { icon: "wrench", title: "Avadanlıq quraşdırılması zamanı tərcümə", text: "Çinli mühəndislərlə müəssisənizin əməkdaşları arasında quraşdırma, sınaq və istismara vermə mərhələlərində şifahi ünsiyyət. Tərcüməçi texniki heyətin yerini tutmur." },
+            { icon: "factory", title: "Çində zavod ziyarəti", text: "Seçdiyiniz zavodda istehsal prosesi, məhsul və sifariş şərtləri barədə görüşlərə tərcüməçi ilə qatılın. Ziyarətin məqsədini və görüşəcəyiniz müəssisəni əvvəlcədən paylaşın." },
+            { icon: "booth", title: "Çində sərgi ziyarəti", text: "Canton Fair və Çindəki digər sərgilərdə stend görüşmələri üçün şifahi tərcümə. Məhsul qrupunu, iştirak edəcəyiniz sərgini və günləri bildirin." }
           ]
         },
         {

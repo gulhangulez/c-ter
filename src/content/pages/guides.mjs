@@ -16,10 +16,10 @@ const collection = {
         {
           type: "cards", heading: "Dört rehber", columns: 2,
           items: [
-            { title: "Tercüman talebi için gerekli bilgiler", href: "/rehber/tercuman-talebi-icin-gerekli-bilgiler/", cta: "Rehberi oku" },
-            { title: "Makine kurulumu öncesi tercüman hazırlığı", href: "/rehber/makine-kurulumu-tercuman-hazirligi/", cta: "Rehberi oku" },
-            { title: "Fabrika ve fuar programı hazırlığı", href: "/rehber/cin-fabrika-fuar-ziyareti-tercuman-hazirligi/", cta: "Rehberi oku" },
-            { title: "Çince tercüman nasıl seçilir?", href: "/rehber/cince-tercuman-nasil-secilir/", cta: "Rehberi oku" }
+            { icon: "chat", title: "Tercüman talebi için gerekli bilgiler", href: "/rehber/tercuman-talebi-icin-gerekli-bilgiler/", cta: "Rehberi oku" },
+            { icon: "wrench", title: "Makine kurulumu öncesi tercüman hazırlığı", href: "/rehber/makine-kurulumu-tercuman-hazirligi/", cta: "Rehberi oku" },
+            { icon: "booth", title: "Fabrika ve fuar programı hazırlığı", href: "/rehber/cin-fabrika-fuar-ziyareti-tercuman-hazirligi/", cta: "Rehberi oku" },
+            { icon: "book", title: "Çince tercüman nasıl seçilir?", href: "/rehber/cince-tercuman-nasil-secilir/", cta: "Rehberi oku" }
           ]
         },
         { type: "finalCta" }
@@ -36,10 +36,10 @@ const collection = {
         {
           type: "cards", heading: "四份指南", columns: 2,
           items: [
-            { title: "咨询口译时需要提供哪些信息", href: "/zh/guides/information-for-interpreter-request/", cta: "阅读指南" },
-            { title: "设备安装前如何准备口译信息", href: "/zh/guides/prepare-machine-installation-interpreting/", cta: "阅读指南" },
-            { title: "为工厂与展会行程准备口译信息", href: "/zh/guides/prepare-factory-and-fair-interpreting/", cta: "阅读指南" },
-            { title: "如何选择中土口译？", href: "/zh/guides/how-to-choose-a-turkish-chinese-interpreter/", cta: "阅读指南" }
+            { icon: "chat", title: "咨询口译时需要提供哪些信息", href: "/zh/guides/information-for-interpreter-request/", cta: "阅读指南" },
+            { icon: "wrench", title: "设备安装前如何准备口译信息", href: "/zh/guides/prepare-machine-installation-interpreting/", cta: "阅读指南" },
+            { icon: "booth", title: "为工厂与展会行程准备口译信息", href: "/zh/guides/prepare-factory-and-fair-interpreting/", cta: "阅读指南" },
+            { icon: "book", title: "如何选择中土口译？", href: "/zh/guides/how-to-choose-a-turkish-chinese-interpreter/", cta: "阅读指南" }
           ]
         },
         { type: "finalCta" }

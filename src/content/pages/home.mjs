@@ -38,10 +38,10 @@ export const home = {
           intro: "Kurulum sahasında, fabrika ziyaretinde veya fuar görüşmesinde ihtiyaç farklıdır. Hizmet kapsamını programınıza göre netleştiriyoruz.",
           columns: 4,
           items: [
-            { title: "Çin'de tercüman", text: "Çin'deki planlanmış görüşmelerinizde Çince–Türkçe sözlü iletişim desteği. Şehir ve tarihlerinize göre tercüman uygunluğunu sorun.", href: "/cinde-tercuman/", cta: "Hizmeti incele" },
-            { title: "Makine kurulumu", text: "Çinli teknik ekip ile işletmeniz arasındaki kurulum, devreye alma ve kullanım açıklamalarını anlaşılır biçimde aktaralım.", href: "/makine-kurulumu-cince-tercuman/", cta: "Hizmeti incele" },
-            { title: "Fabrika ziyareti", text: "Belirlediğiniz fabrikalarda üretim akışı, ürün özellikleri ve çalışma koşulları hakkındaki görüşmelere sözlü tercümanlık.", href: "/cinde-fabrika-ziyareti-tercuman/", cta: "Hizmeti incele" },
-            { title: "Fuar ziyareti", text: "Çin'de katılacağınız fuarda stant görüşmeleri, ürün açıklamaları ve soru-cevaplar için yanınızdayız.", href: "/cinde-fuar-tercumani/", cta: "Hizmeti incele" }
+            { icon: "chat", title: "Çin'de tercüman", text: "Çin'deki planlanmış görüşmelerinizde Çince–Türkçe sözlü iletişim desteği. Şehir ve tarihlerinize göre tercüman uygunluğunu sorun.", href: "/cinde-tercuman/", cta: "Hizmeti incele" },
+            { icon: "wrench", title: "Makine kurulumu", text: "Çinli teknik ekip ile işletmeniz arasındaki kurulum, devreye alma ve kullanım açıklamalarını anlaşılır biçimde aktaralım.", href: "/makine-kurulumu-cince-tercuman/", cta: "Hizmeti incele" },
+            { icon: "factory", title: "Fabrika ziyareti", text: "Belirlediğiniz fabrikalarda üretim akışı, ürün özellikleri ve çalışma koşulları hakkındaki görüşmelere sözlü tercümanlık.", href: "/cinde-fabrika-ziyareti-tercuman/", cta: "Hizmeti incele" },
+            { icon: "booth", title: "Fuar ziyareti", text: "Çin'de katılacağınız fuarda stant görüşmeleri, ürün açıklamaları ve soru-cevaplar için yanınızdayız.", href: "/cinde-fuar-tercumani/", cta: "Hizmeti incele" }
           ]
         },
         {
@@ -82,9 +82,9 @@ export const home = {
           columns: 3,
           surface: true,
           items: [
-            { title: "Kapsam belli", text: "Tercümanın hangi görüşmelere katılacağını ve hangi konuların konuşulacağını önceden belirleyelim." },
-            { title: "Konum belli", text: "Şehir adı kadar fabrika veya fuar alanının gerçek konumu da önemli. Çalışma noktasını programın başında paylaşın." },
-            { title: "Ücret kalemleri belli", text: "Günlük tercümanlık ücreti ile ulaşım, konaklama ve yeme-içme giderlerini ayrı değerlendirelim." }
+            { icon: "compass", title: "Kapsam belli", text: "Tercümanın hangi görüşmelere katılacağını ve hangi konuların konuşulacağını önceden belirleyelim." },
+            { icon: "map", title: "Konum belli", text: "Şehir adı kadar fabrika veya fuar alanının gerçek konumu da önemli. Çalışma noktasını programın başında paylaşın." },
+            { icon: "tag", title: "Ücret kalemleri belli", text: "Günlük tercümanlık ücreti ile ulaşım, konaklama ve yeme-içme giderlerini ayrı değerlendirelim." }
           ]
         },
         { type: "faq", heading: "İlk sorularınıza kısa cevaplar", ids: ["Q001", "Q002", "Q007", "Q013", "Q072"] },
@@ -132,10 +132,10 @@ export const home = {
           intro: "设备安装、工厂参访和展会交流的沟通重点各不相同。请先选择与您行程相符的服务。",
           columns: 4,
           items: [
-            { title: "设备安装口译", text: "协助中国技术团队与土耳其工厂沟通设备安装、调试及使用说明。", href: "/zh/machine-installation-interpreter/", cta: "查看服务详情" },
-            { title: "中国现场口译", text: "为在中国的既定会面与现场行程提供中土双向口译。请根据城市及日期咨询译员档期。", href: "/zh/interpreter-in-china/", cta: "查看服务详情" },
-            { title: "工厂参访口译", text: "在您选定的工厂，协助双方沟通生产流程、产品参数及相关安排。", href: "/zh/factory-visit-interpreter/", cta: "查看服务详情" },
-            { title: "展会口译", text: "在中国展会现场，协助双方进行展位交流、产品介绍与问答。", href: "/zh/trade-fair-interpreter/", cta: "查看服务详情" }
+            { icon: "wrench", title: "设备安装口译", text: "协助中国技术团队与土耳其工厂沟通设备安装、调试及使用说明。", href: "/zh/machine-installation-interpreter/", cta: "查看服务详情" },
+            { icon: "chat", title: "中国现场口译", text: "为在中国的既定会面与现场行程提供中土双向口译。请根据城市及日期咨询译员档期。", href: "/zh/interpreter-in-china/", cta: "查看服务详情" },
+            { icon: "factory", title: "工厂参访口译", text: "在您选定的工厂，协助双方沟通生产流程、产品参数及相关安排。", href: "/zh/factory-visit-interpreter/", cta: "查看服务详情" },
+            { icon: "booth", title: "展会口译", text: "在中国展会现场，协助双方进行展位交流、产品介绍与问答。", href: "/zh/trade-fair-interpreter/", cta: "查看服务详情" }
           ]
         },
         {

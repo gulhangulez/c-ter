@@ -36,10 +36,10 @@ export const services = {
           heading: "Dört hizmet",
           columns: 4,
           items: [
-            { title: "Çin'de tercüman", href: "/cinde-tercuman/", cta: "Hizmeti incele" },
-            { title: "Makine kurulumu", href: "/makine-kurulumu-cince-tercuman/", cta: "Hizmeti incele" },
-            { title: "Fabrika ziyareti", href: "/cinde-fabrika-ziyareti-tercuman/", cta: "Hizmeti incele" },
-            { title: "Fuar ziyareti", href: "/cinde-fuar-tercumani/", cta: "Hizmeti incele" }
+            { icon: "chat", title: "Çin'de tercüman", href: "/cinde-tercuman/", cta: "Hizmeti incele" },
+            { icon: "wrench", title: "Makine kurulumu", href: "/makine-kurulumu-cince-tercuman/", cta: "Hizmeti incele" },
+            { icon: "factory", title: "Fabrika ziyareti", href: "/cinde-fabrika-ziyareti-tercuman/", cta: "Hizmeti incele" },
+            { icon: "booth", title: "Fuar ziyareti", href: "/cinde-fuar-tercumani/", cta: "Hizmeti incele" }
           ]
         },
         { type: "richtext", heading: "Her hizmette ortak olan yaklaşım", html: `<p>Önce şehir, tarih ve kapsamı netleştiriyoruz. Ardından tercüman uygunluğunu ve günlük ücret teklifini değerlendiriyoruz. Ulaşım, konaklama ve yeme-içme giderleri günlük hizmet bedelinden ayrı ele alınır.</p>` },
@@ -80,10 +80,10 @@ export const services = {
           heading: "四项服务",
           columns: 4,
           items: [
-            { title: "设备安装口译", href: "/zh/machine-installation-interpreter/", cta: "查看服务详情" },
-            { title: "中国现场口译", href: "/zh/interpreter-in-china/", cta: "查看服务详情" },
-            { title: "工厂参访口译", href: "/zh/factory-visit-interpreter/", cta: "查看服务详情" },
-            { title: "展会口译", href: "/zh/trade-fair-interpreter/", cta: "查看服务详情" }
+            { icon: "wrench", title: "设备安装口译", href: "/zh/machine-installation-interpreter/", cta: "查看服务详情" },
+            { icon: "chat", title: "中国现场口译", href: "/zh/interpreter-in-china/", cta: "查看服务详情" },
+            { icon: "factory", title: "工厂参访口译", href: "/zh/factory-visit-interpreter/", cta: "查看服务详情" },
+            { icon: "booth", title: "展会口译", href: "/zh/trade-fair-interpreter/", cta: "查看服务详情" }
           ]
         },
         { type: "richtext", heading: "所有服务共同遵循的安排方式", html: `<p>先确认城市、日期和口译范围，再确认译员档期与每日费用。交通、住宿及餐饮费用与口译日费分别计算。</p>` },

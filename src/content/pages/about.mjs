@@ -29,9 +29,9 @@ export const about = {
         {
           type: "cards", heading: "Sahaya çıkmadan önce aynı beklentide buluşalım", columns: 3,
           items: [
-            { title: "Hizmet kapsamı", text: "Tercümanın katılacağı görüşmeleri ve konuşulacak konuları belirleyelim." },
-            { title: "Çalışma düzeni", text: "Buluşma noktası, günlük saatler ve varsa şehir geçişlerini konuşalım." },
-            { title: "Ücret bilgisi", text: "Günlük tercümanlık ile ulaşım, konaklama ve yeme-içme giderlerini ayrı netleştirelim." }
+            { icon: "compass", title: "Hizmet kapsamı", text: "Tercümanın katılacağı görüşmeleri ve konuşulacak konuları belirleyelim." },
+            { icon: "map", title: "Çalışma düzeni", text: "Buluşma noktası, günlük saatler ve varsa şehir geçişlerini konuşalım." },
+            { icon: "tag", title: "Ücret bilgisi", text: "Günlük tercümanlık ile ulaşım, konaklama ve yeme-içme giderlerini ayrı netleştirelim." }
           ]
         },
         { type: "faq", ids: ["Q016", "Q017"] },
@@ -63,9 +63,9 @@ export const about = {
         {
           type: "cards", heading: "进入现场前，先确认彼此的预期", columns: 3,
           items: [
-            { title: "服务范围", text: "明确译员参加的会面和沟通内容。" },
-            { title: "工作安排", text: "确认集合地点、每日时段和城市之间的转场。" },
-            { title: "费用说明", text: "分别明确日费与交通、住宿及餐饮支出。" }
+            { icon: "compass", title: "服务范围", text: "明确译员参加的会面和沟通内容。" },
+            { icon: "map", title: "工作安排", text: "确认集合地点、每日时段和城市之间的转场。" },
+            { icon: "tag", title: "费用说明", text: "分别明确日费与交通、住宿及餐饮支出。" }
           ]
         },
         { type: "faq", ids: ["Q016", "Q017"] },

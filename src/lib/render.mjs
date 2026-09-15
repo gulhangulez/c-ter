@@ -17,6 +17,28 @@ function attr(obj = {}) {
 
 const HTML_LANG = { tr: "tr", "zh-Hans": "zh-Hans", az: "az" };
 
+// Inline line icons (stroke = currentColor) for icon chips / pills.
+const ICONS = {
+  chat: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.2l-6 6a1.4 1.4 0 0 0 2 2l6-6a4 4 0 0 0 5.2-5.4l-2.5 2.5-2-2z"/>',
+  factory: '<path d="M2 20h20M4 20V9l6 4V9l6 4V6l4 2v12"/>',
+  booth: '<path d="M3 9l1-5h16l1 5M4 9h16v11H4zM9 20v-6h6v6"/>',
+  compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  map: '<path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/>',
+  tag: '<path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8zM7.5 7.5h.01"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+  users: '<path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1A4 4 0 0 1 16 11"/>',
+  book: '<path d="M4 4a2 2 0 0 1 2-2h12v18H6a2 2 0 0 0-2 2zM4 20a2 2 0 0 1 2-2h12"/>',
+  shield: '<path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+  building: '<rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 6h.01M15 6h.01M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 22v-4h4v4"/>'
+};
+function icon(name) {
+  const p = ICONS[name] || ICONS.info;
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+}
+
 // ---- CTA links -------------------------------------------------------------
 function ctaHref(kind, site, locale, contactPath) {
   switch (kind) {
@@ -35,9 +57,10 @@ function renderCtas(ctas, ctx) {
     const kind = typeof c === "string" ? c : c.kind;
     const label = (typeof c === "object" && c.label) || microcopy.cta[kind]?.[locale] || kind;
     const href = (typeof c === "object" && c.href) || ctaHref(kind, site, locale, contactPath);
-    const cls = kind === "quote" ? "button-primary" : (kind === "whatsapp" ? "button-secondary" : "button-ghost");
+    const cls = kind === "quote" ? "button-primary" : (kind === "whatsapp" ? "button-whatsapp" : "button-ghost");
     const ext = kind === "whatsapp";
-    return `<a class="${cls}" href="${esc(href)}"${ext ? ' rel="nofollow"' : ""}>${esc(label)}</a>`;
+    const glyph = kind === "whatsapp" ? icon("chat") : "";
+    return `<a class="${cls}" href="${esc(href)}"${ext ? ' rel="nofollow"' : ""}>${glyph}${esc(label)}</a>`;
   });
   return `<div class="button-row">${parts.join("")}</div>`;
 }
@@ -53,16 +76,18 @@ const blocks = {
            ${renderCtas(b.card.ctas, ctx)}
          </aside>`
       : "";
-    return `<section class="hero"><div class="container"><div class="hero__grid">
-      <div>
-        ${b.eyebrow ? `<p class="eyebrow">${esc(b.eyebrow)}</p>` : ""}
+    const eyebrow = b.eyebrow ? `<span class="pill">${icon(b.icon || "compass")}${esc(b.eyebrow)}</span>` : "";
+    const inner = `<div>
+        ${eyebrow}
         <h1>${esc(b.h1)}</h1>
         ${b.lead ? `<p class="lead">${esc(b.lead)}</p>` : ""}
         ${b.bullets ? `<ul>${b.bullets.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : ""}
         ${renderCtas(b.ctas, ctx)}
       </div>
-      ${card}
-    </div></div></section>`;
+      ${card}`;
+    return `<section class="hero"><div class="container">
+      <div class="hero__panel">${card ? `<div class="hero__grid">${inner}</div>` : `<div class="hero__solo">${inner}</div>`}</div>
+    </div></section>`;
   },
 
   richtext(b) {
@@ -74,12 +99,18 @@ const blocks = {
 
   cards(b, ctx) {
     const cols = b.columns || Math.min(b.items.length, 4);
-    const items = b.items.map((it) => `
-      <article class="card${b.surface ? " card--surface" : ""}">
+    const items = b.items.map((it) => {
+      const cls = ["card", it.href ? "card--link" : "", it.featured ? "card--featured" : (b.surface ? "card--surface" : "")].filter(Boolean).join(" ");
+      const chip = it.icon ? `<span class="icon-chip">${icon(it.icon)}</span>` : "";
+      const count = it.count ? `<span class="pill" style="position:absolute;top:18px;right:18px;margin:0;font-size:.72rem;padding:3px 10px">${esc(it.count)}</span>` : "";
+      const link = it.cta ? `<a class="arrow-link" href="${esc(it.href || "#")}">${esc(it.cta)} →</a>` : "";
+      return `<article class="${cls}" style="display:flex;flex-direction:column">
+        ${count}${chip}
         <h3>${it.href ? `<a href="${esc(it.href)}">${esc(it.title)}</a>` : esc(it.title)}</h3>
         ${it.text ? `<p class="card__scope">${esc(it.text)}</p>` : ""}
-        ${it.cta ? `<p><a href="${esc(it.href || "#")}">${esc(it.cta)} →</a></p>` : ""}
-      </article>`).join("");
+        ${link}
+      </article>`;
+    }).join("");
     return `<section class="section${b.surface ? " section--surface" : ""}"><div class="container">
       ${b.heading ? `<h2>${esc(b.heading)}</h2>` : ""}
       ${b.intro ? `<p class="lead">${esc(b.intro)}</p>` : ""}
@@ -114,7 +145,7 @@ const blocks = {
   },
 
   priceNote(_b, ctx) {
-    return `<div class="container"><div class="price-note"><strong>i</strong><span>${esc(ctx.site.priceNote[ctx.locale])}</span></div></div>`;
+    return `<div class="container"><div class="price-note"><span class="icon-chip">${icon("tag")}</span><span>${esc(ctx.site.priceNote[ctx.locale])}</span></div></div>`;
   },
 
   faq(b, ctx) {
@@ -132,12 +163,14 @@ const blocks = {
 
   finalCta(_b, ctx) {
     const c = ctx.site.finalCta[ctx.locale];
-    return `<section class="section section--surface"><div class="container section-intro">
-      <h2>${esc(c.title)}</h2>
-      <p class="lead">${esc(c.text)}</p>
-      <div class="button-row">
-        <a class="button-primary" href="${esc(ctx.contactPath)}">${esc(c.primary)}</a>
-        <a class="button-secondary" rel="nofollow" href="${esc(ctx.site.contact.whatsappUrl)}">${esc(c.whatsapp)}</a>
+    return `<section class="section"><div class="container">
+      <div class="final-cta">
+        <h2>${esc(c.title)}</h2>
+        <p>${esc(c.text)}</p>
+        <div class="button-row">
+          <a class="button-oncolor" href="${esc(ctx.contactPath)}">${esc(c.primary)}</a>
+          <a class="button-whatsapp" rel="nofollow" href="${esc(ctx.site.contact.whatsappUrl)}">${icon("chat")}${esc(c.whatsapp)}</a>
+        </div>
       </div>
     </div></section>`;
   },
@@ -145,12 +178,12 @@ const blocks = {
   contactCards(_b, ctx) {
     const { site, microcopy, locale } = ctx;
     const c = [
-      { label: microcopy.cta.whatsapp[locale], href: site.contact.whatsappUrl, sub: site.contact.whatsappDisplay, nofollow: true },
-      { label: locale === "zh-Hans" ? microcopy.cta.email[locale] : microcopy.cta.phone[locale], href: locale === "zh-Hans" ? site.contact.emailUrl : site.contact.phoneUrl, sub: locale === "zh-Hans" ? site.contact.email : site.contact.phoneDisplay },
-      { label: locale === "zh-Hans" ? microcopy.cta.phone[locale] : microcopy.cta.email[locale], href: locale === "zh-Hans" ? site.contact.phoneUrl : site.contact.emailUrl, sub: locale === "zh-Hans" ? site.contact.phoneDisplay : site.contact.email }
+      { label: microcopy.cta.whatsapp[locale], href: site.contact.whatsappUrl, sub: site.contact.whatsappDisplay, nofollow: true, ic: "chat" },
+      { label: locale === "zh-Hans" ? microcopy.cta.email[locale] : microcopy.cta.phone[locale], href: locale === "zh-Hans" ? site.contact.emailUrl : site.contact.phoneUrl, sub: locale === "zh-Hans" ? site.contact.email : site.contact.phoneDisplay, ic: locale === "zh-Hans" ? "mail" : "phone" },
+      { label: locale === "zh-Hans" ? microcopy.cta.phone[locale] : microcopy.cta.email[locale], href: locale === "zh-Hans" ? site.contact.phoneUrl : site.contact.emailUrl, sub: locale === "zh-Hans" ? site.contact.phoneDisplay : site.contact.email, ic: locale === "zh-Hans" ? "phone" : "mail" }
     ];
     return `<div class="container"><div class="contact-cards">
-      ${c.map((x) => `<article class="card"><h3>${esc(x.label)}</h3><p><a${x.nofollow ? ' rel="nofollow"' : ""} href="${esc(x.href)}">${esc(x.sub)}</a></p></article>`).join("")}
+      ${c.map((x) => `<article class="card"><span class="icon-chip">${icon(x.ic)}</span><h3>${esc(x.label)}</h3><p><a${x.nofollow ? ' rel="nofollow"' : ""} href="${esc(x.href)}">${esc(x.sub)}</a></p></article>`).join("")}
     </div></div>`;
   },
 
@@ -347,9 +380,9 @@ function footer(ctx) {
   const links = (nav.footerLinks[locale] || []).map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)}</a></li>`).join("");
   return `<footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <p class="wordmark__main" style="color:#fff"><strong>Çince</strong> <span style="color:var(--color-brand)">Tercüman</span></p>
-        <p style="color:#c7cfcb;max-width:40ch">${esc(desc[locale])}</p>
+      <div class="footer-brand">
+        <p class="wordmark__main"><strong>Çince</strong> <span>Tercüman</span></p>
+        <p>${esc(desc[locale])}</p>
       </div>
       <div>
         <h4>${esc(contactHeading[locale])}</h4>
@@ -409,6 +442,9 @@ export function layout(page, ctx) {
   <meta property="og:description" content="${esc(page.description || "")}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${esc(canonical)}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="/assets/main.css">
   ${jsonld}
 </head>

@@ -16,9 +16,9 @@ export const faqPage = {
         {
           type: "cards", heading: "Konuya göre ayrıntılı cevaplar", columns: 3,
           items: [
-            { title: "Hizmetler", href: "/cince-tercuman/", cta: "Dört hizmeti gör" },
-            { title: "Günlük ücret", href: "/cince-tercuman-fiyatlari/", cta: "Ücret sayfası" },
-            { title: "Hizmet bölgeleri", href: "/hizmet-bolgeleri/", cta: "Şehirler" }
+            { icon: "chat", title: "Hizmetler", href: "/cince-tercuman/", cta: "Dört hizmeti gör" },
+            { icon: "tag", title: "Günlük ücret", href: "/cince-tercuman-fiyatlari/", cta: "Ücret sayfası" },
+            { icon: "map", title: "Hizmet bölgeleri", href: "/hizmet-bolgeleri/", cta: "Şehirler" }
           ]
         },
         { type: "faq", heading: "Sık sorulan sorular", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q046"] },
@@ -38,9 +38,9 @@ export const faqPage = {
         {
           type: "cards", heading: "按主题查看详细回答", columns: 3,
           items: [
-            { title: "口译服务", href: "/zh/interpreting-services/", cta: "四项服务" },
-            { title: "日费说明", href: "/zh/daily-rates/", cta: "费用页面" },
-            { title: "服务地区", href: "/zh/service-areas/", cta: "城市" }
+            { icon: "chat", title: "口译服务", href: "/zh/interpreting-services/", cta: "四项服务" },
+            { icon: "tag", title: "日费说明", href: "/zh/daily-rates/", cta: "费用页面" },
+            { icon: "map", title: "服务地区", href: "/zh/service-areas/", cta: "城市" }
           ]
         },
         { type: "faq", heading: "常见问题", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q046"] },
