@@ -2,7 +2,7 @@
 // No fixed price / currency / "starting from" is ever emitted (business rule).
 // The cost table is this page's single cost note, so no separate priceNote block.
 
-const FAQ_IDS = ["Q007", "Q013", "Q060", "Q055", "Q056", "Q057", "Q058", "Q059", "Q008", "Q009", "Q011", "Q012", "Q010", "Q061", "Q062", "Q014"];
+const FAQ_IDS = ["Q007", "Q013", "Q060", "Q055", "Q056", "Q057", "Q058", "Q059", "Q008", "Q009", "Q011", "Q012", "Q010", "Q061", "Q062", "Q014", "Q015"];
 const cta = (label, href) => `<div class="button-row"><a class="button-primary" href="${href}">${label}</a></div>`;
 
 export const rates = {

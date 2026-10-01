@@ -62,8 +62,11 @@ section("B. FAQ data integrity (§45, §48)");
   const az = faq.filter((f) => /^AZ/.test(f.id));
   ok("110 Q entries", q.length === 110, `got ${q.length}`);
   ok("30 AZ entries", az.length === 30, `got ${az.length}`);
-  const ownerReview = ["Q015", "Q019", "Q020", "Q021", "Q045", "Q107"];
-  ok("6 owner-review drafts flagged publish:false", ownerReview.every((id) => faq.find((f) => f.id === id)?.publish === false));
+  const ownerApproved = ["Q015", "Q019", "Q020", "Q021", "Q045", "Q107"];
+  ok("6 owner-approved answers published without editorial notes", ownerApproved.every((id) => {
+    const f = faq.find((x) => x.id === id);
+    return f?.publish === true && !f.tr.editorialNote && !f["zh-Hans"].editorialNote;
+  }));
   ok("every Q has TR + ZH answer", q.every((f) => f.tr?.a?.length > 5 && f["zh-Hans"]?.a?.length > 2));
   ok("every AZ has answer", az.every((f) => f.az?.a?.length > 5));
 }
@@ -93,18 +96,19 @@ const htmlByPath = new Map();
 for (const f of htmlFiles) htmlByPath.set("/" + f.slice(DIST.length + 1).replace(/index\.html$/, "").replace(/^\/+/, ""), await readFile(f, "utf8"));
 
 // ---------------------------------------------------------------------------
-section("D. Owner-review answers never reach public HTML (§50)");
+section("D. Owner-approved answers are placed, unpublished FAQs never leak (§50)");
 {
-  const drafts = [
-    ["Q015", "fatura"], ["Q019", null], ["Q020", null], ["Q021", null], ["Q045", null], ["Q107", null]
-  ];
+  const placement = { Q015: "/cince-tercuman-fiyatlari/", Q019: "/hakkimizda/", Q020: "/hakkimizda/", Q021: "/hakkimizda/", Q045: "/sik-sorulan-sorular/", Q107: "/rehber/cince-tercuman-nasil-secilir/" };
+  const missing = Object.entries(placement).filter(([id, path]) => !(htmlByPath.get(path) || "").includes(`id="q-${id.toLowerCase()}"`));
+  ok("owner-approved answers appear on their pages", missing.length === 0, missing.map(([id]) => id).join(","));
+  const oldDraft = ["kesin bir onay vermiyoruz", "koşulsuz veya anlık yedek", "genel bir iddiada bulunmuyoruz"];
+  ok("superseded cautious drafts gone", oldDraft.every((s) => ![...htmlByPath.values()].some((h) => h.includes(s))));
   let leaked = [];
-  for (const [id] of drafts) {
-    const f = faq.find((x) => x.id === id);
+  for (const f of faq.filter((x) => x.publish === false)) {
     const needle = f.tr.a.slice(0, 40);
-    for (const html of htmlByPath.values()) if (html.includes(needle)) { leaked.push(id); break; }
+    for (const html of htmlByPath.values()) if (html.includes(needle)) { leaked.push(f.id); break; }
   }
-  ok("no owner-review answer appears in any page", leaked.length === 0, leaked.join(","));
+  ok("no unpublished answer appears in any page", leaked.length === 0, leaked.join(","));
 }
 
 // ---------------------------------------------------------------------------
@@ -197,7 +201,7 @@ section("I. Active FAQ texts (plan 2026-10 §7)");
   const q5 = faq.find((f) => f.id === "Q005");
   ok("Q005 has no fixed booking policy", !q5.tr.a.includes("sabit bir son başvuru") && !q5["zh-Hans"].a.includes("统一提前天数"));
   const visible = faq.filter((f) => f.publish !== false);
-  ok("134 visible FAQ ids (104 TR/ZH + 30 AZ)", visible.length === 134, String(visible.length));
+  ok("140 visible FAQ ids (110 TR/ZH + 30 AZ)", visible.length === 140, String(visible.length));
 }
 
 // ---------------------------------------------------------------------------

@@ -22,7 +22,7 @@ export const faqPage = {
             { icon: "map", title: "Hizmet bölgeleri", href: "/hizmet-bolgeleri/", cta: "Şehirler" }
           ]
         },
-        { type: "faq", heading: "Sık sorulan sorular", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q046"] },
+        { type: "faq", heading: "Sık sorulan sorular", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q045", "Q046"] },
         { type: "richtext", heading: "WhatsApp kullanamıyorsam nasıl ulaşırım?", html: `<p>info@cince-tercuman.com adresine hizmet, şehir, tarih ve kısa ihtiyaç bilgilerinizi gönderebilirsiniz. Telefonla ulaşmak için +90 507 528 61 87 numarasını kullanabilirsiniz.</p><p class="muted">Sorunuz programınıza özel mi? Şehir ve tarihleri paylaşarak bize ulaşın.</p>` },
         { type: "finalCta" }
       ]
@@ -44,7 +44,7 @@ export const faqPage = {
             { icon: "map", title: "服务地区", href: "/zh/service-areas/", cta: "城市" }
           ]
         },
-        { type: "faq", heading: "常见问题", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q046"] },
+        { type: "faq", heading: "常见问题", ids: ["Q005", "Q006", "Q041", "Q042", "Q043", "Q044", "Q045", "Q046"] },
         { type: "richtext", heading: "无法使用 WhatsApp，如何联系？", html: `<p>您可以将服务类型、城市、日期及简要需求发送至 info@cince-tercuman.com，也可以拨打 +90 507 528 61 87。</p><p class="muted">您的问题与具体行程有关吗？请提供城市与日期联系我们。</p>` },
         { type: "finalCta" }
       ]

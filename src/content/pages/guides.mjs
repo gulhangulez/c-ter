@@ -377,7 +377,7 @@ const factoryFairGuide = guide({
 
 // ---- 4. Choosing an interpreter (§9.5 / §9.6) ----
 const selectionGuide = guide({
-  id: "guide-selection", faqIds: ["Q047", "Q048", "Q052", "Q053", "Q054", "Q101", "Q102", "Q103", "Q104", "Q105", "Q106", "Q108", "Q109", "Q110"],
+  id: "guide-selection", faqIds: ["Q047", "Q048", "Q052", "Q053", "Q054", "Q101", "Q102", "Q103", "Q104", "Q105", "Q106", "Q107", "Q108", "Q109", "Q110"],
   tr: {
     path: "/rehber/cince-tercuman-nasil-secilir/",
     crumb: "Tercüman nasıl seçilir",
