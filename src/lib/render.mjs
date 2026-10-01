@@ -274,7 +274,7 @@ const QUOTE_FORM_I18N = {
     need: "İhtiyacınızı kısaca anlatın", needHint: "Makine türünü, fabrika veya fuarın adını ve konuşulacak konuları yazabilirsiniz. İlk mesajda kişisel veya gizli belgeler paylaşmayın.",
     name: "Ad / şirket", optional: "isteğe bağlı",
     previewTitle: "Göndereceğiniz mesaj", previewNote: "Bu form sitede rezervasyon oluşturmaz. Mesaj WhatsApp'ta açılır; göndermek için oradaki gönder düğmesine basmanız gerekir.",
-    openWhatsapp: "WhatsApp'ta mesajı aç", sendEmail: "E-postayla gönder", copy: "Mesajı kopyala",
+    openWhatsapp: "WhatsApp'ta mesajı aç", sendEmail: "E-posta taslağını aç", copy: "Mesajı kopyala",
     languageLegend: "Dil gereksinimi", language: {}, langNoteTitle: "", langNote: ""
   },
   "zh-Hans": {
@@ -286,7 +286,7 @@ const QUOTE_FORM_I18N = {
     need: "简要说明需求", needHint: "可说明设备类型、工厂或展会名称及沟通主题。首次咨询请勿提交个人证件或保密文件。",
     name: "姓名 / 公司", optional: "选填",
     previewTitle: "将发送的咨询内容", previewNote: "此表单不会在网站中创建预约。消息将在 WhatsApp 中打开，您需要在 WhatsApp 内确认发送。",
-    openWhatsapp: "在 WhatsApp 中打开咨询", sendEmail: "通过邮件发送", copy: "复制咨询内容",
+    openWhatsapp: "在 WhatsApp 中打开消息", sendEmail: "打开邮件草稿", copy: "复制咨询文本",
     languageLegend: "沟通语言要求", language: {}, langNoteTitle: "", langNote: ""
   },
   az: {
@@ -298,11 +298,11 @@ const QUOTE_FORM_I18N = {
     need: "Ehtiyacınızı qısaca yazın", needHint: "Avadanlığın növünü, zavod və ya sərginin adını və müzakirə mövzularını yaza bilərsiniz. İlk mesajda şəxsi və ya məxfi sənəd paylaşmayın.",
     name: "Ad / şirkət", optional: "istəyə bağlı",
     previewTitle: "Göndərəcəyiniz mesaj", previewNote: "Bu forma saytda sifariş yaratmır. Mesaj WhatsApp-da açılır; göndərmək üçün orada göndər düyməsinə basmalısınız.",
-    openWhatsapp: "WhatsApp-da mesajı aç", sendEmail: "E-poçtla göndər", copy: "Mesajı kopyala",
-    languageLegend: "Dil tələbi", language: {
+    openWhatsapp: "WhatsApp-da mesajı aç", sendEmail: "E-poçt qaralamasını aç", copy: "Mesajı kopyala",
+    languageLegend: "İş dili", language: {
       "turkish-ok": "Türk dilində şifahi ünsiyyət mənim üçün uyğundur.",
-      "azerbaijani-required": "Azərbaycan dilində şifahi ünsiyyət tələb edirəm; uyğunluq ayrıca təsdiqlənməlidir.",
-      "confirm-first": "Əvvəlcə dil uyğunluğunu dəqiqləşdirmək istəyirəm; türk dilində işləməyə hələ razılıq verməmişəm."
+      "azerbaijani-required": "Azərbaycan dilində şifahi ünsiyyət mütləq lazımdır.",
+      "confirm-first": "Əvvəlcə dil uyğunluğunu dəqiqləşdirmək istəyirəm."
     },
     langNoteTitle: "Dil qeydi:", langNote: "Dil tələbinin qarşılanması ayrıca təsdiqlənməlidir. Bu mesaj sifarişin təsdiqi deyil."
   }

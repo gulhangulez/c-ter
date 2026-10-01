@@ -12,8 +12,7 @@ export const services = {
       schema: { type: "CollectionPage", crumbs: [{ name: "Hizmetler", path: "/cince-tercuman/" }] },
       blocks: [
         { type: "hero", eyebrow: "Dört hizmet", h1: "Hangi Çince tercümanlık hizmetine ihtiyacınız var?", lead: "Çalışma yeriniz ve görüşmenin konusu, ihtiyacınız olan sözlü tercümanlık hizmetini belirler. Aşağıdaki dört başlık arasından programınıza uygun olanı seçin.", ctas: ["quote", "whatsapp"] },
-        { type: "priceNote" },
-        {
+                {
           type: "table",
           surface: true,
           heading: "Programınıza göre karar tablosu",
@@ -50,8 +49,7 @@ export const services = {
       schema: { type: "CollectionPage", crumbs: [{ name: "口译服务", path: "/zh/interpreting-services/" }] },
       blocks: [
         { type: "hero", eyebrow: "四项服务", h1: "您的行程需要哪一种中土口译？", lead: "工作地点与沟通内容决定口译安排。请从下面四类服务中选择与行程相符的一项。", ctas: ["quote", "whatsapp"] },
-        { type: "priceNote" },
-        {
+                {
           type: "table",
           surface: true,
           heading: "按您的安排选择",
