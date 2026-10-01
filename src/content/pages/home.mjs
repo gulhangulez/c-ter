@@ -28,7 +28,7 @@ export const home = {
       blocks: [
         {
           type: "hero",
-          h1: "Türkiye ve Çin'de Çince–Türkçe sözlü tercümanlık",
+          h1: "Çince tercüman: Türkiye'de makine kurulumu, Çin'de fabrika ve fuar ziyaretleri",
           lead: "Çin'de planladığınız görüşmelerde veya Türkiye'de Çinli teknik ekiple yürüteceğiniz makine kurulumu sırasında, iki tarafın birbirini anlamasına yardımcı oluyoruz. Şehri, tarihleri ve görüşmenin konusunu paylaşın; ihtiyacınıza uygun sözlü tercümanlık için uygunluk ve günlük teklifi değerlendirelim.",
           ctas: ["quote", "whatsapp"],
           card: {
