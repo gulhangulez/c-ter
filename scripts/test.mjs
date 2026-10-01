@@ -285,7 +285,7 @@ section("L. No third-party dependencies at runtime (plan 2026-10 DEV10)");
     }
   }
   ok("no external fonts/scripts/styles", ext.length === 0, ext.slice(0, 4).join(" | "));
-  ok("self-hosted fonts shipped", existsSync(join(DIST, "assets/fonts/manrope-latin-500-normal.woff2")) && existsSync(join(DIST, "assets/fonts/manrope-latin-ext-500-normal.woff2")));
+  ok("self-hosted fonts shipped", ["inter-latin-400", "inter-latin-ext-400", "outfit-latin-800", "outfit-latin-ext-800"].every((f) => existsSync(join(DIST, `assets/fonts/${f}-normal.woff2`))));
 }
 
 // ---------------------------------------------------------------------------
