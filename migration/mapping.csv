@@ -13,18 +13,18 @@ old_url,decision,new_url,http_code,status,approved_by,approved_at,notes
 /cince-tercuman-shenzhen/,keep,/cince-tercuman-shenzhen/,200,plan,,,"Koşullu yakın bölge; sürekli ekip sözü yok"
 /cince-tercuman-shanghai-sanghay/,keep,/cince-tercuman-shanghai-sanghay/,200,plan,,,
 /cince-tercuman-beijing-pekin/,keep,/cince-tercuman-beijing-pekin/,200,plan,,,
-/cince-tercuman-izmir/,pending,,,pending-owner,,,"İşletme teyidi: somut hizmet teyit edilirse aynı yolda 200 sayfa, değilse 410. Ana sayfaya 301 yok"
-/cince-tercuman-yiwu/,pending,,,pending-owner,,,"İşletme teyidi: gerçek program değerlendirmesi teyit edilirse 200, değilse 410"
+/cince-tercuman-izmir/,keep,/cince-tercuman-izmir/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: aynı yolda 200; koşullu yakın bölge (ofis/hazır ekip yok)"
+/cince-tercuman-yiwu/,keep,/cince-tercuman-yiwu/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: aynı yolda 200; plan §17.9 metni, koşullu değerlendirme"
 /cince-ceviri/,remove,,410,plan,,,"Yazılı çeviri sona erdi; 410-yazili-ceviri.html gövdesi"
 /web-sitenizi-cinceye-cevirin/,remove,,410,plan,,,"Yazılı web sitesi çevirisi; 410-yazili-ceviri.html gövdesi"
 /cince-tercumani-olarak-kayit-olun/,remove,,410,plan,,,"Aday kaydı yok; genel 410 gövdesi (gerçek aday alımı ayrıca onaylanırsa değişir)"
 /testimonial/,remove,,410,plan,,,"İzinli yorum yok; sahte yorum eklenmez; genel 410 gövdesi"
-/blog/,pending,,,pending-owner,,,"Plan: arşiv indeksi olarak 200 korunur; korunacak yazılar belirlenmeden içerik üretilmedi"
-/cince-bilen-eleman/,pending,,,pending-owner,,,"Arşiv kararı: güncel kapsam notuyla 200 veya 410"
-/cince-tercuman-maaslari/,pending,,,pending-owner,,,"Arşiv kararı: doğrulanmış güncel bilgiyle 200 veya 410; ücret sayfasına 301 yok"
-/cince-tercuman-arayanlar-adaylarin-cinceyi-iyi-bildiginden-nasil-emin-olacaklar/,pending,,,pending-owner,,,"Tercih: aynı yolda 200 + seçim rehberine link; içerik eşdeğeri olmadan 301 yok"
-/cinin-sehirleri/,pending,,,pending-owner,,,"Bilgi güncellenirse 200, aksi 410"
-/cinden-makina-almak-getirmek/,pending,,,pending-owner,,,"Denetim/ithalat vaadi çıkarılıp yararlı bilgi korunursa 200, aksi 410"
+/blog/,keep,/blog/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: blog arşiv indeksi 200"
+/cince-bilen-eleman/,keep,/cince-bilen-eleman/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: 200; güncel kapsamla yeniden yazıldı (işe alım/personel temini yok)"
+/cince-tercuman-maaslari/,keep,/cince-tercuman-maaslari/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: 200; doğrulanmamış rakam yok, ücreti etkileyen etkenler"
+/cince-tercuman-arayanlar-adaylarin-cinceyi-iyi-bildiginden-nasil-emin-olacaklar/,keep,/cince-tercuman-arayanlar-adaylarin-cinceyi-iyi-bildiginden-nasil-emin-olacaklar/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: 200 + seçim rehberine link"
+/cinin-sehirleri/,keep,/cinin-sehirleri/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: 200; iş ziyareti şehirleri, şehir sayfalarına linkler"
+/cinden-makina-almak-getirmek/,keep,/cinden-makina-almak-getirmek/,200,owner,site sahibi,2026-10-01,"Site sahibi kararı: 200; ithalat/denetim vaadi yok, iletişim odaklı"
 /faq/cincetercuman-nedir/,move,/hakkimizda/,301,plan,,,
 /faq/bize-gondereceginiz-kisinin-cinceyi-iyi-bildiginden-nasil-emin-olabilirim/,move,/rehber/cince-tercuman-nasil-secilir/#q-q103,301,plan,,,
 /faq/bize-yonlendireceginiz-tercumani-neye-gore-seciyorsunuz/,move,/rehber/cince-tercuman-nasil-secilir/#q-q053,301,plan,,,

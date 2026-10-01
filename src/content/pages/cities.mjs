@@ -1,6 +1,6 @@
 // City pages — preserved/clean URLs per plan §5.1 & §6.4–6.5, §6.23–6.24.
 // User-confirmed network: İstanbul, Tekirdağ, Düzce, Ankara, Kayseri, Gaziantep;
-// Guangzhou, Shanghai, Beijing. Kocaeli, Gebze and Shenzhen keep their URLs but are
+// Guangzhou, Shanghai, Beijing. Kocaeli, Gebze, İzmir, Shenzhen and Yiwu keep their URLs but are
 // conditional nearby locations (evaluated by location/date; no office/ready team).
 // A city being listed never implies an office or standing team there.
 
@@ -171,5 +171,81 @@ export const cityPages = [
     id: "shenzhen", faqId: "Q064", country: "CN",
     tr: { path: "/cince-tercuman-shenzhen/", title: "Shenzhen'de Çince Tercüman | Fabrika ve Görüşme", description: "Shenzhen'deki fabrika ve iş görüşmeleriniz için Çince–Türkçe sözlü tercümanlık. Çalışma noktası ve tarihle uygunluk değerlendirmesi isteyin.", eyebrow: "Shenzhen / 深圳", h1: "Shenzhen'de Çince–Türkçe tercüman", lead: "Shenzhen'deki fabrika ve iş görüşmeleriniz için sözlü tercümanlık talebinizi konum ve tarihle değerlendirelim.", body: `<p>Shenzhen, teyitli hizmet ağımızdaki şehirlerden biri değildir; talepler tarih, gerçek çalışma noktası ve konuya göre ayrıca değerlendirilir. Shenzhen'de ofis veya hazır ekip bulunduğu varsayılmaz. Ziyaret edeceğiniz fabrikanın veya görüşme noktasının gerçek konumunu ve tarihleri paylaşın.</p><p>İlgili: <a href="/cinde-tercuman/">Çin'de tercüman</a> · <a href="/cinde-fabrika-ziyareti-tercuman/">Fabrika ziyareti</a> · <a href="/hizmet-bolgeleri/">Hizmet bölgeleri</a>.</p>` },
     zh: { path: "/zh/shenzhen-interpreter/", title: "深圳中文口译｜工厂与商务会面", description: "深圳的工厂参访和商务会面，可提交实际地点和日期，评估中土口译是否可以安排。", eyebrow: "深圳", h1: "深圳中文—土耳其语口译", lead: "深圳的工厂与商务会面需求，可按地点和日期提交评估。", body: `<p>深圳不属于我们已确认的服务网络城市，相关需求需结合日期、实际地点与主题另行评估，不代表当地设有办公室或常驻人员。请提供要访问的工厂或会面地点的实际位置及日期。</p><p>相关：<a href="/zh/interpreter-in-china/">中国现场口译</a> · <a href="/zh/factory-visit-interpreter/">工厂参访口译</a> · <a href="/zh/service-areas/">服务地区</a>。</p>` }
+  }),
+
+  // ------------------------------------------ İzmir (conditional nearby)
+  city({
+    id: "izmir", country: "TR",
+    tr: {
+      path: "/cince-tercuman-izmir/",
+      title: "İzmir'de Çince Tercüman | Makine Kurulumu ve Teknik Ekip",
+      description: "İzmir'de Çinli teknik ekiple makine kurulumu ve devreye alma için Çince–Türkçe sözlü tercümanlık talebi. Tesis konumu ve tarihlerle uygunluk sorun.",
+      eyebrow: "İzmir",
+      h1: "İzmir'de Çince–Türkçe tercüman talebi",
+      lead: "Çin'den gelen teknik ekibiniz İzmir'deki tesisinizde makine kurulumu, devreye alma veya kullanım eğitimi yapacaksa tesis konumunu ve tarihleri paylaşarak sözlü tercümanlık talebinizi iletebilirsiniz.",
+      sections: [
+        sec("İzmir talepleri konum ve tarihe göre değerlendirilir", `<p>İzmir, teyitli hizmet ağımızdaki şehirlerden biri değildir. Talepler tarih, gerçek çalışma noktası ve ulaşım planıyla birlikte ayrıca değerlendirilir; İzmir'de ofis veya hazır tercüman bulunduğu varsayılmaz. Kemalpaşa, Torbalı, Çiğli veya Aliağa gibi bir sanayi bölgesindeyseniz tesisin açık konumunu yazın.</p>`, true),
+        sec("Teknik ekip uygular, tercüman iletişimi destekler", `<p>Tercüman; kurulum adımları, test sırasında sorulan sorular ve operatöre yapılan açıklamalar arasında sözlü iletişimi aktarır. Montaj, elektrik bağlantısı, güvenlik kararı ve teknik kabul yetkili teknik ekiplerin sorumluluğundadır. <a href="/makine-kurulumu-cince-tercuman/">Makine kurulumu tercümanlığının kapsamını inceleyin</a>.</p>`),
+        sec("Talep için ne paylaşmalısınız?", `<p>Makine veya hat türü, tesis konumu, çalışma tarihleri ve hangi aşamalarda tercüman gerektiğini yazın. Hizmet günlük ücretlendirilir; şehir içi ve şehir dışı ulaşım, konaklama ve yeme-içme ayrıca hesaplanır. Talep göndermek tek başına rezervasyon oluşturmaz.</p>
+        <p><a href="/rehber/makine-kurulumu-tercuman-hazirligi/">Teknik ekip için hazırlık rehberi</a> · <a href="/cince-tercuman-fiyatlari/">Günlük ücret</a> · <a href="/hizmet-bolgeleri/">Hizmet bölgeleri</a></p>
+        ${ctaRow(`<a class="button-primary" href="/iletisim/">İzmir için uygunluk sorun</a>`)}`, true)
+      ]
+    },
+    zh: {
+      path: "/zh/izmir-interpreter/",
+      title: "伊兹密尔中文口译｜设备安装与调试现场沟通",
+      description: "中国工程师赴土耳其伊兹密尔安装或调试设备，可提交工厂位置和日期，评估中土现场口译是否可以安排。",
+      eyebrow: "伊兹密尔",
+      h1: "伊兹密尔设备安装现场的中土口译需求",
+      lead: "中国技术团队如需在土耳其伊兹密尔（İzmir）安装、调试设备或进行操作培训，可提交工厂位置和日期，咨询中文与土耳其语现场口译。",
+      sections: [
+        sec("按地点和日期另行评估", `<p>伊兹密尔不属于我们已确认的服务网络城市，相关需求需结合日期、实际工作地点和交通安排另行评估，不代表当地设有办公室或有人员随时待命。如工厂位于 Kemalpaşa、Torbalı、Çiğli 或 Aliağa 等工业区，请写明具体位置。</p>`, true),
+        sec("口译与技术工作的分工", `<p>口译人员协助传达安装步骤、调试反馈和操作说明。设备安装、安全判断和技术验收由获授权的技术团队负责。<a href="/zh/machine-installation-interpreter/">查看设备安装口译服务</a>。</p>`),
+        sec("咨询时需要哪些信息？", `<p>请提供设备类型、工厂位置、日期以及需要口译的环节。口译按天计费，市内交通、城际交通、住宿和餐饮费用另计。发送咨询不等于预订成功。</p>
+        <p><a href="/zh/guides/prepare-machine-installation-interpreting/">技术团队口译准备清单</a> · <a href="/zh/daily-rates/">每日费用说明</a> · <a href="/zh/service-areas/">服务地区</a></p>
+        ${ctaRow(`<a class="button-primary" href="/zh/contact/">咨询伊兹密尔口译安排</a>`)}`, true)
+      ]
+    }
+  }),
+
+  // ------------------------------------------- Yiwu (conditional, §17.9)
+  city({
+    id: "yiwu", country: "CN",
+    tr: {
+      path: "/cince-tercuman-yiwu/",
+      title: "Yiwu Türkçe–Çince Tercüman Talebi",
+      description: "Yiwu'da önceden belirlediğiniz görüşmeler veya saha ziyaretleri için Çince–Türkçe tercümanlık talebinizi iletin. Program, tercüman ve ulaşım uygunluğuna göre değerlendirilir.",
+      eyebrow: "Yiwu / 义乌",
+      h1: "Yiwu Türkçe–Çince tercüman talebi",
+      lead: "Yiwu'da önceden belirlediğiniz görüşmeler veya saha ziyaretleri için Çince–Türkçe tercümanlık talebinizi iletin. Program, tercüman ve ulaşım uygunluğuna göre değerlendirilir.",
+      sections: [
+        sec("Belirlenmiş görüşme noktalarıyla talep oluşturun", `<p>Görüşeceğiniz firma veya fabrikanın adresini, tarihini ve gündemini paylaşın. Bu sayfa sürekli yerleşik bir Yiwu ekibi vaadi içermez; Yiwu teyitli hizmet ağımızdaki şehirlerden biri değildir. Başka bir şehirden geçiş varsa çalışma gününü ve seyahat düzenini ayrı belirtin.</p>`, true),
+        sec("Hizmetin kapsamı", `<p>Görüşmelerde sözlü tercümanlık yapılır. Tedarikçi bulma, ürün seçimi, sipariş takibi, kalite kontrol, ithalat işlemleri, tur veya otel organizasyonu kapsamda değildir. İlgili hizmetler: <a href="/cinde-tercuman/">Çin'de tercüman</a> · <a href="/cinde-fabrika-ziyareti-tercuman/">Fabrika ziyareti</a> · <a href="/cinde-fuar-tercumani/">Fuar tercümanlığı</a> · <a href="/hizmet-bolgeleri/">Hizmet bölgeleri</a>.</p>`),
+        { type: "priceNote" },
+        sec("Sık sorulanlar", `<h3>Yiwu'da sürekli hazır tercüman var mı?</h3>
+        <p>Bu yönde bir garanti vermiyoruz. Belirli tarih ve çalışma noktası için uygunluk sorabilirsiniz.</p>
+        <h3>Birden fazla görüşme adresi paylaşabilir miyim?</h3>
+        <p>Evet. Her adresi ve planlanan saati belirtin; günlük çalışma düzenini bu bilgilerle değerlendirelim.</p>
+        ${ctaRow(`<a class="button-primary" href="/iletisim/">Yiwu için uygunluk sor</a><a class="button-whatsapp" rel="nofollow" href="https://wa.me/905550441141">WhatsApp'tan yazın</a>`)}`, true)
+      ]
+    },
+    zh: {
+      path: "/zh/yiwu-interpreter/",
+      title: "义乌中土口译需求｜会面行程咨询",
+      description: "可提交义乌既定会面或现场参访的中土口译需求。具体安排需结合行程、译员档期与交通评估。",
+      eyebrow: "义乌",
+      h1: "义乌中土口译需求：会面行程咨询",
+      lead: "可提交义乌既定会面或现场参访的中土口译需求。具体安排需结合行程、译员档期与交通评估。",
+      sections: [
+        sec("请提供已确定的会面地点", `<p>请提供已安排的企业或工厂地址、日期及议题。本页不承诺义乌常驻团队，义乌不属于我们已确认的服务网络城市。如从其他城市前往，请分别注明工作日期与转场安排。</p>`, true),
+        sec("服务范围", `<p>服务内容为会面中的中土现场口译，不包括寻找供应商、选品、跟单、验货、进出口手续、旅游或酒店安排。相关：<a href="/zh/interpreter-in-china/">中国现场口译</a> · <a href="/zh/factory-visit-interpreter/">工厂参访口译</a> · <a href="/zh/trade-fair-interpreter/">展会口译</a> · <a href="/zh/service-areas/">服务地区</a>。</p>`),
+        { type: "priceNote" },
+        sec("常见问题", `<h3>义乌始终有译员待命吗？</h3>
+        <p>我们不作此承诺。请根据具体日期及地点咨询是否可以安排。</p>
+        <h3>可以提供多个会面地址吗？</h3>
+        <p>可以。请列出每个地址及计划时间，再据此评估每日工作安排。</p>
+        ${ctaRow(`<a class="button-primary" href="/zh/contact/">咨询义乌口译档期</a>`)}`, true)
+      ]
+    }
   })
 ];

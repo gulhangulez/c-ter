@@ -59,6 +59,7 @@ const collection = {
             { icon: "book", title: "İşiniz için uygun Çince tercümanı nasıl seçersiniz?", href: "/rehber/cince-tercuman-nasil-secilir/", cta: "Rehberi oku" }
           ]
         },
+        { type: "richtext", surface: true, html: `<p>Daha genel yazılar için <a href="/blog/">bloga</a> bakın: tercüman adayının dil seviyesi, ücretleri etkileyen etkenler, Çin'in iş şehirleri ve Çin'den makine alımında iletişim.</p>` },
         { type: "finalCta" }
       ]
     },

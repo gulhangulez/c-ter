@@ -47,8 +47,8 @@ export const areas = {
         },
         { type: "richtext", html: `<p>Şehir sayfaları: <a href="/cince-tercuman-guangzhou/">Guangzhou</a> · <a href="/cince-tercuman-shanghai-sanghay/">Shanghai</a> · <a href="/cince-tercuman-beijing-pekin/">Beijing</a>. Hizmet kapsamı: <a href="/cinde-tercuman/">Çin'de tercüman</a>.</p>
         <p class="muted">Bir şehrin sitede anılması, o şehirde bir ofis veya sürekli hazır tercüman bulunduğu anlamına gelmez. Uygunluk her talep için tarih ve gerçek çalışma noktasına göre teyit edilir.</p>` },
-        { type: "richtext", surface: true, heading: "Yakın bölgeler: konum ve tarihe göre değerlendirme", html: `<p>Kocaeli, Gebze, Shenzhen veya yukarıdaki listede olmayan başka bir yerde tercümana ihtiyaç duyuyorsanız şehir adı, çalışma noktası ve tarihleri yazın. Bu yerler teyitli hizmet ağımızın parçası değildir; talebin karşılanıp karşılanamayacağı tercüman ve ulaşım uygunluğuyla birlikte ayrıca değerlendirilir. Bu bölgelerde ofis veya hazır ekip bulunduğu varsayılmaz.</p>
-        <p>Mevcut bölge sayfaları: <a href="/cince-tercuman-kocaeli/">Kocaeli</a> · <a href="/cince-tercuman-gebze/">Gebze</a> · <a href="/cince-tercuman-shenzhen/">Shenzhen</a>.</p>` },
+        { type: "richtext", surface: true, heading: "Yakın bölgeler: konum ve tarihe göre değerlendirme", html: `<p>Kocaeli, Gebze, İzmir, Shenzhen, Yiwu veya yukarıdaki listede olmayan başka bir yerde tercümana ihtiyaç duyuyorsanız şehir adı, çalışma noktası ve tarihleri yazın. Bu yerler teyitli hizmet ağımızın parçası değildir; talebin karşılanıp karşılanamayacağı tercüman ve ulaşım uygunluğuyla birlikte ayrıca değerlendirilir. Bu bölgelerde ofis veya hazır ekip bulunduğu varsayılmaz.</p>
+        <p>Mevcut bölge sayfaları: <a href="/cince-tercuman-kocaeli/">Kocaeli</a> · <a href="/cince-tercuman-gebze/">Gebze</a> · <a href="/cince-tercuman-izmir/">İzmir</a> · <a href="/cince-tercuman-shenzhen/">Shenzhen</a> · <a href="/cince-tercuman-yiwu/">Yiwu</a>.</p>` },
         { type: "faq", ids: ["Q002", "Q072", "Q073"] },
         { type: "finalCta" }
       ]
@@ -92,8 +92,8 @@ export const areas = {
         },
         { type: "richtext", html: `<p>城市页面：<a href="/zh/guangzhou-interpreter/">广州</a> · <a href="/zh/shanghai-interpreter/">上海</a> · <a href="/zh/beijing-interpreter/">北京</a>。相关服务：<a href="/zh/interpreter-in-china/">中国境内口译</a>。</p>
         <p class="muted">网站列出某座城市，并不代表当地设有办公室或始终有译员待命。每项需求均需按日期和实际工作地点确认。</p>` },
-        { type: "richtext", surface: true, heading: "邻近地区：按地点和日期另行评估", html: `<p>如需要科贾埃利、盖布泽、深圳或列表之外其他地点的服务，请提供城市、实际地点及日期。这些地点不属于已确认的服务网络，能否安排需结合译员档期与交通情况另行确认，不代表当地设有办公室或常驻人员。</p>
-        <p>现有地区页面：<a href="/zh/kocaeli-interpreter/">科贾埃利</a> · <a href="/zh/gebze-interpreter/">盖布泽</a> · <a href="/zh/shenzhen-interpreter/">深圳</a>。</p>` },
+        { type: "richtext", surface: true, heading: "邻近地区：按地点和日期另行评估", html: `<p>如需要科贾埃利、盖布泽、伊兹密尔、深圳、义乌或列表之外其他地点的服务，请提供城市、实际地点及日期。这些地点不属于已确认的服务网络，能否安排需结合译员档期与交通情况另行确认，不代表当地设有办公室或常驻人员。</p>
+        <p>现有地区页面：<a href="/zh/kocaeli-interpreter/">科贾埃利</a> · <a href="/zh/gebze-interpreter/">盖布泽</a> · <a href="/zh/izmir-interpreter/">伊兹密尔</a> · <a href="/zh/shenzhen-interpreter/">深圳</a> · <a href="/zh/yiwu-interpreter/">义乌</a>。</p>` },
         { type: "faq", ids: ["Q002", "Q072", "Q073"] },
         { type: "finalCta" }
       ]

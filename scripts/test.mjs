@@ -205,7 +205,7 @@ section("J. Page inventory, hreflang reciprocity & sitemap (plan 2026-10 §5.1, 
 {
   const locs = pages.flatMap((p) => Object.entries(p.locales).map(([l, loc]) => ({ page: p, l, loc })));
   const count = (l) => locs.filter((x) => x.l === l && x.loc.status === "published").length;
-  ok("26 TR + 26 ZH + 3 AZ = 55 content pages", count("tr") === 26 && count("zh-Hans") === 26 && count("az") === 3, `${count("tr")}/${count("zh-Hans")}/${count("az")}`);
+  ok("34 TR + 28 ZH + 3 AZ = 65 content pages", count("tr") === 34 && count("zh-Hans") === 28 && count("az") === 3, `${count("tr")}/${count("zh-Hans")}/${count("az")}`);
   ok("Tekirdağ old TR URL restored", htmlByPath.has("/cince-tercuman-tekirdag/"));
   const tk = pages.find((p) => p.locales.tr?.path === "/cince-tercuman-tekirdag/");
   ok("Tekirdağ has a real ZH counterpart", Boolean(tk?.locales["zh-Hans"] && htmlByPath.has(tk.locales["zh-Hans"].path)));
@@ -213,7 +213,7 @@ section("J. Page inventory, hreflang reciprocity & sitemap (plan 2026-10 §5.1, 
 
   const sitemap = await readFile(join(DIST, "sitemap.xml"), "utf8");
   const locsInMap = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  ok("sitemap lists 55 absolute URLs", locsInMap.length === 55 && locsInMap.every((u) => u.startsWith("https://www.cince-tercuman.com/")), String(locsInMap.length));
+  ok("sitemap lists 65 absolute URLs", locsInMap.length === 65 && locsInMap.every((u) => u.startsWith("https://www.cince-tercuman.com/")), String(locsInMap.length));
   ok("sitemap hreflang hrefs absolute", [...sitemap.matchAll(/hreflang="[^"]+" href="([^"]+)"/g)].every((m) => m[1].startsWith("https://")));
   ok("404/410 not in sitemap", !/404|410/.test(locsInMap.join(" ")));
 
