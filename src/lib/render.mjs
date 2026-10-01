@@ -502,7 +502,7 @@ export function layout(page, ctx) {
   <meta property="og:site_name" content="${esc(site.brand.name)}">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  ${locale === "zh-Hans" ? "" : '<link rel="preload" href="/assets/fonts/manrope-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>'}
+  ${locale === "zh-Hans" ? "" : '<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>'}
   <link rel="stylesheet" href="/assets/main.css">
   ${jsonld}
 </head>
