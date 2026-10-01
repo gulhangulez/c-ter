@@ -1,21 +1,23 @@
 # Redirects & HTTP status rules
 
-Per plan §20.4 and §21, the host **must** serve real HTTP status codes:
+The host **must** serve real HTTP status codes (plan 2026-10 §12 T7, §13):
 
-- Real `301`/`308` only for content that genuinely moved to a real equivalent.
-- Real `404` for unknown URLs (never a `200` error screen).
-- Real `410` for deliberately removed pages where the host supports it; a real
-  `404` is an acceptable fallback.
+- `301` only from an old URL to its real equivalent, in **one hop** to the final
+  `https://www.cince-tercuman.com/...` URL.
+- Real `404` for unknown URLs (never a `200` error screen, no SPA fallback).
+- Real `410` for deliberately removed pages (`410-yazili-ceviri.html` for the
+  ended written-translation pages, `410.html` otherwise). Removed services are
+  never redirected to the home page.
 
-**Do not** apply any redirect or deletion to an old URL until the migration
-inventory (`migration/old-url-inventory.csv` → `migration/mapping.csv`) has been
-built and approved. Never mass-redirect removed pages to the home page
-(Google may treat that as a soft 404, §21.1).
+`migration/mapping.csv` is the single source. Run `node scripts/redirects.mjs`
+after editing it; it regenerates the three samples here, and `npm test` fails if
+they are stale:
 
-Two starter configs are provided; use the one matching your host and fill in
-approved rows from `migration/mapping.csv`.
+- `htaccess.sample` — Apache / LiteSpeed (Güzel Hosting is most likely this;
+  verify first). Rename to `.htaccess` in the web root only after testing.
+- `nginx.conf.sample` — nginx server block.
+- `_redirects` — Netlify / Cloudflare Pages. Güzel Hosting does not read it.
 
-- `_redirects` — Netlify / Cloudflare Pages style.
-- `nginx.conf.sample` — nginx `location` rules.
-
-The 404 document is `dist/404.html`; wire it to a real 404 response.
+Rows with `decision=pending` (İzmir, Yiwu and the old blog/archive posts) need an
+owner decision before launch: either real, updated content at the same URL
+(`keep`, 200) or `remove` (410). No rule is generated for them until then.

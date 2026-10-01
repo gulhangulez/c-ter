@@ -97,7 +97,11 @@ export function prepareContactV13(input) {
   const name = input.nameCompany == null || input.nameCompany === ""
     ? null : readText(input.nameCompany, 1, 120, "invalid_name_company");
   const defaultPath = locale === "az" ? "/az/elaqe/" : locale === "zh-Hans" ? "/zh/contact/" : "/iletisim/";
-  const source = new URL(input.sourcePath || defaultPath, SITE_V13.origin);
+  // Source page: a same-site pathname only (no query/fragment, no external URL),
+  // so the prepared message never carries personal data from a URL (plan DEV07).
+  const sourcePath = input.sourcePath || defaultPath;
+  if (typeof sourcePath !== "string" || !/^\/[a-z0-9\-/]{0,120}$/.test(sourcePath)) throw new Error("invalid_source");
+  const source = new URL(sourcePath, SITE_V13.origin);
   if (source.origin !== SITE_V13.origin) throw new Error("invalid_source");
   const copy = CONTACT_COPY_V13[locale];
   const lines = [

@@ -191,7 +191,8 @@
     },
     "zh-Hans": {
       "q": "工厂安全要求及个人防护用品如何安排？",
-      "a": "请提前提供工厂入场要求、必要的安全说明及所需防护用品清单，并在确认行程时明确由谁提供装备及如何完成入场准备。口译安排应符合现场规则；译员在场不代表其接替技术团队或工厂承担安全职责。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Koruyucu ekipmanın mevcut olduğu veya tamamının tercüman tarafından sağlanacağı iddia edilmez. İş güvenliği mevzuatı yorumu değil, planlama metnidir."
+      "a": "请提前提供工厂入场要求、必要的安全说明及所需防护用品清单，并在确认行程时明确由谁提供装备及如何完成入场准备。口译安排应符合现场规则；译员在场不代表其接替技术团队或工厂承担安全职责。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Koruyucu ekipmanın mevcut olduğu veya tamamının tercüman tarafından sağlanacağı iddia edilmez. İş güvenliği mevzuatı yorumu değil, planlama metnidir."
     }
   },
   {
@@ -477,7 +478,8 @@
     },
     "zh-Hans": {
       "q": "译员的展会入场登记或证件需要我们办理吗？",
-      "a": "入场要求可能因展会及参与身份而异。请提供展会名称和日期，提前明确译员所需登记或证件、办理方及可能的费用。不要默认译员自动具备入场资格，也不要默认证件费用已包含在日费内。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli fuarın kayıt kuralı veya kart ücreti verilmedi. Güncel organizatör koşulları gerçek etkinlik için ayrıca kontrol edilir; bu metin somut kural iddiası taşımaz."
+      "a": "入场要求可能因展会及参与身份而异。请提供展会名称和日期，提前明确译员所需登记或证件、办理方及可能的费用。不要默认译员自动具备入场资格，也不要默认证件费用已包含在日费内。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli fuarın kayıt kuralı veya kart ücreti verilmedi. Güncel organizatör koşulları gerçek etkinlik için ayrıca kontrol edilir; bu metin somut kural iddiası taşımaz."
     }
   },
   {
@@ -577,11 +579,11 @@
     "publish": true,
     "tr": {
       "q": "Hangi şehirlerde Çince tercüman sağlayabiliyorsunuz?",
-      "a": "Türkiye’de İstanbul, Tekirdağ, Düzce, Ankara, Kayseri ve Gaziantep; Çin’de Guangzhou, Shanghai ve Beijing başta olmak üzere birçok şehirdeki tercüman ağımızla talepleri değerlendiriyoruz. Gebze, Kocaeli ve bu merkezlere yakın bölgeler için de gerçek çalışma konumunu paylaşabilirsiniz. Hizmet uygunluğu şehir, tarih ve konu birlikte değerlendirilerek teyit edilir; bu liste her şehirde ofisimiz olduğu anlamına gelmez."
+      "a": "Türkiye'deki hizmet ağımız İstanbul, Tekirdağ, Düzce, Ankara, Kayseri ve Gaziantep; Çin'deki hizmet ağımız Guangzhou, Shanghai ve Beijing şehirlerini kapsar. Yakın bölgeler için gerçek çalışma noktasını ve tarihleri paylaşabilirsiniz. Her talep şehir, tarih ve konu birlikte değerlendirilerek teyit edilir. Şehir listesi her şehirde ofis veya her tarihte hazır tercüman bulunduğu anlamına gelmez."
     },
     "zh-Hans": {
       "q": "哪些城市可以咨询中土口译服务？",
-      "a": "我们通过多个城市的译员网络评估需求，主要包括土耳其的伊斯坦布尔、泰基尔达、迪兹杰、安卡拉、开塞利和加济安泰普，以及中国的广州、上海和北京。盖布泽、科贾埃利及邻近地区也可提供实际工作地点咨询。是否能安排服务须结合城市、日期及内容确认；服务地区不代表当地设有办公室。"
+      "a": "土耳其服务网络包括伊斯坦布尔（İstanbul）、泰基尔达（Tekirdağ）、迪兹杰（Düzce）、安卡拉（Ankara）、开塞利（Kayseri）和加济安泰普（Gaziantep）；中国服务网络包括广州、上海和北京。邻近地区可提供实际工作地点及日期咨询。每项需求都需结合城市、日期和内容确认。列出城市不代表当地设有办公室或任何日期都有人员待命。"
     }
   },
   {
@@ -724,7 +726,8 @@
     },
     "zh-Hans": {
       "q": "按天计费具体包含多少小时？",
-      "a": "每天的起止时间、休息及必要的出行安排需在报价阶段共同明确。“一天”不代表无限时工作。网站没有公布适用于所有工作的统一小时套餐，请在需求中写明计划工作时段。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Sabit günlük saat, mola veya seyahat süresinin mesaiye sayılması kullanıcı tarafından belirlenmedi. 8/9/10 saat gibi sayılar eklenmez."
+      "a": "每天的起止时间、休息及必要的出行安排需在报价阶段共同明确。“一天”不代表无限时工作。网站没有公布适用于所有工作的统一小时套餐，请在需求中写明计划工作时段。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Sabit günlük saat, mola veya seyahat süresinin mesaiye sayılması kullanıcı tarafından belirlenmedi. 8/9/10 saat gibi sayılar eklenmez."
     }
   },
   {
@@ -815,20 +818,21 @@
     },
     "zh-Hans": {
       "q": "什么时候付款，使用什么币种和方式？",
-      "a": "付款时间、币种、方式及可能涉及的预付款条件，需在具体报价中明确。网站不公布适用于所有工作的统一订金比例或支付渠道。确认服务前，请通过我们的直接联系方式核实付款信息及收款方。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Gerçek ödeme kanalları, para birimleri ve ödeme alacak taraf belirlendikten sonra somutlaştırılır. Web sitesine ödeme altyapısı eklendiği anlamına gelmez."
+      "a": "付款时间、币种、方式及可能涉及的预付款条件，需在具体报价中明确。网站不公布适用于所有工作的统一订金比例或支付渠道。确认服务前，请通过我们的直接联系方式核实付款信息及收款方。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Gerçek ödeme kanalları, para birimleri ve ödeme alacak taraf belirlendikten sonra somutlaştırılır. Web sitesine ödeme altyapısı eklendiği anlamına gelmez."
     }
   },
   {
     "id": "Q015",
     "page": "rates",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Şirketimiz adına fatura düzenleyebiliyor musunuz?",
-      "a": "Şirket adına fatura düzenlenmesi sizin için gerekli ise bunu teklif talebinizde belirtin. Fatura düzenleme imkânı ve düzenleyici işletme bilgileri teyit edilmeden bu konuda kesin bir onay vermiyoruz. Rezervasyonunuzu kesinleştirmeden önce ihtiyaç duyduğunuz fatura veya ödeme belgesi koşullarını birlikte netleştirelim."
+      "a": "Evet. Hizmet bedeli için şirketiniz adına fatura düzenliyoruz. Fatura için gereken şirket bilgilerini teklifi onaylarken paylaşmanız yeterlidir."
     },
     "zh-Hans": {
       "q": "可以向我们公司开具发票吗？",
-      "a": "如果公司发票是您的必要条件，请在询价时说明。在确认开票安排及开票主体之前，我们不会作出确定承诺。请在落实预约前，将所需发票或付款凭证的条件确认清楚。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Fatura düzenleyen gerçek işletme, ülke ve belge türü kullanıcı tarafından verilmedi. Bu cevap taslaktır; yayımdan önce işletme doğrulaması gerekir. Çince 发票 sözcüğü Çin vergi sistemiyle uyumlu özel fatura taahhüdü olarak kullanılmaz."
+      "a": "可以。我们可以为贵公司开具服务费发票。请在确认报价时提供开票所需的公司信息。"
     }
   },
   {
@@ -860,40 +864,40 @@
   {
     "id": "Q019",
     "page": "about",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Görüşmelerde paylaşılan ticari ve teknik bilgilerin gizliliğini nasıl koruyorsunuz?",
-      "a": "Gizlilik gereksinimlerinizi işe başlamadan önce paylaşın. Hangi bilgilerin tercümana aktarılabileceğini, kimlerle paylaşılabileceğini ve saklama veya silme beklentilerinizi çalışma öncesinde netleştirelim. İlk talepte yalnızca ihtiyaç özeti gönderin; paylaşma yetkiniz olmayan dosyaları iletmeyin. Özel bir gizlilik protokolü gerekiyorsa belge paylaşımından önce bu koşulları konuşalım."
+      "a": "Gizlilik beklentilerinizi işe başlamadan önce bizimle paylaşın. İsterseniz çalışma öncesinde gizlilik sözleşmesi (NDA) imzalayabiliriz. İlk talepte yalnızca ihtiyaç özetini göndermeniz yeterlidir; ayrıntılı ticari veya teknik belgeleri gizlilik koşulları netleştikten sonra paylaşabilirsiniz."
     },
     "zh-Hans": {
       "q": "如何处理会面中的商业和技术保密要求？",
-      "a": "请在工作开始前说明保密要求，并事先明确哪些资料可提供给译员、可向谁共享，以及保存或删除方面的要求。首次咨询只需简要说明需求，请勿发送未经授权的资料。如需专门的保密安排，应在分享文件前讨论并确认。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Bu metin önerilen süreçtir; mevcut sertifikalı güvenlik, saklama süresi, üçüncü taraf kullanmama veya imzalı NDA politikası kanıtı değildir. İşletmenin gerçek veri akışıyla kontrol edilir."
+      "a": "请在工作开始前告知您的保密要求。如有需要，我们可以在服务开始前签署保密协议（NDA）。首次咨询只需简要说明需求；详细的商业或技术资料，可在保密安排确认后再提供。"
     }
   },
   {
     "id": "Q020",
     "page": "about",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Şirketimizin gizlilik sözleşmesini imzalayabiliyor musunuz?",
-      "a": "Gizlilik sözleşmesi talebinizi hizmet başlamadan önce iletebilirsiniz. Metnin taraflarını, imza yetkisini ve çalışma koşullarıyla uyumunu değerlendirdikten sonra imzalama imkânını teyit etmemiz gerekir. Her sözleşmeyi incelemeden imzalayacağımızı söylemiyoruz; gizli belge paylaşımından önce bu konuyu netleştirelim."
+      "a": "Evet. Şirketinizin gizlilik sözleşmesini (NDA) hizmet başlamadan önce imzalayabiliriz. Sözleşme metnini teklif aşamasında iletirseniz imza süreci, gizli belgeler paylaşılmadan önce tamamlanır."
     },
     "zh-Hans": {
       "q": "可以签署我们公司的保密协议吗？",
-      "a": "可以在服务开始前提出保密协议要求。我们需要先确认协议当事方、签署权限及条款与本次工作的适配情况，再答复是否可以签署。不会承诺未经审阅即签署所有协议；请在提供保密资料前明确相关安排。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > NDA imzalayacak kişi/kuruluş ve uygulanacak süreç doğrulanmadan kesin imza vaadi yayımlanmaz."
+      "a": "可以。我们可以在服务开始前签署贵公司的保密协议（NDA）。请在报价阶段提供协议文本，以便在分享保密资料前完成签署。"
     }
   },
   {
     "id": "Q021",
     "page": "about",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Tercümanın görüşeceğimiz Çinli firma veya tedarikçiyle herhangi bir ticari ilişkisi bulunuyor mu?",
-      "a": "Görüşeceğiniz firmanın adını ve varsa bağımsızlık beklentinizi önceden paylaşın. Görevlendirilecek tercümanın bu firmayla geçmiş çalışma, ticari bağlantı veya komisyon ilişkisi bulunup bulunmadığını seçim aşamasında açıklığa kavuşturalım. Tüm tercümanlar için kontrol yapılmadan “hiçbir bağlantısı yoktur” şeklinde genel bir güvence vermiyoruz."
+      "a": "Hayır. Tercümanlarımızın görüşeceğiniz Çinli firma veya tedarikçiyle ticari bir ilişkisi yoktur. Tercüman sizin talebinizle görevlendirilir ve görüşmede iki taraf arasındaki sözlü iletişimi aktarır."
     },
     "zh-Hans": {
       "q": "译员与我们将会面的中国企业或供应商存在商业关系吗？",
-      "a": "请提前提供对方企业名称及独立性要求。在选择译员时，应明确其是否与该企业有过合作、商业联系或佣金关系。在未进行具体核实前，我们不会对所有译员作出“绝无任何联系”的笼统保证。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Görevlendirme öncesi çıkar ilişkisi beyanı ve kontrol süreci işletme tarafından kabul edilmelidir; mevcut tüm ağ için araştırılmış ilişkisizlik iddiası yoktur."
+      "a": "没有。我们的译员与您将会面的中国企业或供应商不存在商业关系。译员根据您的需求安排，在会面中负责双方之间的口头沟通。"
     }
   },
   {
@@ -902,11 +906,11 @@
     "publish": true,
     "tr": {
       "q": "Tercüman rezervasyonunu ne kadar önceden yapmalıyım?",
-      "a": "Şehir ve tarih aralığınız belli olduğunda bizimle iletişime geçmenizi öneriyoruz. Teknik uzmanlık gerektiren işler, birden fazla şehir içeren programlar ve belirli fuar günleri için hazırlık ve uygunluk kontrolüne zaman ayırmak gerekir. Her iş için geçerli sabit bir son başvuru süremiz yok; son dakika talebinizi de mevcut uygunluğa göre değerlendirebiliriz."
+      "a": "Şehir ve tarih aralığınız belli olduğunda bizimle iletişime geçmenizi öneriyoruz. Teknik uzmanlık gerektiren işler, birden fazla şehir içeren programlar ve belirli fuar günleri için hazırlık ve uygunluk kontrolüne zaman ayırmak gerekir. Ne kadar önceden başvurulması gerektiği konu, şehir ve tarihlerle birlikte değerlendirilir; son dakika talebinde uygunluk ayrıca teyit edilir."
     },
     "zh-Hans": {
       "q": "应提前多久联系并预约口译？",
-      "a": "城市和日期范围确定后，建议尽早联系我们。涉及技术内容、多城市行程或特定展会日期的需求，需要预留准备及档期确认时间。我们不设适用于所有工作的统一提前天数；临时需求也可咨询，但须根据实际档期评估。"
+      "a": "城市和日期范围确定后，建议尽早联系我们。涉及技术内容、多城市行程或特定展会日期的需求，需要预留准备及档期确认时间。需要提前多久联系，应结合主题、城市和日期评估；临时需求须另行确认档期。"
     }
   },
   {
@@ -971,20 +975,21 @@
     },
     "zh-Hans": {
       "q": "取消预约或更改日期适用什么条件？",
-      "a": "应在确认预约前，与报价一起明确取消及改期条件。通知时间、已预留日期及已发生支出可能影响处理。我们不公布适用于所有预约的统一免费取消期限或退款比例，请以已向您确认的条件为准。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Bu cevap hukuki iptal/iade politikası değildir. Gerçek sözleşme ve uygun hukuki inceleme olmadan yeni bağlayıcı kesinti/iade oranı üretilmez."
+      "a": "应在确认预约前，与报价一起明确取消及改期条件。通知时间、已预留日期及已发生支出可能影响处理。我们不公布适用于所有预约的统一免费取消期限或退款比例，请以已向您确认的条件为准。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Bu cevap hukuki iptal/iade politikası değildir. Gerçek sözleşme ve uygun hukuki inceleme olmadan yeni bağlayıcı kesinti/iade oranı üretilmez."
     }
   },
   {
     "id": "Q045",
     "page": "faq",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Görevlendirilen tercüman beklenmedik bir nedenle gelemezse nasıl bir çözüm sunuyorsunuz?",
-      "a": "Böyle bir durum oluşursa mevcut iletişim kanalımız üzerinden programı ve mümkün olan alternatifleri birlikte değerlendirelim. Başka bir tercümanın bulunması şehir, tarih ve işin konusuna bağlıdır; koşulsuz veya anlık yedek tercüman garantisi vermiyoruz. Bir değişiklik gerekiyorsa yeni görevlendirme ve çalışma koşulları ayrıca teyit edilmelidir."
+      "a": "Bugüne kadar böyle bir durum yaşanmadı. Görevlendirilen tercüman beklenmedik bir nedenle gelemeyecek olursa sizi mutlaka önceden bilgilendirir ve yerine başka bir tercüman sağlamak için çalışırız. Alternatif tercümanın uygunluğu şehir, tarih ve işin konusuna göre sizinle birlikte teyit edilir."
     },
     "zh-Hans": {
       "q": "已安排的译员因突发情况无法到场，怎么办？",
-      "a": "出现这种情况时，请通过现有联系渠道共同评估行程及可行替代方案。是否能找到其他译员取决于城市、日期和工作内容；我们不承诺无条件或即时替补。若需变更人员，应另行确认新的安排及工作条件。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > İşletme, aksama iletişim süreci ve alternatif araştırma sorumluluğunu onaylamalıdır. 24/7 destek, ücretsiz yedek veya kesintisizlik garantisi yoktur."
+      "a": "到目前为止尚未发生过这种情况。如已安排的译员因突发原因无法到场，我们一定会提前通知您，并尽力安排其他译员。替补译员能否安排，需结合城市、日期和工作内容与您共同确认。"
     }
   },
   {
@@ -1270,7 +1275,8 @@
     },
     "zh-Hans": {
       "q": "选择译员时，普通话与粤语的区别重要吗？",
-      "a": "重要。请提前说明会面人员使用的语言或方言，不要默认每位译员都能同时满足普通话和粤语需求。咨询时写明土耳其语之外所需的口语种类，并单独确认译员是否适合。网站使用“中文”一词，不代表自动保证所有方言服务。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Mandarin/Kantonca hizmet envanteri kullanıcı tarafından verilmedi; iki dil/lehçenin de kesin sunulduğu söylenmez."
+      "a": "重要。请提前说明会面人员使用的语言或方言，不要默认每位译员都能同时满足普通话和粤语需求。咨询时写明土耳其语之外所需的口语种类，并单独确认译员是否适合。网站使用“中文”一词，不代表自动保证所有方言服务。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Mandarin/Kantonca hizmet envanteri kullanıcı tarafından verilmedi; iki dil/lehçenin de kesin sunulduğu söylenmez."
     }
   },
   {
@@ -1380,14 +1386,14 @@
   {
     "id": "Q107",
     "page": "selection_guide",
-    "publish": false,
+    "publish": true,
     "tr": {
       "q": "Çince tercümanın tedarikçiden komisyon alıp almadığını nasıl öğrenebilirim?",
-      "a": "Görüşeceğiniz firmanın adını belirtip doğrudan komisyon, yönlendirme bedeli veya başka bir ticari ilişki bulunup bulunmadığını sorun. Bizden tercüman talep ederken de bu beklentinizi yazılı olarak iletebilirsiniz. İlgili tercüman için teyit alınmadan tüm ağımız adına “hiç kimse komisyon almaz” şeklinde genel bir iddiada bulunmuyoruz."
+      "a": "Şirket içi kurallarımız, tercümanlarımızın görüşülen tedarikçilerden komisyon, yönlendirme bedeli veya benzeri bir menfaat almasını yasaklar. Bu kurala aykırı davrandığı tespit edilen tercümanla çalışmaya son verilir. Bu konuda özel bir beklentiniz varsa talebinizde yazılı olarak da belirtebilirsiniz."
     },
     "zh-Hans": {
       "q": "如何了解译员是否从供应商收取佣金？",
-      "a": "请明确对方企业名称，直接询问是否涉及佣金、转介费或其他商业关系。向我们申请译员时，也可书面说明这项要求。在核实具体译员前，我们不会笼统声称整个网络中任何人都不收取佣金。\n\n> **Yayın kapısı — ziyaretçiye gösterilmez:** İŞLETME ONAYI BEKLİYOR — cevap taslağı dosyada saklanır; ilgili süreç teyit edilmeden canlıda gösterilmez. > Mevcut komisyon/çıkar çatışması politikası verilmedi. İlgili kişi ve firma düzeyinde beyan ve kontrol süreci onaylanmalıdır; bağımsızlık garantisi eklenmez."
+      "a": "根据我们的内部规定，译员不得从会面的供应商处收取佣金、介绍费或其他利益。一经发现违反此规定，将终止与该译员的合作。如您对此有特别要求，也可在咨询时书面说明。"
     }
   },
   {
@@ -1400,7 +1406,8 @@
     },
     "zh-Hans": {
       "q": "Google 翻译可以替代面对面商务会谈中的中土口译吗？",
-      "a": "简单表达可以借助翻译应用，但不能自动认定它适合所有面对面商务会谈。应根据技术细节、交流节奏、误解后果及保密需求选择。使用人工口译同样不代表零错误，关键内容仍应当场由双方核实。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli uygulama sürümüne ilişkin test, doğruluk oranı veya güncel yetenek karşılaştırması yapılmadı. Metin koşullu seçim yaklaşımıdır."
+      "a": "简单表达可以借助翻译应用，但不能自动认定它适合所有面对面商务会谈。应根据技术细节、交流节奏、误解后果及保密需求选择。使用人工口译同样不代表零错误，关键内容仍应当场由双方核实。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Belirli uygulama sürümüne ilişkin test, doğruluk oranı veya güncel yetenek karşılaştırması yapılmadı. Metin koşullu seçim yaklaşımıdır."
     }
   },
   {
@@ -1413,7 +1420,8 @@
     },
     "zh-Hans": {
       "q": "AI 翻译设备足以应对设备安装和工厂会面吗？",
-      "a": "未用实际工作交流进行评估前，不宜认定某个设备或 AI 应用能够满足整个安装或参访过程。需要考虑术语、数字、单位、现场条件及保密信息处理。无论使用何种工具，技术决策均应由授权团队作出，说明存在歧义时应先核实再操作。\n\n**İç uygulama notu — ziyaretçiye gösterilmez:** Cihaz önerisi, ölçülmüş hata oranı veya AI sistemlerinin tümü hakkında deneysel iddia yoktur. Genel iş akışı değerlendirmesidir."
+      "a": "未用实际工作交流进行评估前，不宜认定某个设备或 AI 应用能够满足整个安装或参访过程。需要考虑术语、数字、单位、现场条件及保密信息处理。无论使用何种工具，技术决策均应由授权团队作出，说明存在歧义时应先核实再操作。",
+      "editorialNote": "**İç uygulama notu — ziyaretçiye gösterilmez:** Cihaz önerisi, ölçülmüş hata oranı veya AI sistemlerinin tümü hakkında deneysel iddia yoktur. Genel iş akışı değerlendirmesidir."
     }
   },
   {

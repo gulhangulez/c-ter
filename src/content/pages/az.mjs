@@ -1,11 +1,19 @@
-// AZ trilingual deliverable — /az/, /az/suallar/, /az/elaqe/. Plan §54–58.
+// AZ trilingual deliverable — /az/, /az/suallar/, /az/elaqe/. Plan §6.20–6.22.
 // Language honesty: an AZ site does NOT guarantee an Azerbaijani-speaking
 // interpreter. Core pair is Chinese–Turkish. AZ is a customer market, not a
 // service location (no Baku office / local number / standing team).
+// One price note per page: where the page text already states the daily fee
+// and separate expenses, no extra priceNote block is used.
 
-const AZ_LANGUAGE_NOTE = "Əsas iş dillərimiz Çin dili və türk dilidir. Türk dilində ünsiyyət sizin üçün uyğundursa, bu qaydada işləyə bilərik. Tərcüməçinin mütləq azərbaycanca danışmasını istəyirsinizsə, bunu əvvəlcədən bildirin; həmin dil üzrə uyğunluğu ayrıca dəqiqləşdirməliyik.";
+// Mandatory language note (§6.1) — identical on all three AZ pages.
+const AZ_LANGUAGE_NOTE = "Əsas iş dillərimiz Çin dili və türk dilidir. Saytın Azərbaycan dilində olması tərcüməçinin Azərbaycan dilini bildiyi anlamına gəlmir. Türk dilində ünsiyyətin sizin üçün uyğun olduğunu açıq şəkildə təsdiqləməlisiniz. Azərbaycan dili mütləq lazımdırsa, bunu ayrıca qeyd edin; dil uyğunluğu təsdiqlənmədən sifariş verilmiş sayılmır.";
 
 const azIds = Array.from({ length: 30 }, (_, i) => "AZ" + String(i + 1).padStart(3, "0"));
+
+const AZ_CTAS = [
+  { kind: "quote", label: "Uyğunluq və qiymət təklifi soruşun" },
+  { kind: "whatsapp", label: "WhatsApp-da yazın" }
+];
 
 const landing = {
   id: "az-home",
@@ -15,94 +23,56 @@ const landing = {
       path: "/az/",
       status: "published",
       indexable: true,
-      title: "Çində tərcüməçi | Sərgi, zavod və texniki görüşlər",
-      description: "Çində zavod və sərgi ziyarətləri, Türkiyədə avadanlıq quraşdırılması üçün şifahi tərcümə. İş dilini, tarixləri və günlük qiyməti dəqiqləşdirin.",
-      jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "Çində tərcüməçi", inLanguage: "az", url: "https://www.cince-tercuman.com/az/" },
+      title: "Çində Tərcüməçi | Çin–Türk Dili üzrə Şifahi Tərcümə",
+      description: "Çində görüş, zavod və sərgi ziyarətləri, Türkiyədə avadanlıq quraşdırılması üçün Çin–türk dili üzrə şifahi tərcümə. Dil uyğunluğunu, tarixləri və günlük haqqı soruşun.",
+      schema: { type: "WebPage", crumbs: [] },
       blocks: [
         {
           type: "hero",
           eyebrow: "Azərbaycandan Çin və Türkiyəyə işgüzar səfər edənlər üçün",
-          h1: "Çində tərcüməçi: zavod və sərgi görüşlərində dil dəstəyi",
-          lead: "Çində zavod və sərgi ziyarətləri, Türkiyədə isə Çinli texniki heyətlə avadanlıq quraşdırılması zamanı şifahi tərcümə dəstəyi göstəririk. Səfərinizin məqsədini, şəhəri və tarixləri bildirin; iş dilini və tərcüməçinin həmin günlərdə işləyə biləcəyini əvvəlcədən dəqiqləşdirək.",
-          ctas: ["quote", "whatsapp"],
-          card: {
-            title: "Görüşməniz harada və nə vaxtdır?",
-            intro: "Hansı şəhərə gedirsiniz? Zavod ziyarəti, sərgi, yoxsa avadanlıq quraşdırılması üçün tərcüməçi lazımdır? Tarixləri və hansı dildə rahat ünsiyyət qurduğunuzu bildirin.",
-            ctas: [{ kind: "quote", label: "Müraciətinizi hazırlayın" }]
-          }
+          h1: "Çində görüş, zavod və sərgi ziyarətləri üçün tərcüməçi",
+          lead: "Çində əvvəlcədən planlaşdırdığınız görüşlərdə və Türkiyədə Çinli texniki heyətlə avadanlıq quraşdırılması zamanı şifahi ünsiyyət üçün müraciət edə bilərsiniz. Xidməti, şəhəri, tarixləri və qısa ehtiyacınızı bildirin. İş dilinin sizin üçün uyğunluğunu xidmət təsdiqlənməzdən əvvəl ayrıca dəqiqləşdirək.",
+          ctas: AZ_CTAS
         },
         { type: "callout", html: `<strong>Dil qeydi:</strong> ${AZ_LANGUAGE_NOTE}` },
-        { type: "priceNote" },
         {
           type: "cards",
-          heading: "Hansı iş üçün tərcüməçi axtarırsınız?",
+          heading: "Hansı işlər üçün müraciət edə bilərsiniz?",
           columns: 4,
           items: [
-            { icon: "chat", title: "Çində şifahi tərcümə", text: "Əvvəlcədən planlaşdırdığınız görüş və səfər proqramında Çin dilində ünsiyyət üçün tərcüməçi dəstəyi. Şəhəri, görüşün mövzusunu və iş dilini əvvəlcədən dəqiqləşdiririk." },
-            { icon: "wrench", title: "Avadanlıq quraşdırılması zamanı tərcümə", text: "Çinli mühəndislərlə müəssisənizin əməkdaşları arasında quraşdırma, sınaq və istismara vermə mərhələlərində şifahi ünsiyyət. Tərcüməçi texniki heyətin yerini tutmur." },
-            { icon: "factory", title: "Çində zavod ziyarəti", text: "Seçdiyiniz zavodda istehsal prosesi, məhsul və sifariş şərtləri barədə görüşlərə tərcüməçi ilə qatılın. Ziyarətin məqsədini və görüşəcəyiniz müəssisəni əvvəlcədən paylaşın." },
-            { icon: "booth", title: "Çində sərgi ziyarəti", text: "Canton Fair və Çindəki digər sərgilərdə stend görüşmələri üçün şifahi tərcümə. Məhsul qrupunu, iştirak edəcəyiniz sərgini və günləri bildirin." }
+            { icon: "chat", title: "Çində planlaşdırılmış görüşlər", text: "Əvvəlcədən müəyyən etdiyiniz görüşlərdə Çin dili ilə türk dili arasında şifahi ünsiyyət. Məhsul və ya tərəfdaş axtarışı, ticarət məsləhəti və idxal xidməti təqdim etmirik." },
+            { icon: "wrench", title: "Türkiyədə avadanlıq quraşdırılması", text: "Çinli texniki heyətin quraşdırma, sınaq və istifadə ilə bağlı izahlarının, müəssisə əməkdaşlarının isə suallarının qarşılıqlı çatdırılması. Avadanlığı tərcüməçi quraşdırmır və texniki qərar vermir." },
+            { icon: "factory", title: "Çində zavod ziyarəti", text: "Sizin seçdiyiniz zavodda məhsul, istehsal prosesi və görüş gündəmi barədə şifahi tərcümə. Bu xidmət zavod auditi, keyfiyyət yoxlaması və ya məhsula zəmanət deyil." },
+            { icon: "booth", title: "Sərgi və stend görüşləri", text: "Müəyyən etdiyiniz sərgidə məhsul təqdimatı və stend danışıqları üçün dil dəstəyi. Bilet, otel, transfer və tur təşkili xidmətə daxil deyil." }
           ]
         },
         {
           type: "richtext",
           surface: true,
           heading: "Çində Azərbaycan dilli tərcüməçi axtarırsınız?",
-          html: `<p>Əvvəlcə sizin üçün uyğun iş dilini müəyyənləşdirək. Əsas xidmətimiz Çin dili ilə türk dili arasında şifahi tərcümədir. Türk dilində görüşməni rahat izləyə bilirsinizsə, ünsiyyəti bu qaydada qura bilərik.</p>
-          <p>Tərcüməçinin azərbaycanca danışması sizin üçün mütləq şərtdirsə, bunu müraciətdə ayrıca seçin. Belə bir tərcüməçinin mövcudluğunu və dil uyğunluğunu yoxlamadan sifarişi təsdiqləmirik. Saytın Azərbaycan dilində olması hər tərcüməçinin bu dili bildiyi mənasına gəlmir.</p>
+          html: `<p>Azərbaycan dili görüşün mütləq iş dili olmalıdırsa, bunu əlaqə formasında ayrıca seçin. Türk dilində işləməyə razılığınızı avtomatik qəbul etmirik. Türk dilində sualları və cavabları rahat izləyə biləcəyinizi açıq şəkildə təsdiqləməyiniz lazımdır. Azərbaycan dili üzrə uyğunluq ayrıca təsdiqlənməyibsə, həmin tələbin qarşılanacağına söz vermirik.</p>
           <p><a class="button-ghost" href="/az/elaqe/#is-dili">Dil tələbinizi bildirin</a></p>`
         },
         {
           type: "richtext",
-          heading: "Çində görüşmələrinizə aydın proqramla gedin",
-          html: `<p>Çin dili tərcüməçisi axtararkən yalnız şəhəri deyil, görüşün mövzusunu da bildirmək vacibdir. Məhsulu müzakirə edəcəksiniz, istehsal xəttinə baxacaqsınız, yoxsa texniki izahları dinləyəcəksiniz? Bu məlumatlar uyğun tərcüməçinin seçilməsinə və hazırlığına kömək edir.</p>
-          <p>Görüşəcəyiniz tərəfi və proqramı siz müəyyən edirsiniz. Biz razılaşdırılmış görüşlərdə Çin dili ilə türk dili arasında şifahi ünsiyyətə dəstək veririk; iş dilinin sizin üçün uyğunluğunu əvvəlcədən yoxlayırıq.</p>
-          <h3>Çində zavod ziyarəti üçün tərcüməçi</h3>
-          <p>Ziyarət edəcəyiniz zavodun yerini, məhsul qrupunu və görüşdə soruşmaq istədiyiniz əsas sualları paylaşın. İstehsal xəttinin izahı, minimum sifariş miqdarı, nümunə, qiymət və çatdırılma müddəti barədə danışarkən qarşılıqlı ünsiyyətə kömək edirik.</p>
-          <p>Bu xidmət zavod auditi və ya məhsul keyfiyyətinə zəmanət deyil. Ticarət qərarları sizə aiddir; tərcüməçi tərəflərin dediklərini və suallarını bir-birinə çatdırır.</p>
-          <p class="muted">Zavodun yeri · Məhsul qrupu · Görüş tarixi · Əsas suallar</p>`
+          heading: "Guangzhou və Canton Fair proqramı",
+          html: `<p>Sərginin mərhələsini, iştirak günlərinizi və məhsul qrupunu qeyd edin. Eyni gün zavoda da gedəcəksinizsə, onun ünvanını ayrıca yazın. Komandanız müxtəlif stendlərdə eyni vaxtda görüşəcəksə, bir tərcüməçi hər iki yerdə ola bilməz; paralel görüşləri əvvəlcədən bildirin.</p>`
         },
         {
           type: "richtext",
           surface: true,
-          heading: "Guangzhou səfəriniz və Canton Fair",
-          html: `<p>Guangzhou səfərinizdə sərgi ilə yanaşı zavod görüşləri də planlaşdırırsınızsa, hər işin yerini və gününü ayrıca bildirin. Sərgi salonu, zavod və qalacağınız yer arasındakı gediş-gəlişi nəzərə alaraq tərcüməçinin proqramını dəqiqləşdirək.</p>
-          <h3>Canton Fair üçün tərcüməçi dəstəyi</h3>
-          <p>Kanton Sərgisində — Canton Fair — stendləri gəzərkən məhsulun xüsusiyyətləri, sifariş miqdarı, nümunə və təhvil müddəti barədə suallarınızı qarşı tərəfə çatdırmağa kömək edirik. İştirak edəcəyiniz mərhələni, tarixləri və məhsul qruplarını əvvəlcədən paylaşın.</p>
-          <p>Komandanız eyni vaxtda müxtəlif stendlərdə görüşəcəksə, bunu da bildirin. Bir tərcüməçi ayrı yerlərdə keçirilən eyni vaxtlı görüşlərə birlikdə qatıla bilməz.</p>
-          <p class="muted">Xidmət sərgi görüşmələrində şifahi tərcüməni əhatə edir. Səfər və sərgi iştirakının təşkili bu xidmətə daxil deyil.</p>`
+          heading: "Xidmət harada planlaşdırılır?",
+          html: `<p>Çində Guangzhou, Şanxay (Shanghai) və Pekin (Beijing); Türkiyədə İstanbul, Tekirdağ, Düzce, Ankara, Kayseri və Gaziantep xidmət şəbəkəsində olan şəhərlərdir. Hər müraciət tarixə, faktiki iş yerinə və uyğunluğa görə qiymətləndirilir. Şəhər siyahısı hər şəhərdə ofis və ya daim hazır tərcüməçi olduğu demək deyil. Yaxın bölgələr üçün də konkret konumu paylaşa bilərsiniz.</p>
+          <p>Azərbaycandakı müəssisədə görüləcək iş ayrıca qiymətləndirilməlidir. Azərbaycanda ofis və ya hazır heyət vədi vermirik; saytın Azərbaycan dilində olması belə bir mövcudluğu təsdiqləmir.</p>`
         },
         {
           type: "richtext",
-          heading: "Çindən gələn mühəndislər üçün tərcüməçi",
-          html: `<p>Türkiyədəki müəssisənizə Çindən texniki heyət gəlirsə, avadanlığın quraşdırılması və istismara verilməsi zamanı Çin dili ilə türk dili arasında şifahi tərcümə üçün müraciət edə bilərsiniz. Avadanlığın növünü, işin mərhələsini, şəhəri və tarixləri bildirin.</p>
-          <p>Tərcüməçi mühəndislərin izahlarını, müəssisə əməkdaşlarının suallarını və qarşılıqlı cavabları çatdırır. Avadanlığı özü quraşdırmır, texniki qərar vermir və işin təhlükəsizliyinə dair mühəndislik məsuliyyəti daşımır.</p>
-          <div class="callout"><strong>Ölkə sərhədi:</strong> Hazırkı xidmət planımız Türkiyə və Çini əhatə edir. İş Azərbaycanda görüləcəksə, məkanı əvvəlcədən bildirin; bu, ayrıca qiymətləndirilməli olan müraciətdir və xidmətin həmin ölkədə mövcudluğu hələ təsdiqlənmiş sayılmır.</div>`
+          heading: "Günlük haqq və müraciət qaydası",
+          html: `<p>Xidmət günlük əsasda planlaşdırılır. Nəqliyyat, qalma və yemək-içmək ayrıca hesablanır. Proqramı paylaşın, iş dilini dəqiqləşdirək, sonra uyğunluq və günlük şərtləri qarşılıqlı təsdiqləyək. İlkin mesaj sifariş təsdiqi deyil.</p>
+          <p><a class="button-primary" href="/az/elaqe/">Uyğunluq və qiymət təklifi soruşun</a></p>
+          <p><a href="/az/suallar/">Suallar və cavablar</a> · <a href="/az/elaqe/#is-dili">Əlaqə və dil tələbi</a></p>`
         },
-        {
-          type: "richtext",
-          surface: true,
-          heading: "Şəhəri deyil, işin görüləcəyi yeri də bildirin",
-          html: `<p><strong>Çində:</strong> Guangzhou, Şanxay (Shanghai) və Pekin (Beijing) üzrə tərcüməçi şəbəkəmiz var. Bu mərkəzlərə yaxın şəhərlərdəki müraciətləri tarix, məsafə və tərcüməçi uyğunluğuna görə qiymətləndiririk.</p>
-          <p><strong>Türkiyədə:</strong> İstanbul, Tekirdağ, Düzce, Ankara, Kayseri və Gaziantepdə, eləcə də yaxın bölgələrdəki işlər üçün müraciət edə bilərsiniz. Tərcüməçinin faktiki uyğunluğu iş yeri və tarixlər dəqiqləşdikdən sonra təsdiqlənir.</p>
-          <p class="muted">Şəbəkəmizin olması hər şəhərdə ayrıca ofisimiz və ya daim hazır tərcüməçimiz olduğu demək deyil.</p>`
-        },
-        {
-          type: "steps",
-          heading: "Tərcüməçi sifarişini necə planlaşdırırıq?",
-          items: [
-            { title: "Proqramınızı paylaşın", text: "Xidməti, ölkəni, şəhəri və tarixləri bildirin. Görüşün məqsədini qısaca yazın." },
-            { title: "İş dilini və uyğunluğu dəqiqləşdirək", text: "Türk dilində ünsiyyətin sizin üçün uyğun olub-olmadığını və ya mütləq Azərbaycan dilində danışan tərcüməçiyə ehtiyacınızı qeyd edin." },
-            { title: "Günlük şərtləri razılaşdıraq", text: "Tərcüməçinin uyğunluğu, günlük iş saatları, xidmət haqqı və ayrıca xərclər dəqiqləşdikdən sonra sifarişin təsdiq qaydasını razılaşdırırıq. Sadəcə mesaj göndərmək sifarişi avtomatik təsdiqləmir." }
-          ]
-        },
-        {
-          type: "richtext",
-          heading: "Günlük qiymət nəyə əsasən müəyyən olunur?",
-          html: `<p>Qiymət işin görüləcəyi şəhərə, tarixlərə, mövzuya və tərcüməçinin uyğunluğuna görə dəqiqləşdirilir. Bir neçə günlük proqramda da xidmət haqqı gün hesabı ilə verilir.</p>
-          <p>Şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərcləri ayrıca hesablanır. Günlük iş müddəti, əlavə vaxt və ödəniş qaydası təklifdə aydınlaşdırılır. Saytda göstərilməyən saat, məbləğ və ya valyutanı əvvəlcədən qəbul etməyin.</p>`
-        },
-        { type: "faq", heading: "Qısa suallar", intro: "Tam cavabların tək mənbəyi suallar səhifəsidir.", ids: ["AZ002", "AZ004", "AZ007", "AZ017", "AZ015"] },
+        { type: "faq", heading: "Qısa suallar", ids: ["AZ002", "AZ004", "AZ007", "AZ017", "AZ015"] },
         { type: "finalCta" }
       ]
     }
@@ -117,18 +87,25 @@ const suallar = {
       path: "/az/suallar/",
       status: "published",
       indexable: true,
-      title: "Çində tərcüməçi: suallar və cavablar | Çince Tercüman",
-      description: "Çində tərcüməçi, zavod və sərgi ziyarəti, avadanlıq quraşdırılması, iş dili, günlük qiymət və əlavə xərclər barədə suallarınıza cavablar.",
-      jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "Suallar və cavablar", inLanguage: "az" },
+      title: "Çin Dili Tərcüməçisi Haqqında Suallar | Dil, Xərc və Proqram",
+      description: "Çində və Türkiyədə şifahi tərcümə, Azərbaycan dili tələbi, günlük haqq, əlavə xərclər və görüş proqramı haqqında suallar. Əsas iş dilləri Çin dili və türk dilidir.",
+      schema: { type: "WebPage", crumbs: [{ name: "Suallar və cavablar", path: "/az/suallar/" }] },
       blocks: [
-        { type: "hero", eyebrow: "Suallar və cavablar", h1: "Çin dili tərcüməçisi barədə suallar və cavablar", lead: "Səfərinizə və ya texniki görüşünüzə başlamazdan əvvəl xidmətin sərhədlərini, iş dilini və ayrıca xərcləri bilmək vacibdir. Burada ən çox dəqiqləşdirilən mövzuları bir araya topladıq.", ctas: ["quote", "whatsapp"] },
+        { type: "hero", eyebrow: "Suallar və cavablar", h1: "Tərcüməçi sorğusundan əvvəl suallarınız", lead: "Hansı iş üçün müraciət edə biləcəyinizi, iş dilinin necə dəqiqləşdirildiyini və günlük haqqdan ayrıca hansı xərclərin hesablandığını bu səhifədə tapa bilərsiniz. Müraciətinizə uyğun cavab üçün şəhəri, tarixləri və ehtiyacınızı yazın.", ctas: AZ_CTAS },
         { type: "callout", html: `<strong>Dil qeydi:</strong> ${AZ_LANGUAGE_NOTE}` },
-        { type: "faq", heading: "Xidmət və iş dili", ids: azIds.slice(0, 5) },
-        { type: "faq", heading: "Çində şəhərlər, zavodlar və sərgilər", ids: azIds.slice(5, 10) },
-        { type: "faq", heading: "Avadanlıq quraşdırılması və xidmət yeri", ids: azIds.slice(10, 15) },
-        { type: "faq", heading: "Günlük qiymət və əlavə xərclər", ids: azIds.slice(15, 21) },
-        { type: "faq", heading: "Sifariş və proqram dəyişikliyi", ids: azIds.slice(21, 26) },
-        { type: "faq", heading: "Hazırlıq və əlaqə", ids: azIds.slice(26, 30) },
+        { type: "richtext", html: `<p>Aşağıdakı bölmələrdə xidmətin əhatəsi, iş dili, Çin proqramı, texniki heyətlə iş, günlük xərc və müraciət qaydası üzrə cavabları tapa bilərsiniz. Öz proqramınıza aid məsələ aydın deyilsə, şəhəri, tarixləri və dil tələbinizi bizə yazın.</p>` },
+        { type: "faq", heading: "Xidmət və iş dili", intro: "Çin dili ilə türk dili arasında şifahi tərcümənin hansı işləri əhatə etdiyini və iş dilinin sizin üçün uyğunluğunu necə dəqiqləşdirəcəyinizi öyrənin. Azərbaycan dili mütləq lazımdırsa, bunu ayrıca bildirin.", ids: azIds.slice(0, 5) },
+        { type: "faq", heading: "Çində şəhərlər, zavodlar və sərgilər", intro: "Çində görüş, seçdiyiniz zavoda ziyarət və sərgi proqramı üçün hansı məlumatların lazım olduğunu öyrənin. Bir neçə ünvan varsa, onları günlər üzrə paylaşın; tərcüməçiliyin audit və keyfiyyət yoxlamasından fərqini nəzərə alın.", ids: azIds.slice(5, 10) },
+        { type: "faq", heading: "Avadanlıq quraşdırılması və xidmət yeri", intro: "Türkiyədə Çinli texniki heyətlə iş üçün avadanlığı, faktiki iş yerini və tarixləri bildirin. Tərcüməçi şifahi ünsiyyəti dəstəkləyir; avadanlığı quraşdırmır və texniki qərar vermir. Azərbaycandakı iş yeri ayrıca qiymətləndirilməlidir.", ids: azIds.slice(10, 15) },
+        { type: "faq", heading: "Günlük qiymət və əlavə xərclər", intro: "Günlük tərcüməçi haqqını şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərclərindən ayrıca qiymətləndirin. İş saatlarını, əlavə gün ehtimalını və ödəniş şərtlərini proqramınıza uyğun dəqiqləşdirin.", ids: azIds.slice(15, 21) },
+        { type: "faq", heading: "Sifariş və proqram dəyişikliyi", intro: "Müraciət göndərmək sifarişi təsdiqləmir. Tarix dəyişməsi, əlavə gün və eyni vaxtda keçiriləcək görüşlər barədə əvvəlcədən məlumat verin; uyğunluq və şərtlər ayrıca dəqiqləşdirilir.", ids: azIds.slice(21, 26) },
+        { type: "faq", heading: "Hazırlıq və əlaqə", intro: "Qısa iş məlumatı, faktiki görüş yeri və dil tələbi ilə başlayın. Hazırladığınız mesajı özünüz göndərirsiniz. Azərbaycan dilində yazışma seçimi tərcüməçinin Azərbaycan dilində danışacağına zəmanət vermir.", ids: azIds.slice(26, 30) },
+        {
+          type: "richtext",
+          surface: true,
+          heading: "Öz proqramınız üçün cavab alın",
+          html: `<p>Xidmət, şəhər, tarixlər, iş dili və qısa ehtiyacınızı <a href="/az/elaqe/">əlaqə formasında</a> paylaşın. Günlük haqq və ayrıca xərclər proqram əsasında dəqiqləşdirilir. Sorğu göndərmək sifarişi təsdiqləmir.</p>`
+        },
         { type: "finalCta" }
       ]
     }
@@ -143,16 +120,37 @@ const elaqe = {
       path: "/az/elaqe/",
       status: "published",
       indexable: true,
-      title: "Çin dili tərcüməçisi üçün müraciət | Çince Tercüman",
-      description: "Şəhəri, tarixləri, xidmət növünü və dil tələbinizi bildirin. Çin dili tərcüməçisi üçün günlük şərtləri WhatsApp və ya e-poçtla dəqiqləşdirin.",
-      jsonld: { "@context": "https://schema.org", "@type": "ContactPage", name: "Əlaqə", inLanguage: "az" },
+      title: "Çin Dili Tərcüməçisi ilə Əlaqə | Şəhər, Tarix və Dil Tələbi",
+      description: "Xidməti, şəhəri, tarixləri və dil tələbinizi bildirin. WhatsApp, telefon və e-poçtla günlük tərcüməçi üçün uyğunluq və qiymət təklifi soruşun.",
+      schema: { type: "ContactPage", crumbs: [{ name: "Əlaqə", path: "/az/elaqe/" }] },
       blocks: [
-        { type: "hero", eyebrow: "Əlaqə", h1: "Proqramınızı yazın, iş dilini və qiyməti dəqiqləşdirək", lead: "Hansı ölkədə və şəhərdə, hansı tarixlərdə tərcüməçiyə ehtiyacınız var? Görüşün məqsədini və hansı dildə rahat ünsiyyət qurduğunuzu bildirin. Müraciətiniz əsasında tərcüməçinin uyğunluğunu və günlük şərtləri dəqiqləşdirək." },
+        { type: "hero", eyebrow: "Əlaqə", h1: "Şəhəri, tarixləri və iş dili tələbinizi bildirin", lead: "Çində görüşünüz və ya Türkiyədə texniki heyətlə işiniz üçün qısa proqramı paylaşın. Tarixlər tam müəyyən deyilsə, bunu yazın. Azərbaycan dilində danışan tərcüməçi mütləq lazımdırsa, bunu ayrıca seçin; türk dilində işləməyə uyğunluğunuzu avtomatik qəbul etmirik." },
         { type: "callout", html: `<strong>Dil qeydi:</strong> ${AZ_LANGUAGE_NOTE}` },
-        { type: "priceNote" },
+        { type: "callout", text: "Xidmət günlük əsasda hesablanır. Şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərcləri günlük tərcüməçi haqqına daxil deyil, ayrıca hesablanır." },
+        { type: "richtext", heading: "Əlaqə vasitələri", html: `<p>Nömrələrimiz Türkiyə nömrələridir. Azərbaycanda yerli ofis göstərmirik.</p>` },
         { type: "contactCards" },
-        { type: "callout", html: `Formadan istifadə etmədən də yaza bilərsiniz. Mesajınızda şəhəri, tarixləri və iş dilinə dair tələbinizi qeyd edin. Nömrələrimiz Türkiyə nömrələridir; Azərbaycanda yerli ofis və ya yerli telefon nömrəsi göstərmirik.` },
+        {
+          type: "richtext",
+          heading: "Sorğu mətninizi hazırlayın",
+          html: `<p>Məcburi sahələr: xidmət; iş ölkəsi; şəhər və faktiki iş yeri; tarix; dil tələbi; qısa ehtiyac. Ad/şirkət könüllüdür. İlk mesajda məxfi texniki sənəd paylaşmayın.</p>
+          <h3>İş dili</h3>
+          <p>Görüşməni hansı dildə izləyə biləcəyinizi aşağıdakı seçimlərdən biri ilə bildirin.</p>
+          <p>Daxil etdiyiniz məlumatlarla mesaj mətni hazırlanır. Mətnə baxıb WhatsApp və ya e-poçt tətbiqində özünüz göndərirsiniz. Formanı doldurmaq və tətbiqi açmaq mesajın göndərildiyi və ya sifarişin təsdiqləndiyi demək deyil.</p>`
+        },
         { type: "quoteForm", languageRadios: true, defaultCountry: "CN" },
+        {
+          type: "richtext",
+          html: `<h3>Kopyalana bilən mətn</h3>
+          <div class="callout" id="sorgu-metni-az">Salam. Şifahi tərcümə üçün uyğunluq və qiymət təklifi soruşmaq istəyirəm. Xidmət: [xidmət]. Ölkə, şəhər və iş yeri: [konum]. Tarixlər: [tarix]. Dil tələbi: [açıq seçiminiz]. Qısa ehtiyac: [mövzu]. Günlük tərcüməçi haqqını şəhərdaxili və şəhərlərarası nəqliyyat, qalma və yemək-içmək xərclərindən ayrı bildirə bilərsinizmi? Bu mesaj sifariş təsdiqi deyil. Mənbə səhifə: [açıq səhifə yolu].</div>
+          <div class="button-row"><button class="button-ghost" type="button" data-copy-target="sorgu-metni-az">Mesajı kopyala</button></div>`
+        },
+        {
+          type: "richtext",
+          surface: true,
+          heading: "Sorğudan sonra",
+          html: `<p>Əvvəl proqramı və iş dilini, sonra uyğunluğu, günlük haqqı və ayrıca xərcləri dəqiqləşdiririk. Xidmət yalnız qarşılıqlı təsdiqdən sonra planlaşdırılır.</p>
+          <p><a href="/az/">Xidmətə baxın</a> · <a href="/az/suallar/">Bütün suallar</a></p>`
+        },
         { type: "faq", heading: "Qısa suallar", ids: ["AZ029", "AZ023", "AZ030"] }
       ]
     }

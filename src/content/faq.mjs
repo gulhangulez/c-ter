@@ -1,6 +1,6 @@
 // FAQ single source. Generated from the spec by scripts/extract-faq.mjs.
-// Owner-review drafts (Q015, Q019, Q020, Q021, Q045, Q107) carry publish:false
-// and are never emitted to public HTML/JSON-LD (build filters them out).
+// Entries with publish:false are never emitted to public HTML/JSON-LD (build
+// filters them out). The six former owner-review drafts were approved 2026-10-01.
 import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";

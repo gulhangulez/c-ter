@@ -9,6 +9,7 @@ import { faqPage } from "./pages/faq-page.mjs";
 import { contact } from "./pages/contact.mjs";
 import { guides } from "./pages/guides.mjs";
 import { cityPages } from "./pages/cities.mjs";
+import { blog } from "./pages/blog.mjs";
 import { azFaqPage, azHomeLocale, azContactLocale } from "./pages/az.mjs";
 
 // §61: the home and contact groups carry true 3-way hreflang (tr / zh-Hans / az).
@@ -27,5 +28,6 @@ export const pages = [
   contact,
   ...guides,
   ...cityPages,
+  ...blog,
   azFaqPage
 ];

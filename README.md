@@ -33,6 +33,21 @@ Node.js ≥ 20 gerekir. **Bağımlılık yoktur** (yalnızca Node standart küt�
 - `src/scripts/app.js` — tarayıcı etkileşimi (menü, form önizleme, kopyalama).
 - `scripts/build.mjs` — üretici. `dist/` + `sitemap.xml` + `robots.txt` + `404.html`.
 
+## 2026-10 güncellemesi (içerik/SEO/AI planı + DESIGN.md)
+
+- Tasarım: `DESIGN.md` "Contrast" sistemi — beyaz zemin, tek mercan vurgu (#ff5065),
+  hap düğmeler, tek gölge tokenı. Font Manrope (OFL) `public/assets/fonts/` altında
+  yerel sunulur; Google Fonts dahil hiçbir üçüncü taraf isteği yoktur (Çin erişimi).
+- JSON-LD: `src/lib/schema.mjs` her sayfaya tek graf üretir (sabit `@id`'ler,
+  görünür breadcrumb ile aynı BreadcrumbList). Sayfa modülleri yalnız `schema`
+  meta verisi taşır.
+- SSS: iç notlar `editorialNote` alanında, hiçbir çıktıya yazılmaz
+  (`scripts/faq-fixes.mjs`, çıkarıcıya bağlı). Q002/Q005 etkin metinleri uygulandı.
+- Geçiş: `migration/mapping.csv` tek kaynak; `node scripts/redirects.mjs`
+  `redirects/` altındaki Apache/LiteSpeed, nginx ve Netlify örneklerini üretir.
+  `pending` satırlar (İzmir, Yiwu, eski blog yazıları) işletme kararı bekler.
+- 55 içerik sayfası: 26 TR + 26 ZH (Tekirdağ geri eklendi) + 3 AZ; 404 ve 410 gövdeleri.
+
 ## URL düzeni
 
 - Türkçe kök URL'lerde (`/`, `/cince-tercuman/`, …); **toplu `/tr/` taşıması yok**.

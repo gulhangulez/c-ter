@@ -3,6 +3,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { applyFaqFixes } from "./faq-fixes.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SPEC = join(ROOT, "spec/site-plan-v1.3.md");
@@ -82,6 +83,8 @@ async function main() {
     });
   }
 
+  // Internal notes -> editorialNote; Q002/Q005 active texts (plan 2026-10 §7).
+  applyFaqFixes(entries);
   await writeFile(join(ROOT, "src/content/faq.data.json"), JSON.stringify(entries, null, 2) + "\n");
   const q = entries.filter((e) => /^Q/.test(e.id));
   const az = entries.filter((e) => /^AZ/.test(e.id));
