@@ -1,5 +1,6 @@
 // General FAQ — /sik-sorulan-sorular/ and /zh/faq/. Plan §15.4.
 // FAQPage JSON-LD intentionally omitted (Google dropped FAQ rich results, §2.4/G2).
+// JSON-LD (WebPage + BreadcrumbList) is generated centrally from `schema`.
 export const faqPage = {
   id: "faq",
   primaryService: null,
@@ -10,7 +11,7 @@ export const faqPage = {
       indexable: true,
       title: "Çince Tercümanlık Hakkında Sık Sorulan Sorular",
       description: "Çince sözlü tercümanlıkta günlük çalışma, hizmet bölgeleri, teklif için gerekli bilgiler ve program değişiklikleri hakkında sık sorulan sorular.",
-      jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "Sık sorulan sorular", inLanguage: "tr" },
+      schema: { type: "WebPage", crumbs: [{ name: "Sık sorulan sorular", path: "/sik-sorulan-sorular/" }] },
       blocks: [
         { type: "hero", eyebrow: "Sık sorulan sorular", h1: "Tercümanlık talebi öncesinde merak edilenler", lead: "İhtiyacınızı doğru tarif etmek ve çalışma koşullarını önceden netleştirmek için en sık karşılaşılabilecek soruları yanıtladık.", ctas: ["quote", "whatsapp"] },
         {
@@ -32,7 +33,7 @@ export const faqPage = {
       indexable: true,
       title: "中土口译常见问题｜档期、费用与行程",
       description: "了解中土现场口译的按日安排、服务地区、咨询信息、费用及行程变更相关问题。",
-      jsonld: { "@context": "https://schema.org", "@type": "WebPage", name: "常见问题", inLanguage: "zh-Hans" },
+      schema: { type: "WebPage", crumbs: [{ name: "常见问题", path: "/zh/faq/" }] },
       blocks: [
         { type: "hero", eyebrow: "常见问题", h1: "咨询口译前，您可能想了解的问题", lead: "以下内容帮助您说明需求，并在安排服务前明确工作条件。", ctas: ["quote", "whatsapp"] },
         {

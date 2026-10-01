@@ -1,5 +1,40 @@
-old_url,decision,new_url,http_code,approved_by,approved_at,notes
-# decision: keep | move | remove
-# keep  -> URL preserved, content updated in place (default, plan §21.1)
-# move  -> real 301/308 to a genuine equivalent new_url
-# remove-> real 410 (or 404) for services no longer offered
+old_url,decision,new_url,http_code,status,approved_by,approved_at,notes
+/,keep,/,200,plan,,,"Yerinde güncellendi; yazılı çeviri/ticaret vaadi kaldırıldı (plan §13 T1)"
+/cince-tercuman/,keep,/cince-tercuman/,200,plan,,,"Sözlü hizmet seçimi korunur"
+/hakkimizda/,keep,/hakkimizda/,200,plan,,,"Teyitsiz yıl/ekip/ofis çıkarıldı"
+/iletisim/,keep,/iletisim/,200,plan,,,"Yeni form akışı; eski adres ve dosya alanı yok"
+/sik-sorulan-sorular/,keep,/sik-sorulan-sorular/,200,plan,,,"Q kimlikleri korunur"
+/cince-tercuman-istanbul/,keep,/cince-tercuman-istanbul/,200,plan,,,"Güçlendirildi; ofis/aynı gün dönüş vaadi yok"
+/cince-tercuman-ankara/,keep,/cince-tercuman-ankara/,200,plan,,,
+/cince-tercuman-kocaeli/,keep,/cince-tercuman-kocaeli/,200,plan,,,"Koşullu yakın bölge metni"
+/cince-tercuman-gebze/,keep,/cince-tercuman-gebze/,200,plan,,,"Koşullu yakın bölge metni"
+/cince-tercuman-tekirdag/,keep,/cince-tercuman-tekirdag/,200,plan,,,"Aynı yol uygulamaya geri eklendi + ZH eşleniği"
+/cince-tercuman-guangzhou/,keep,/cince-tercuman-guangzhou/,200,plan,,,"Tur/otel satışı çıkarıldı"
+/cince-tercuman-shenzhen/,keep,/cince-tercuman-shenzhen/,200,plan,,,"Koşullu yakın bölge; sürekli ekip sözü yok"
+/cince-tercuman-shanghai-sanghay/,keep,/cince-tercuman-shanghai-sanghay/,200,plan,,,
+/cince-tercuman-beijing-pekin/,keep,/cince-tercuman-beijing-pekin/,200,plan,,,
+/cince-tercuman-izmir/,pending,,,pending-owner,,,"İşletme teyidi: somut hizmet teyit edilirse aynı yolda 200 sayfa, değilse 410. Ana sayfaya 301 yok"
+/cince-tercuman-yiwu/,pending,,,pending-owner,,,"İşletme teyidi: gerçek program değerlendirmesi teyit edilirse 200, değilse 410"
+/cince-ceviri/,remove,,410,plan,,,"Yazılı çeviri sona erdi; 410-yazili-ceviri.html gövdesi"
+/web-sitenizi-cinceye-cevirin/,remove,,410,plan,,,"Yazılı web sitesi çevirisi; 410-yazili-ceviri.html gövdesi"
+/cince-tercumani-olarak-kayit-olun/,remove,,410,plan,,,"Aday kaydı yok; genel 410 gövdesi (gerçek aday alımı ayrıca onaylanırsa değişir)"
+/testimonial/,remove,,410,plan,,,"İzinli yorum yok; sahte yorum eklenmez; genel 410 gövdesi"
+/blog/,pending,,,pending-owner,,,"Plan: arşiv indeksi olarak 200 korunur; korunacak yazılar belirlenmeden içerik üretilmedi"
+/cince-bilen-eleman/,pending,,,pending-owner,,,"Arşiv kararı: güncel kapsam notuyla 200 veya 410"
+/cince-tercuman-maaslari/,pending,,,pending-owner,,,"Arşiv kararı: doğrulanmış güncel bilgiyle 200 veya 410; ücret sayfasına 301 yok"
+/cince-tercuman-arayanlar-adaylarin-cinceyi-iyi-bildiginden-nasil-emin-olacaklar/,pending,,,pending-owner,,,"Tercih: aynı yolda 200 + seçim rehberine link; içerik eşdeğeri olmadan 301 yok"
+/cinin-sehirleri/,pending,,,pending-owner,,,"Bilgi güncellenirse 200, aksi 410"
+/cinden-makina-almak-getirmek/,pending,,,pending-owner,,,"Denetim/ithalat vaadi çıkarılıp yararlı bilgi korunursa 200, aksi 410"
+/faq/cincetercuman-nedir/,move,/hakkimizda/,301,plan,,,
+/faq/bize-gondereceginiz-kisinin-cinceyi-iyi-bildiginden-nasil-emin-olabilirim/,move,/rehber/cince-tercuman-nasil-secilir/#q-q103,301,plan,,,
+/faq/bize-yonlendireceginiz-tercumani-neye-gore-seciyorsunuz/,move,/rehber/cince-tercuman-nasil-secilir/#q-q053,301,plan,,,
+/faq/size-nasil-ulasabiliriz/,move,/iletisim/,301,plan,,,
+/faq/nasil-tercuman-talebinde-bulunabilirim/,move,/rehber/tercuman-talebi-icin-gerekli-bilgiler/,301,plan,,,
+/faq/tercuman-talebinde-bulundum-baska-birsey-yapmam-gerekiyor-mu/,move,/sik-sorulan-sorular/#q-q041,301,plan,,,
+/faq/size-odemeyi-nasil-yapacagim/,move,/cince-tercuman-fiyatlari/#q-q014,301,plan,,,
+/faq/bulundugum-sehirde-tercuman-yok-ve-baska-bir-sehirden-gelecek-masraflari-bize-mi-ait/,move,/cince-tercuman-fiyatlari/#q-q010,301,plan,,,
+/faq/eger-memnun-kalmazsak-ne-yapmam-gerekiyor/,move,/sik-sorulan-sorular/#q-q046,301,plan,,,
+/sitemap_index.xml,move,/sitemap.xml,301,plan,,,"Eski WordPress site haritası"
+/page-sitemap.xml,move,/sitemap.xml,301,plan,,,"Eski WordPress alt haritası"
+/post-sitemap.xml,move,/sitemap.xml,301,plan,,,"Eski WordPress alt haritası"
+/faq-sitemap.xml,move,/sitemap.xml,301,plan,,,"Eski WordPress alt haritası"

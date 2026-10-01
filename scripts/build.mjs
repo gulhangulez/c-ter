@@ -10,6 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const DIST = join(ROOT, "dist");
 const LOCALES = ["tr", "zh-Hans", "az"];
+const SERVICE_IDS = new Set(["china", "machine", "factory", "fair", "canton"]);
 
 const readJson = async (p) => JSON.parse(await readFile(join(ROOT, p), "utf8"));
 
@@ -34,6 +35,11 @@ async function main() {
     await cp(join(ROOT, "public"), DIST, { recursive: true });
   }
 
+  // One published+indexable filter feeds HTML hreflang and the sitemap (plan §12 T4).
+  // Only an explicit "published" status counts; missing/unknown status is unpublished.
+  const isPublished = (loc) => loc?.status === "published";
+  const isPublishedIndexable = (loc) => isPublished(loc) && loc.indexable !== false;
+
   const sitemapUrls = [];
   const written = [];
   let draftCount = 0;
@@ -52,13 +58,19 @@ async function main() {
   }
 
   for (const page of pages) {
-    const alternates = {};
-    for (const l of LOCALES) if (page.locales[l]) alternates[l] = page.locales[l].path;
+    const alternateRecords = LOCALES
+      .filter((locale) => isPublishedIndexable(page.locales[locale]))
+      .map((locale) => {
+        const path = page.locales[locale].path;
+        return { locale, path, url: new URL(path, site.origin).href };
+      });
+    // layout()/hreflangTags() add the origin themselves; relative paths here.
+    const alternates = Object.fromEntries(alternateRecords.map(({ locale, path }) => [locale, path]));
 
     for (const locale of LOCALES) {
       const loc = page.locales[locale];
       if (!loc) continue;
-      if (loc.status === "draft") { draftCount++; continue; } // not published
+      if (!isPublished(loc)) { draftCount++; continue; } // not published
 
       const homeHref = locale === "zh-Hans" ? "/zh/" : locale === "az" ? "/az/" : "/";
       const contactPath = locale === "zh-Hans" ? "/zh/contact/" : locale === "az" ? "/az/elaqe/" : "/iletisim/";
@@ -66,6 +78,7 @@ async function main() {
       const ctx = {
         site, nav, microcopy, locale, alternates,
         currentPath: loc.path, homeHref, contactPath, year,
+        pageId: page.id, serviceId: page.primaryService === "canton" ? "fair" : SERVICE_IDS.has(page.primaryService) ? page.primaryService : "none",
         faqFor: makeFaqFor(locale)
       };
       const html = layout(loc, ctx);
@@ -75,10 +88,11 @@ async function main() {
       await writeFile(dest, html);
       written.push(loc.path);
 
-      if (loc.indexable !== false && loc.status !== "draft") {
+      if (isPublishedIndexable(loc)) {
         sitemapUrls.push({
-          loc: site.origin + loc.path,
-          alternates: Object.fromEntries(LOCALES.filter((l) => page.locales[l] && page.locales[l].status !== "draft").map((l) => [l, site.origin + page.locales[l].path]))
+          loc: new URL(loc.path, site.origin).href,
+          // Same rule as HTML: no alternate set for a page without a real counterpart.
+          alternates: alternateRecords.length > 1 ? Object.fromEntries(alternateRecords.map(({ locale, url }) => [locale, url])) : {}
         });
       }
     }
@@ -100,6 +114,12 @@ ${Object.entries(u.alternates).map(([l, href]) => `    <xhtml:link rel="alternat
   // 404 page (host serves it with a real 404 status; see redirects/)
   const notFound = await import("../src/content/not-found.mjs");
   await writeFile(join(DIST, "404.html"), notFound.render({ site, microcopy, year }));
+
+  // 410 bodies for deliberately removed URLs (plan §13). Served with a real 410
+  // by the host rules generated from migration/mapping.csv.
+  const gone = await import("../src/content/gone.mjs");
+  await writeFile(join(DIST, "410.html"), gone.renderGeneric({ site }));
+  await writeFile(join(DIST, "410-yazili-ceviri.html"), gone.renderWrittenTranslation({ site }));
 
   console.log(`Built ${written.length} pages, ${sitemapUrls.length} in sitemap, ${draftCount} draft page(s) skipped.`);
   return { written, sitemapUrls, draftCount };

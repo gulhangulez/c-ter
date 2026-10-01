@@ -9,13 +9,7 @@ export const services = {
       indexable: true,
       title: "Çince Tercümanlık Hizmetleri | Çin'de Tercüman, Kurulum, Fabrika, Fuar",
       description: "Çin'de tercüman, makine kurulumu, fabrika ve fuar ziyaretleri için sözlü tercümanlık seçeneklerini karşılaştırın. Günlük hizmet için uygunluk sorun.",
-      jsonld: {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: "Çince Tercümanlık Hizmetleri",
-        inLanguage: "tr",
-        url: "https://www.cince-tercuman.com/cince-tercuman/"
-      },
+      schema: { type: "CollectionPage", crumbs: [{ name: "Hizmetler", path: "/cince-tercuman/" }] },
       blocks: [
         { type: "hero", eyebrow: "Dört hizmet", h1: "Hangi Çince tercümanlık hizmetine ihtiyacınız var?", lead: "Çalışma yeriniz ve görüşmenin konusu, ihtiyacınız olan sözlü tercümanlık hizmetini belirler. Aşağıdaki dört başlık arasından programınıza uygun olanı seçin.", ctas: ["quote", "whatsapp"] },
         { type: "priceNote" },
@@ -42,7 +36,7 @@ export const services = {
             { icon: "booth", title: "Fuar ziyareti", href: "/cinde-fuar-tercumani/", cta: "Hizmeti incele" }
           ]
         },
-        { type: "richtext", heading: "Her hizmette ortak olan yaklaşım", html: `<p>Önce şehir, tarih ve kapsamı netleştiriyoruz. Ardından tercüman uygunluğunu ve günlük ücret teklifini değerlendiriyoruz. Ulaşım, konaklama ve yeme-içme giderleri günlük hizmet bedelinden ayrı ele alınır.</p>` },
+        { type: "richtext", heading: "Her hizmette ortak olan yaklaşım", html: `<p>Önce şehir, tarih ve kapsamı netleştiriyoruz. Ardından tercüman uygunluğunu ve günlük ücret teklifini değerlendiriyoruz. Ulaşım, konaklama ve yeme-içme giderleri günlük hizmet bedelinden ayrı ele alınır.</p><p><a href="/rehber/cince-tercuman-nasil-secilir/">Çince tercüman nasıl seçilir?</a> · <a href="/rehber/tercuman-talebi-icin-gerekli-bilgiler/">Talep için gerekli bilgiler</a> · <a href="/cince-tercuman-fiyatlari/">Günlük ücret ve ek masraflar</a></p>` },
         { type: "faq", ids: ["Q001", "Q003", "Q004"] },
         { type: "finalCta" }
       ]
@@ -53,13 +47,7 @@ export const services = {
       indexable: true,
       title: "中土口译服务｜设备安装、中国现场、工厂参访与展会",
       description: "了解中土现场口译的四类服务：设备安装、中国现场会面、工厂参访和展会交流。按天计费，可咨询档期与报价。",
-      jsonld: {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        name: "中土口译服务",
-        inLanguage: "zh-Hans",
-        url: "https://www.cince-tercuman.com/zh/interpreting-services/"
-      },
+      schema: { type: "CollectionPage", crumbs: [{ name: "口译服务", path: "/zh/interpreting-services/" }] },
       blocks: [
         { type: "hero", eyebrow: "四项服务", h1: "您的行程需要哪一种中土口译？", lead: "工作地点与沟通内容决定口译安排。请从下面四类服务中选择与行程相符的一项。", ctas: ["quote", "whatsapp"] },
         { type: "priceNote" },
@@ -86,7 +74,7 @@ export const services = {
             { icon: "booth", title: "展会口译", href: "/zh/trade-fair-interpreter/", cta: "查看服务详情" }
           ]
         },
-        { type: "richtext", heading: "所有服务共同遵循的安排方式", html: `<p>先确认城市、日期和口译范围，再确认译员档期与每日费用。交通、住宿及餐饮费用与口译日费分别计算。</p>` },
+        { type: "richtext", heading: "所有服务共同遵循的安排方式", html: `<p>先确认城市、日期和口译范围，再确认译员档期与每日费用。交通、住宿及餐饮费用与口译日费分别计算。</p><p><a href="/zh/guides/how-to-choose-a-turkish-chinese-interpreter/">如何选择中土口译</a> · <a href="/zh/guides/information-for-interpreter-request/">咨询信息准备</a> · <a href="/zh/daily-rates/">每日费用说明</a></p>` },
         { type: "faq", ids: ["Q001", "Q003", "Q004"] },
         { type: "finalCta" }
       ]

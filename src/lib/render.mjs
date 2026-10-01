@@ -1,5 +1,6 @@
 // Render helpers: HTML escaping, layout, and content-block renderers.
 // Content stays as data (blocks); this module turns blocks into static HTML.
+import { buildGraph, breadcrumbItems } from "./schema.mjs";
 
 export function esc(s = "") {
   return String(s)
@@ -50,7 +51,13 @@ function ctaHref(kind, site, locale, contactPath) {
   }
 }
 
-function renderCtas(ctas, ctx) {
+// Measurement hooks: enum-only data attributes, never free text (plan §15.1).
+const CHANNEL_OF = { quote: "contact", whatsapp: "whatsapp", phone: "phone", email: "email" };
+function track(channel, placement) {
+  return ` data-track="contact_cta_click" data-channel="${channel}" data-placement="${placement}"`;
+}
+
+function renderCtas(ctas, ctx, placement = "body") {
   if (!ctas || !ctas.length) return "";
   const { site, microcopy, locale, contactPath } = ctx;
   const parts = ctas.map((c) => {
@@ -60,7 +67,7 @@ function renderCtas(ctas, ctx) {
     const cls = kind === "quote" ? "button-primary" : (kind === "whatsapp" ? "button-whatsapp" : "button-ghost");
     const ext = kind === "whatsapp";
     const glyph = kind === "whatsapp" ? icon("chat") : "";
-    return `<a class="${cls}" href="${esc(href)}"${ext ? ' rel="nofollow"' : ""}>${glyph}${esc(label)}</a>`;
+    return `<a class="${cls}" href="${esc(href)}"${ext ? ' rel="nofollow"' : ""}${track(CHANNEL_OF[kind] || "contact", placement)}>${glyph}${esc(label)}</a>`;
   });
   return `<div class="button-row">${parts.join("")}</div>`;
 }
@@ -73,7 +80,7 @@ const blocks = {
            <h2>${esc(b.card.title)}</h2>
            ${b.card.intro ? `<p class="muted">${esc(b.card.intro)}</p>` : ""}
            ${b.card.items ? `<ul>${b.card.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : ""}
-           ${renderCtas(b.card.ctas, ctx)}
+           ${renderCtas(b.card.ctas, ctx, "hero")}
          </aside>`
       : "";
     const eyebrow = b.eyebrow ? `<span class="pill">${icon(b.icon || "compass")}${esc(b.eyebrow)}</span>` : "";
@@ -82,16 +89,16 @@ const blocks = {
         <h1>${esc(b.h1)}</h1>
         ${b.lead ? `<p class="lead">${esc(b.lead)}</p>` : ""}
         ${b.bullets ? `<ul>${b.bullets.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>` : ""}
-        ${renderCtas(b.ctas, ctx)}
+        ${renderCtas(b.ctas, ctx, "hero")}
       </div>
       ${card}`;
-    return `<section class="hero"><div class="container">
+    return `<section class="hero"${b.id ? ` id="${esc(b.id)}"` : ""}><div class="container">
       <div class="hero__panel">${card ? `<div class="hero__grid">${inner}</div>` : `<div class="hero__solo">${inner}</div>`}</div>
     </div></section>`;
   },
 
   richtext(b) {
-    return `<section class="section${b.surface ? " section--surface" : ""}"><div class="container section-intro">
+    return `<section class="section${b.surface ? " section--surface" : ""}"${b.id ? ` id="${esc(b.id)}"` : ""}><div class="container section-intro">
       ${b.heading ? `<h2>${esc(b.heading)}</h2>` : ""}
       ${b.html || ""}
     </div></section>`;
@@ -168,8 +175,8 @@ const blocks = {
         <h2>${esc(c.title)}</h2>
         <p>${esc(c.text)}</p>
         <div class="button-row">
-          <a class="button-oncolor" href="${esc(ctx.contactPath)}">${esc(c.primary)}</a>
-          <a class="button-whatsapp" rel="nofollow" href="${esc(ctx.site.contact.whatsappUrl)}">${icon("chat")}${esc(c.whatsapp)}</a>
+          <a class="button-oncolor" href="${esc(ctx.contactPath)}"${track("contact", "body")}>${esc(c.primary)}</a>
+          <a class="button-whatsapp" rel="nofollow" href="${esc(ctx.site.contact.whatsappUrl)}"${track("whatsapp", "body")}>${icon("chat")}${esc(c.whatsapp)}</a>
         </div>
       </div>
     </div></section>`;
@@ -325,17 +332,20 @@ function wordmark(site, locale, homeHref) {
   </a>`;
 }
 
+const LANG_SHORT = { tr: "TR", "zh-Hans": "中文", az: "AZ" };
+const langLabel = (l, microcopy) => `<span class="ls-full">${esc(microcopy.langSwitch[l])}</span><span class="ls-short" aria-hidden="true">${LANG_SHORT[l]}</span>`;
+
 function langSwitch(alternates, locale, microcopy) {
   const order = ["tr", "zh-Hans", "az"];
   const items = order.map((l) => {
     const current = l === locale;
     if (alternates[l]) {
-      return `<a href="${esc(alternates[l])}" hreflang="${HTML_LANG[l]}"${current ? ' aria-current="true"' : ""}>${esc(microcopy.langSwitch[l])}</a>`;
+      return `<a href="${esc(alternates[l])}" hreflang="${HTML_LANG[l]}"${current ? ' aria-current="true"' : ""}>${langLabel(l, microcopy)}</a>`;
     }
     // §57.2: AZ pages without an equivalent fall back to a plain link to /az/,
     // labelled as the AZ start page and deliberately kept out of hreflang.
     if (l === "az") {
-      return `<a href="/az/" title="Azərbaycan dili — başlanğıc səhifəsi">${esc(microcopy.langSwitch.az)}</a>`;
+      return `<a href="/az/" title="Azərbaycan dili — başlanğıc səhifəsi">${langLabel("az", microcopy)}</a>`;
     }
     return "";
   }).filter(Boolean);
@@ -355,12 +365,36 @@ function header(ctx) {
       <nav class="nav-primary" aria-label="${esc(microcopy.ui.menu[locale])}"><ul>${items}</ul></nav>
       <div class="header-tools">
         ${langSwitch(alternates, locale, microcopy)}
-        <a class="button-primary header-cta" href="${esc(contactPath)}">${esc(microcopy.cta.quote[locale])}</a>
+        <a class="button-primary header-cta" href="${esc(contactPath)}"${track("contact", "header")}>${esc(microcopy.cta.quote[locale])}</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle aria-label="${esc(microcopy.ui.menu[locale])}">☰</button>
       </div>
     </div>
     <div class="container"><nav class="mobile-nav" id="mobile-nav" aria-label="${esc(microcopy.ui.menu[locale])}" hidden><ul>${mobItems}</ul></nav></div>
   </header>`;
+}
+
+// Visible breadcrumb; the same trail feeds the BreadcrumbList in the JSON-LD graph.
+function breadcrumb(page, ctx) {
+  const items = breadcrumbItems(page, ctx.locale);
+  if (!items.length) return "";
+  const label = { tr: "Sayfa yolu", "zh-Hans": "页面路径", az: "Səhifə yolu" }[ctx.locale];
+  const lis = items.map((c, i) => i === items.length - 1
+    ? `<li><span aria-current="page">${esc(c.name)}</span></li>`
+    : `<li><a href="${esc(c.path)}">${esc(c.name)}</a></li>`).join("");
+  return `<nav class="breadcrumb container" aria-label="${esc(label)}"><ol>${lis}</ol></nav>`;
+}
+
+// Decorative coral diagonal marquee band (DESIGN.md). Purely visual: aria-hidden,
+// repeats the real service scope, no claims.
+const BAND_TEXT = {
+  tr: ["Çince ⇄ Türkçe sözlü tercümanlık", "Makine kurulumu", "Fabrika ziyareti", "Fuar ve stant görüşmeleri"],
+  "zh-Hans": ["中文 ⇄ 土耳其语现场口译", "设备安装与调试", "工厂参访", "展会洽谈"],
+  az: ["Çin dili ⇄ türk dili şifahi tərcümə", "Avadanlıq quraşdırılması", "Zavod ziyarəti", "Sərgi görüşləri"]
+};
+function band(locale) {
+  const words = BAND_TEXT[locale];
+  const run = [...words, ...words, ...words].map((w) => `<span>${esc(w)}</span>`).join("");
+  return `<div class="band" aria-hidden="true"><div class="band__track">${run}${run}</div></div>`;
 }
 
 function footer(ctx) {
@@ -372,6 +406,8 @@ function footer(ctx) {
   };
   const contactHeading = { tr: "İletişim", "zh-Hans": "联系方式", az: "Əlaqə" };
   const linksHeading = { tr: "Bağlantılar", "zh-Hans": "链接", az: "Keçidlər" };
+  const phoneLabel = { tr: "Telefon", "zh-Hans": "电话", az: "Telefon" };
+  const emailLabel = { tr: "E-posta", "zh-Hans": "邮箱", az: "E-poçt" };
   const rights = {
     tr: `© ${year} Çince Tercüman. Tüm hakları saklıdır.`,
     "zh-Hans": `© ${year} Çince Tercüman. 保留所有权利。`,
@@ -387,9 +423,9 @@ function footer(ctx) {
       <div>
         <h4>${esc(contactHeading[locale])}</h4>
         <ul>
-          <li>WhatsApp: <a rel="nofollow" href="${esc(site.contact.whatsappUrl)}">${esc(site.contact.whatsappDisplay)}</a></li>
-          <li>${locale === "zh-Hans" ? "电话" : locale === "az" ? "Telefon" : "Telefon"}: <a href="${esc(site.contact.phoneUrl)}">${esc(site.contact.phoneDisplay)}</a></li>
-          <li>${locale === "zh-Hans" ? "邮箱" : "E-poçt".replace("E-poçt", locale === "az" ? "E-poçt" : "E-posta")}: <a href="${esc(site.contact.emailUrl)}">${esc(site.contact.email)}</a></li>
+          <li>WhatsApp: <a rel="nofollow" href="${esc(site.contact.whatsappUrl)}"${track("whatsapp", "footer")}>${esc(site.contact.whatsappDisplay)}</a></li>
+          <li>${esc(phoneLabel[locale])}: <a href="${esc(site.contact.phoneUrl)}"${track("phone", "footer")}>${esc(site.contact.phoneDisplay)}</a></li>
+          <li>${esc(emailLabel[locale])}: <a href="${esc(site.contact.emailUrl)}"${track("email", "footer")}>${esc(site.contact.email)}</a></li>
         </ul>
       </div>
       <div>
@@ -401,33 +437,53 @@ function footer(ctx) {
   </footer>`;
 }
 
+// Floating contact widget (desktop, bottom-left) + mobile bottom bar.
+const DOCK_TEXT = {
+  tr: { label: "Uygunluk ve teklif", text: "Şehir, tarih ve kısa ihtiyacınızı paylaşın; günlük uygunluğu birlikte netleştirelim.", close: "Kapat" },
+  "zh-Hans": { label: "档期与报价", text: "请提供城市、日期和简要需求，以便确认每日安排。", close: "关闭" },
+  az: { label: "Uyğunluq və qiymət", text: "Şəhəri, tarixləri və qısa ehtiyacınızı bildirin; iş dilini də qeyd edin.", close: "Bağla" }
+};
 function mobileBar(ctx) {
-  const { site, locale, microcopy, contactPath } = ctx;
+  const { site, locale, microcopy, contactPath, currentPath } = ctx;
   // TR/AZ: WhatsApp + Ara ; ZH: WhatsApp + E-posta (per §4.4)
   const second = locale === "zh-Hans"
-    ? `<a class="button-ghost" href="${esc(site.contact.emailUrl)}">${esc(microcopy.cta.email[locale])}</a>`
-    : `<a class="button-ghost" href="${esc(site.contact.phoneUrl)}">${esc(microcopy.cta.phone[locale])}</a>`;
+    ? `<a class="button-ghost" href="${esc(site.contact.emailUrl)}"${track("email", "mobile")}>${esc(microcopy.cta.email[locale])}</a>`
+    : `<a class="button-ghost" href="${esc(site.contact.phoneUrl)}"${track("phone", "mobile")}>${esc(microcopy.cta.phone[locale])}</a>`;
+  const d = DOCK_TEXT[locale];
+  const dock = currentPath === contactPath ? "" : `<aside class="dock" data-dock aria-label="${esc(d.label)}">
+    <div class="dock__head"><span><span class="dot" aria-hidden="true"></span>${esc(d.label)}</span><button class="dock__close" type="button" data-dock-close aria-label="${esc(d.close)}">×</button></div>
+    <p>${esc(d.text)}</p>
+    <a class="button-primary" href="${esc(contactPath)}"${track("contact", "widget")}>${esc(microcopy.cta.quote[locale])}</a>
+  </aside>`;
   return `<nav class="mobile-bar" aria-label="${esc(microcopy.cta.quote[locale])}">
-    <a class="button-primary" rel="nofollow" href="${esc(site.contact.whatsappUrl)}">WhatsApp</a>
+    <a class="button-whatsapp" rel="nofollow" href="${esc(site.contact.whatsappUrl)}"${track("whatsapp", "mobile")}>${icon("chat")}WhatsApp</a>
     ${second}
   </nav>
-  <div class="dock"><a class="button-primary" rel="nofollow" href="${esc(site.contact.whatsappUrl)}">${esc(microcopy.cta.whatsapp[locale])}</a></div>`;
+  ${dock}`;
 }
 
 function hreflangTags(alternates, origin) {
   const order = ["tr", "zh-Hans", "az"];
+  // A page without a real counterpart (e.g. /az/suallar/) gets no hreflang set.
+  if (order.filter((l) => alternates[l]).length < 2) return "";
   const tags = order.filter((l) => alternates[l]).map((l) =>
     `<link rel="alternate" hreflang="${HTML_LANG[l]}" href="${esc(origin + alternates[l])}">`);
   if (alternates.tr) tags.push(`<link rel="alternate" hreflang="x-default" href="${esc(origin + alternates.tr)}">`);
   return tags.join("\n  ");
 }
 
+// JSON-LD is serialised inside <script>; escape "<" so content can never close the tag.
+function jsonLdScript(graph) {
+  return `<script type="application/ld+json">${JSON.stringify(graph).replace(/</g, "\\u003c")}</script>`;
+}
+
 export function layout(page, ctx) {
   const { site, locale, microcopy, alternates, currentPath } = ctx;
   const canonical = site.origin + currentPath;
-  const robots = page.indexable === false || page.status === "draft" ? "noindex,follow" : "index,follow";
-  const jsonld = page.jsonld ? `<script type="application/ld+json">${JSON.stringify(page.jsonld)}</script>` : "";
+  const robots = page.indexable === false || page.status !== "published" ? "noindex,follow" : "index,follow";
+  const jsonld = jsonLdScript(buildGraph(page, ctx));
   const body = renderBlocks(page.blocks, ctx);
+  const ogLocale = { tr: "tr_TR", "zh-Hans": "zh_CN", az: "az_AZ" }[locale];
   return `<!doctype html>
 <html lang="${HTML_LANG[locale]}">
 <head>
@@ -442,18 +498,22 @@ export function layout(page, ctx) {
   <meta property="og:description" content="${esc(page.description || "")}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${esc(canonical)}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <meta property="og:locale" content="${ogLocale}">
+  <meta property="og:site_name" content="${esc(site.brand.name)}">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  ${locale === "zh-Hans" ? "" : '<link rel="preload" href="/assets/fonts/manrope-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>'}
   <link rel="stylesheet" href="/assets/main.css">
   ${jsonld}
 </head>
-<body>
+<body data-page-id="${esc(ctx.pageId || "")}" data-service-id="${esc(ctx.serviceId || "none")}">
   <a class="skip-link" href="#main">${esc(microcopy.ui.skipToContent[locale])}</a>
   ${header(ctx)}
+  ${breadcrumb(page, ctx)}
   <main id="main">
     ${body}
   </main>
+  ${band(locale)}
   ${footer(ctx)}
   ${mobileBar(ctx)}
   <script type="module" src="/assets/app.js"></script>
