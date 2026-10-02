@@ -333,5 +333,17 @@ section("O. Migration & host rules (plan 2026-10 §13)");
 }
 
 // ---------------------------------------------------------------------------
+section("P. Reference-client logo band")
+{
+  const { clients } = await import("../src/content/clients.mjs");
+  ok("every client logo shipped", clients.every((c) => existsSync(join(DIST, "assets/logos", c.file))));
+  for (const p of ["/", "/zh/", "/az/"]) {
+    const html = htmlByPath.get(p) || "";
+    ok(`logo band on ${p} after the hero`, html.includes('class="logo-band"') && html.indexOf('class="hero"') < html.indexOf('class="logo-band"'));
+    ok(`logo band on ${p} has one alt per client and a hidden loop copy`, clients.every((c) => html.includes(`alt="${c.name.replace(/&/g, "&amp;")}"`)) && html.includes('class="logo-band__track" aria-hidden="true"'));
+  }
+}
+
+// ---------------------------------------------------------------------------
 console.log(`\n${fail === 0 ? "✓ ALL PASS" : "✗ FAILURES"}: ${pass} passed, ${fail} failed.`);
 process.exit(fail === 0 ? 0 : 1);

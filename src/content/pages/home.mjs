@@ -38,6 +38,7 @@ export const home = {
             ctas: [{ kind: "quote", label: "Talep formuna git" }, "whatsapp"]
           }
         },
+        { type: "logos", heading: "Daha önce sözlü tercümanlık desteği verdiğimiz firmalardan bazıları" },
         svcCards("Programınıza uygun hizmeti seçin", [
           {
             title: "Çin'de tercüman", href: "/cinde-tercuman/",
@@ -121,6 +122,7 @@ export const home = {
             ctas: [{ kind: "quote", label: "前往咨询表单" }, "email"]
           }
         },
+        { type: "logos", heading: "我们曾为以下企业提供口译服务（部分）" },
         svcCards("您需要哪一种现场口译？", [
           {
             title: "土耳其设备安装与调试口译", href: "/zh/machine-installation-interpreter/",

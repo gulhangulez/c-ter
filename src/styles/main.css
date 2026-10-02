@@ -344,6 +344,26 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
 .faq .faq__body > :last-child { margin-bottom: 0; }
 .faq details:target { outline: 2px solid var(--color-coral); outline-offset: 2px; }
 
+/* Reference-client logo band under the hero (getcontrast.io "trusted by" row):
+   small muted caption, greyscale logos drifting left, faded edges. Two identical
+   tracks each move by their own width, so the loop has no seam. */
+.logo-band { padding-block: 8px 40px; }
+.logo-band__title { text-align: center; font-size: var(--text-caption); font-weight: 500; color: var(--color-muted); margin: 0 0 24px; }
+.logo-band__viewport {
+  display: flex; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.logo-band__track {
+  flex: none; display: flex; align-items: center; gap: 64px; padding: 0 64px 0 0; margin: 0; list-style: none;
+  animation: logo-scroll 50s linear infinite;
+}
+.logo-band__track li { margin: 0; flex: none; display: flex; align-items: center; height: 56px; }
+.logo-band__track img { display: block; width: auto; max-width: none; height: var(--logo-h, 36px); opacity: .62; transition: opacity .2s; }
+.logo-band__track img:hover { opacity: 1; }
+.logo-band__viewport:hover .logo-band__track { animation-play-state: paused; }
+@keyframes logo-scroll { to { transform: translateX(-100%); } }
+
 /* Decorative diagonal marquee band (aria-hidden) — cream ribbon, persimmon stars */
 .band { overflow: hidden; background: var(--color-cream-band); border-block: 1px solid var(--color-cream-border); margin-top: calc(var(--section-gap) / 2); transform: skewY(-2deg); }
 .band__track { display: flex; gap: 40px; white-space: nowrap; padding: 14px 0; transform: skewY(2deg); width: max-content; animation: band-scroll 40s linear infinite; }
@@ -471,6 +491,10 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
   .final-cta { border-radius: var(--radius-card); }
   .dock { display: none; }
   .band { display: none; }
+  .logo-band { padding-block: 8px 24px; }
+  .logo-band__track { gap: 40px; padding-right: 40px; animation-duration: 36s; }
+  .logo-band__track li { height: 44px; }
+  .logo-band__track img { height: calc(var(--logo-h, 36px) * .78); }
   .mobile-bar {
     display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px;
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
@@ -483,5 +507,9 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  /* Logo band stands still: one centered, wrapping row instead of a loop. */
+  .logo-band__viewport { -webkit-mask-image: none; mask-image: none; }
+  .logo-band__track { flex: 1; flex-wrap: wrap; justify-content: center; gap: 24px 48px; padding: 0; }
+  .logo-band__track[aria-hidden="true"] { display: none; }
 }
 .h3-like { font-size: 20px; margin-top: 0; }
