@@ -98,14 +98,15 @@ async function main() {
     }
   }
 
-  // sitemap.xml — published + indexable only, with hreflang alternates
+  // sitemap.xml — published + indexable only, with hreflang alternates;
+  // x-default mirrors the HTML head (TR version) so both signals agree.
   const xmlns = 'xmlns="http://www.sitemap.org/schemas/sitemap/0.9"'.replace("sitemap.org", "sitemaps.org");
   const hl = { tr: "tr", "zh-Hans": "zh-Hans", az: "az" };
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset ${xmlns} xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${sitemapUrls.map((u) => `  <url>
     <loc>${u.loc}</loc>
-${Object.entries(u.alternates).map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${hl[l]}" href="${href}"/>`).join("\n")}
+${Object.entries(u.alternates).map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${hl[l]}" href="${href}"/>`).join("\n")}${u.alternates.tr ? `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${u.alternates.tr}"/>` : ""}
   </url>`).join("\n")}
 </urlset>
 `;
