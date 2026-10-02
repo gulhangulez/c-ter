@@ -11,13 +11,14 @@ import { guides } from "./pages/guides.mjs";
 import { cityPages } from "./pages/cities.mjs";
 import { blog } from "./pages/blog.mjs";
 import { azFaqPage, azHomeLocale, azContactLocale } from "./pages/az.mjs";
+import { applyPageImprovements } from "./page-improvements.mjs";
 
 // §61: the home and contact groups carry true 3-way hreflang (tr / zh-Hans / az).
 // The AZ landing and AZ contact are the az alternates of those two groups.
 home.locales.az = azHomeLocale;
 contact.locales.az = azContactLocale;
 
-export const pages = [
+export const pages = applyPageImprovements([
   home,
   services,
   ...serviceDetail,
@@ -30,4 +31,4 @@ export const pages = [
   ...cityPages,
   ...blog,
   azFaqPage
-];
+]);

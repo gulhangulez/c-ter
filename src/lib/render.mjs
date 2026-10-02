@@ -2,6 +2,7 @@
 // Content stays as data (blocks); this module turns blocks into static HTML.
 import { buildGraph, breadcrumbItems } from "./schema.mjs";
 import { clients } from "../content/clients.mjs";
+import { SERVICE_DETAILS_TR } from "./contact.mjs";
 
 export function esc(s = "") {
   return String(s)
@@ -216,6 +217,11 @@ const blocks = {
     const t = QUOTE_FORM_I18N[locale];
     const err = QUOTE_ERRORS[locale];
     const errAttrs = Object.entries(err).map(([k, v]) => `data-error-${k}="${esc(v)}"`).join(" ");
+    const serviceDetails = locale === "tr" ? `<details class="callout" data-details-disclosure hidden>
+      <summary>İsterseniz işin ayrıntılarını da ekleyin</summary>
+      <p class="hint">Bu alanlar isteğe bağlı. Henüz belli olmayan bilgileri boş bırakabilirsiniz.</p>
+      ${Object.entries(SERVICE_DETAILS_TR).map(([service, fields]) => `<div data-service-details="${service}" hidden>${fields.map((field) => `<div class="field"><label for="qf-${service}-${field.key}">${esc(field.label)}</label><input id="qf-${service}-${field.key}" name="detail-${service}-${field.key}" data-detail-key="${field.key}" type="text" maxlength="180" placeholder="${esc(field.placeholder)}" disabled></div>`).join("")}</div>`).join("")}
+    </details>` : "";
     const services = [
       ["china", t.services.china], ["machine", t.services.machine], ["factory", t.services.factory],
       ["fair", t.services.fair], ["unsure", t.services.unsure]
@@ -258,7 +264,7 @@ const blocks = {
           <textarea id="qf-need" name="need" required minlength="10" maxlength="600"></textarea>
           <span class="hint">${esc(t.needHint)}</span>
         </div>
-        <div class="field">
+        ${serviceDetails ? serviceDetails + "\n        " : ""}<div class="field">
           <label for="qf-name">${esc(t.name)} <span class="muted">(${esc(t.optional)})</span></label>
           <input id="qf-name" name="nameCompany" type="text" maxlength="120" autocomplete="off">
         </div>
@@ -328,7 +334,7 @@ const QUOTE_FORM_I18N = {
 const LANG_OPTIONS = ["turkish-ok", "azerbaijani-required", "confirm-first"];
 
 const QUOTE_ERRORS = {
-  tr: { invalid_service: "Lütfen bir hizmet seçin.", invalid_city: "Lütfen çalışma şehrini veya bölgesini yazın.", invalid_dates: "Başlangıç tarihini seçin veya tarihlerin henüz belli olmadığını yazın.", invalid_need: "İhtiyacınızı en az 10 karakterle açıklayın (en çok 600).", invalid_country: "Lütfen çalışma ülkesini seçin.", service_country_mismatch: "Çin fabrika/fuar hizmeti için çalışma ülkesi Çin olmalıdır.", invalid_language_requirement: "Lütfen dil gereksiniminizi seçin.", invalid_name_company: "Ad / şirket alanını kısaltın (en çok 120 karakter).", generic: "Lütfen işaretli alanları kontrol edin.", copied: "Kopyalandı" },
+  tr: { invalid_service_details: "Ek ayrıntıların her birini en çok 180 karakterle yazın.", invalid_service: "Lütfen bir hizmet seçin.", invalid_city: "Lütfen çalışma şehrini veya bölgesini yazın.", invalid_dates: "Başlangıç tarihini seçin veya tarihlerin henüz belli olmadığını yazın.", invalid_need: "İhtiyacınızı en az 10 karakterle açıklayın (en çok 600).", invalid_country: "Lütfen çalışma ülkesini seçin.", service_country_mismatch: "Çin fabrika/fuar hizmeti için çalışma ülkesi Çin olmalıdır.", invalid_language_requirement: "Lütfen dil gereksiniminizi seçin.", invalid_name_company: "Ad / şirket alanını kısaltın (en çok 120 karakter).", generic: "Lütfen işaretli alanları kontrol edin.", copied: "Kopyalandı" },
   "zh-Hans": { invalid_service: "请选择服务类型。", invalid_city: "请填写工作城市或区域。", invalid_dates: "请填写日期，或注明日期尚未确定。", invalid_need: "请用至少 10 个字符说明需求（不超过 600）。", invalid_country: "请选择工作所在国家。", service_country_mismatch: "中国工厂/展会服务的工作所在国家应为中国。", invalid_language_requirement: "请选择沟通语言要求。", invalid_name_company: "姓名/公司请控制在 120 个字符以内。", generic: "请检查标注的字段。", copied: "已复制" },
   az: { invalid_service: "Zəhmət olmasa, xidmət seçin.", invalid_city: "Zəhmət olmasa, şəhər və ya iş yerini yazın.", invalid_dates: "Tarixləri yazın və ya hələ dəqiq olmadığını qeyd edin.", invalid_need: "Ehtiyacınızı ən azı 10 simvolla izah edin (ən çox 600).", invalid_country: "Zəhmət olmasa, işin görüləcəyi ölkəni seçin.", service_country_mismatch: "Çində zavod/sərgi xidməti üçün ölkə Çin olmalıdır.", invalid_language_requirement: "Zəhmət olmasa, dil tələbini seçin.", invalid_name_company: "Ad / şirkət sahəsini qısaldın (ən çox 120 simvol).", generic: "Zəhmət olmasa, işarələnmiş sahələri yoxlayın.", copied: "Kopyalandı" }
 };

@@ -53,6 +53,17 @@ section("A. prepareContactV13 — language honesty & validation (§56/§58)");
 
   let badNeed = false; try { prepareContactV13({ locale: "tr", service: "unsure", country: "TR", city: "Ankara", dateLabel: "1", need: "kısa" }); } catch (e) { badNeed = e.message; }
   ok("need < 10 chars rejected", badNeed === "invalid_need");
+
+  const detailRequest = { locale: "tr", service: "machine", country: "TR", city: "Tekirdağ", dateLabel: "Henüz kesin değil", need: "Ambalaj hattı kurulum görüşmeleri" };
+  const detailed = prepareContactV13({ ...detailRequest, serviceDetails: { equipment: "Ambalaj hattı", stage: "Kurulum ve deneme", openDates: " ", fairName: "ESKİ FUAR BİLGİSİ" } });
+  ok("optional details included with public labels", detailed.text.includes("Makine veya hat: Ambalaj hattı") && detailed.text.includes("Çalışma aşaması ve ekipler: Kurulum ve deneme"));
+  ok("empty and other-service details omitted", !detailed.text.includes("Olası ek günler:") && !detailed.text.includes("ESKİ FUAR BİLGİSİ"));
+  ok("blank optional details preserve original request", prepareContactV13({ ...detailRequest, serviceDetails: {} }).text === prepareContactV13(detailRequest).text);
+  ok("WhatsApp carries the same preview", new URL(detailed.whatsapp).searchParams.get("text") === detailed.text);
+  for (const serviceDetails of [{ equipment: "x".repeat(181) }, { equipment: 5 }, []]) {
+    let rejected; try { prepareContactV13({ ...detailRequest, serviceDetails }); } catch (e) { rejected = e.message; }
+    ok("invalid optional detail rejected", rejected === "invalid_service_details");
+  }
 }
 
 // ---------------------------------------------------------------------------

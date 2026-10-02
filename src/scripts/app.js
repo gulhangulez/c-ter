@@ -19,7 +19,7 @@ const ENUMS = {
   placement: ["header", "hero", "body", "footer", "mobile", "form", "widget"],
   service_id: ["china", "machine", "factory", "fair", "unsure", "none"],
   language_requirement: ["turkish-ok", "azerbaijani-required", "confirm-first"],
-  error: ["invalid_service", "invalid_country", "service_country_mismatch", "invalid_city", "invalid_dates", "invalid_need", "invalid_name_company", "invalid_language_requirement", "invalid_source"]
+  error: ["invalid_service", "invalid_country", "service_country_mismatch", "invalid_city", "invalid_dates", "invalid_need", "invalid_name_company", "invalid_language_requirement", "invalid_source", "invalid_service_details"]
 };
 const pick = (key, value) => (ENUMS[key].includes(value) ? value : undefined);
 
@@ -125,6 +125,18 @@ if (form) {
   // Preselect the service of the page the visitor came from, if the form is untouched.
   const serviceSelect = form.querySelector('[name="service"]');
   const countrySelect = form.querySelector('[name="country"]');
+  const detailsDisclosure = form.querySelector('[data-details-disclosure]');
+  const detailGroups = [...form.querySelectorAll('[data-service-details]')];
+  const syncServiceDetails = () => {
+    let hasDetails = false;
+    for (const group of detailGroups) {
+      const active = group.dataset.serviceDetails === serviceSelect?.value;
+      group.hidden = !active;
+      for (const field of group.querySelectorAll('input')) field.disabled = !active;
+      if (active) hasDetails = true;
+    }
+    if (detailsDisclosure) detailsDisclosure.hidden = !hasDetails;
+  };
   if (source?.service && source.service !== "none" && serviceSelect && !serviceSelect.value) {
     if ([...serviceSelect.options].some((o) => o.value === source.service)) {
       serviceSelect.value = source.service;
@@ -146,6 +158,12 @@ if (form) {
       sourcePath: source?.path || contactPath
     };
     if (langEl) input.languageRequirement = langEl.value;
+    if (locale === "tr") {
+      input.serviceDetails = {};
+      for (const field of form.querySelectorAll('[data-detail-key]:not(:disabled)')) {
+        input.serviceDetails[field.dataset.detailKey] = field.value;
+      }
+    }
     return input;
   };
 
@@ -198,7 +216,12 @@ if (form) {
 
   // Re-evaluate on every change even while the error summary is visible;
   // focus never jumps to the summary while typing.
-  const onEdit = () => {
+  const onEdit = (event) => {
+    if (event.target === serviceSelect) {
+      syncServiceDetails();
+      if (locale === "tr" && countrySelect && ["china", "factory", "fair"].includes(serviceSelect.value)) countrySelect.value = "CN";
+      if (locale === "tr" && countrySelect && serviceSelect.value === "machine") countrySelect.value = "TR";
+    }
     if (!started) { started = true; emit("contact_form_start", { service_id: pick("service_id", serviceSelect?.value) }); }
     update();
   };
@@ -238,5 +261,6 @@ if (form) {
   });
 
   // On first load an incomplete form must not carry an empty or stale message.
+  syncServiceDetails();
   update();
 }

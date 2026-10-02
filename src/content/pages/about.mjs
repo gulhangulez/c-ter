@@ -22,7 +22,7 @@ export const about = {
             { icon: "tag", title: "Ücret bilgisi", text: "Günlük tercümanlık ile ulaşım, konaklama ve yeme-içme giderlerini ayrı netleştirelim." }
           ]
         },
-        { type: "faq", ids: ["Q016", "Q017", "Q019", "Q020", "Q021"] },
+        { type: "faq", ids: ["Q016", "Q017", "Q019", "Q020", "Q021", "Q107"] },
         { type: "finalCta" }
       ]
     },
@@ -44,7 +44,7 @@ export const about = {
             { icon: "tag", title: "费用说明", text: "分别明确日费与交通、住宿及餐饮支出。" }
           ]
         },
-        { type: "faq", ids: ["Q016", "Q017", "Q019", "Q020", "Q021"] },
+        { type: "faq", ids: ["Q016", "Q017", "Q019", "Q020", "Q021", "Q107"] },
         { type: "finalCta" }
       ]
     }
