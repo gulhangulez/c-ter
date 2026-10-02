@@ -248,6 +248,14 @@ section("J. Page inventory, hreflang reciprocity & sitemap (plan 2026-10 §5.1, 
   }
   ok("one self-canonical per page", canonBad.length === 0, canonBad.slice(0, 5).join(","));
   ok("hreflang alternates reciprocal", nonRecip.length === 0, nonRecip.slice(0, 5).join(","));
+  const mapMismatch = [];
+  for (const block of sitemap.split("<url>").slice(1)) {
+    const loc = block.match(/<loc>([^<]+)<\/loc>/)[1];
+    const inMap = Object.fromEntries([...block.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]));
+    const html = htmlByPath.get(loc.replace("https://www.cince-tercuman.com", ""));
+    if (!html || JSON.stringify(inMap) !== JSON.stringify(altOf(html))) mapMismatch.push(loc);
+  }
+  ok("sitemap hreflang (incl. x-default) matches each page head", mapMismatch.length === 0, mapMismatch.slice(0, 5).join(","));
   const azAlts = [...htmlByPath.values()].filter((h) => /<link rel="alternate" hreflang="az"/.test(h)).length;
   ok("az hreflang only in the home and contact groups (6 pages)", azAlts === 6, String(azAlts));
 }

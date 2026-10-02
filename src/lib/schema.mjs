@@ -53,6 +53,17 @@ const SERVICES = {
   }
 };
 
+// Mirrors the visible home-page scope; no office, team size or price claims.
+const ORG_DESCRIPTION = {
+  tr: "Türkiye'de Çinli teknik ekiplerle makine kurulumu, Çin'de fabrika ziyaretleri, fuar ve iş görüşmeleri için Çince–Türkçe sözlü tercümanlık. Hizmet günlük ücretlendirilir; uygunluk şehir ve tarihe göre değerlendirilir.",
+  "zh-Hans": "提供中文与土耳其语现场口译：在土耳其协助中国技术团队安装调试设备，在中国陪同工厂参访、展会及商务洽谈。按天计费，档期视城市和日期确认。",
+  az: "Türkiyədə Çinli texniki komandalarla avadanlıq quraşdırılması, Çində zavod ziyarətləri, sərgi və işgüzar görüşlər üçün Çin–Türk dili şifahi tərcüməsi. Xidmət gün hesabı ilə ödənilir; uyğunluq şəhər və tarixə görə qiymətləndirilir."
+};
+const COUNTRY = {
+  tr: { tr: "Türkiye", "zh-Hans": "土耳其", az: "Türkiyə" },
+  cn: { tr: "Çin", "zh-Hans": "中国", az: "Çin" }
+};
+
 const SERVICE_LOCALE = (locale) => (locale === "zh-Hans" ? "zh-Hans" : "tr");
 
 export function buildGraph(page, ctx) {
@@ -71,6 +82,14 @@ export function buildGraph(page, ctx) {
     "@id": orgId,
     name: site.brand.name,
     url: abs("/"),
+    description: ORG_DESCRIPTION[locale],
+    // Working languages of the service (not of the site UI): the AZ site
+    // does not mean Azerbaijani interpreting, so az is deliberately absent.
+    knowsLanguage: ["tr", "zh"],
+    areaServed: [
+      { "@type": "Country", name: COUNTRY.tr[locale] },
+      { "@type": "Country", name: COUNTRY.cn[locale] }
+    ],
     email: site.contact.email,
     telephone: site.contact.phone,
     contactPoint: [

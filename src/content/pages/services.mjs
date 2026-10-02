@@ -7,7 +7,7 @@ export const services = {
       path: "/cince-tercuman/",
       status: "published",
       indexable: true,
-      title: "Çince Tercümanlık Hizmetleri | Çin'de Tercüman, Kurulum, Fabrika, Fuar",
+      title: "Çince Tercümanlık Hizmetleri: Kurulum, Fabrika ve Fuar",
       description: "Çin'de tercüman, makine kurulumu, fabrika ve fuar ziyaretleri için sözlü tercümanlık seçeneklerini karşılaştırın. Günlük hizmet için uygunluk sorun.",
       schema: { type: "CollectionPage", crumbs: [{ name: "Hizmetler", path: "/cince-tercuman/" }] },
       blocks: [
