@@ -34,6 +34,7 @@ const landing = {
           lead: "Çində əvvəlcədən planlaşdırdığınız görüşlərdə və Türkiyədə Çinli texniki heyətlə avadanlıq quraşdırılması zamanı şifahi ünsiyyət üçün müraciət edə bilərsiniz. Xidməti, şəhəri, tarixləri və qısa ehtiyacınızı bildirin. İş dilinin sizin üçün uyğunluğunu xidmət təsdiqlənməzdən əvvəl ayrıca dəqiqləşdirək.",
           ctas: AZ_CTAS
         },
+        { type: "logos", heading: "Əvvəllər şifahi tərcümə dəstəyi verdiyimiz şirkətlərdən bəziləri" },
         { type: "callout", html: `<strong>Dil qeydi:</strong> ${AZ_LANGUAGE_NOTE}` },
         {
           type: "cards",

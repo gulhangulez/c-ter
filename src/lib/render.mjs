@@ -1,6 +1,7 @@
 // Render helpers: HTML escaping, layout, and content-block renderers.
 // Content stays as data (blocks); this module turns blocks into static HTML.
 import { buildGraph, breadcrumbItems } from "./schema.mjs";
+import { clients } from "../content/clients.mjs";
 
 export function esc(s = "") {
   return String(s)
@@ -94,6 +95,22 @@ const blocks = {
       ${card}`;
     return `<section class="hero"${b.id ? ` id="${esc(b.id)}"` : ""}><div class="container">
       <div class="hero__panel">${card ? `<div class="hero__grid">${inner}</div>` : `<div class="hero__solo">${inner}</div>`}</div>
+    </div></section>`;
+  },
+
+  // Reference-client logo band under the hero (getcontrast.io "trusted by" row):
+  // greyscale logos scrolling sideways. The list is doubled for a seamless loop;
+  // the copy is hidden from assistive tech. No JS, no external files.
+  logos(b) {
+    const run = (hidden) => clients.map((c) =>
+      `<li><img src="/assets/logos/${esc(c.file)}" alt="${hidden ? "" : esc(c.name)}" width="${c.w}" height="${c.h}" style="--logo-h:${c.display}px" decoding="async"></li>`
+    ).join("");
+    return `<section class="logo-band" aria-labelledby="logo-band-title"><div class="container">
+      <p class="logo-band__title" id="logo-band-title">${esc(b.heading)}</p>
+      <div class="logo-band__viewport">
+        <ul class="logo-band__track">${run(false)}</ul>
+        <ul class="logo-band__track" aria-hidden="true">${run(true)}</ul>
+      </div>
     </div></section>`;
   },
 

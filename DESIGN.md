@@ -73,6 +73,11 @@ başlıklarda letter-spacing −0.015em.
   nokta), bağlantılar ortada (Inter 500), dil seçici + coral CTA sağda.
 - **Hero:** her sayfada ortalanmış başlık + lead + iki buton (coral + ghost). Talep kartı
   olan sayfalarda kart, başlığın altında geniş krem panel: başlık | liste | butonlar.
+- **Referans logo bandı:** ana sayfalarda (TR/ZH/AZ) hero'nun hemen altında; küçük gri
+  ortalı başlık, gri tonlu şeffaf PNG logolar (%62 opaklık, üzerine gelince tam) sola doğru
+  sürekli kayar, kenarlar silikleşir. Logolar `public/assets/logos/`, liste
+  `src/content/clients.mjs`. Hareket azaltma tercihinde kayma durur, logolar ortalı satırlara
+  dizilir.
 - **Bölüm başlıkları:** kart, adım, tablo ve SSS bloklarında ortalı (en çok 26 karakter
   genişliğinde); düz metin bölümlerinde sola yaslı.
 - **Kart:** beyaz, 1px `#e2e2e2`, 24px köşe. Simge çipi taşıyan kartlarda kenarlık
