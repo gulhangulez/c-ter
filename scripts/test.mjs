@@ -88,6 +88,8 @@ section("C. Build output & drafts (§20.3, §50)");
   ok("dist exists", existsSync(DIST));
   ok("sitemap.xml exists", existsSync(join(DIST, "sitemap.xml")));
   ok("robots.txt exists", existsSync(join(DIST, "robots.txt")));
+  const indexNowKey = (await readdir(DIST)).find((f) => /^[0-9a-f]{32}\.txt$/.test(f));
+  ok("IndexNow key file at site root, content = file name", !!indexNowKey && (await readFile(join(DIST, indexNowKey), "utf8")).trim() === indexNowKey.slice(0, -4));
   ok("404.html exists", existsSync(join(DIST, "404.html")));
   ok("app.js + contact.mjs shipped", existsSync(join(DIST, "assets/app.js")) && existsSync(join(DIST, "assets/contact.mjs")));
 }
