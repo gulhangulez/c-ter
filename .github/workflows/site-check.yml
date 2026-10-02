@@ -1,0 +1,28 @@
+# Read-only check of the live site's HTTP/HTTPS and certificate state. Changes nothing on the server.
+name: Site check
+on:
+  push:
+    branches: [claude/https-warning-eo5ady]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS
+        run: |
+          for h in cince-tercuman.com www.cince-tercuman.com; do echo "== $h"; dig +short A $h @8.8.8.8; dig +short A $h @1.1.1.1; done
+          dig +short CAA cince-tercuman.com @8.8.8.8 || true
+      - name: HTTP
+        run: |
+          for u in http://cince-tercuman.com/ http://www.cince-tercuman.com/; do echo "== $u"; curl -sS -o /dev/null -D - --max-time 20 "$u" | head -15 || true; done
+      - name: HTTPS
+        run: |
+          for u in https://cince-tercuman.com/ https://www.cince-tercuman.com/; do echo "== $u"; curl -sS -o /dev/null -D - --max-time 20 "$u" 2>&1 | head -15 || true; done
+      - name: Certificates
+        run: |
+          for h in cince-tercuman.com www.cince-tercuman.com; do echo "== $h"; echo | timeout 20 openssl s_client -connect $h:443 -servername $h 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName 2>&1 || true; echo | timeout 20 openssl s_client -connect $h:443 -servername $h 2>&1 | grep -E "Verify return code|verify error" | head -5 || true; done
+      - name: Mixed content scan
+        run: |
+          curl -sSk --max-time 20 https://www.cince-tercuman.com/ | grep -oE '(src|href|action)="http://[^"]+"' | sort -u | head -30 || true
+          curl -sSk --max-time 20 https://www.cince-tercuman.com/ | grep -oE 'url\(http://[^)]+\)' | head || true
+          echo done
