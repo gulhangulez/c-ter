@@ -33,9 +33,19 @@ if (!process.argv.includes("--send")) {
   process.exit(0);
 }
 
-const live = await fetch(keyLocation).then(async (r) => (r.ok ? (await r.text()).trim() : null)).catch(() => null);
-if (live !== key) {
-  console.error(`Anahtar dosyası canlıda bulunamadı veya farklı: ${keyLocation}\nÖnce site zip'ini sunucuya yükleyin.`);
+// Arama motorları da anahtarı bu adresten okur; burada okunamıyorsa onlar da
+// büyük olasılıkla okuyamaz. Nedeni (HTTP kodu, TLS hatası) açıkça yazdırılır.
+let problem = null;
+try {
+  const r = await fetch(keyLocation, { headers: { "User-Agent": "cince-tercuman-indexnow-check" } });
+  const text = (await r.text()).trim();
+  if (!r.ok) problem = `HTTP ${r.status} ${r.statusText}${r.headers.get("server") ? ` (sunucu: ${r.headers.get("server")})` : ""}\nYanıtın başı: ${text.slice(0, 300)}`;
+  else if (text !== key) problem = `Dosya açıldı ama içeriği farklı: "${text.slice(0, 80)}"`;
+} catch (err) {
+  problem = `Bağlantı hatası: ${err.cause?.code || ""} ${err.cause?.message || err.message}`;
+}
+if (problem) {
+  console.error(`Anahtar dosyası okunamadı: ${keyLocation}\n${problem}`);
   process.exit(1);
 }
 
