@@ -373,11 +373,16 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
 @keyframes logo-scroll { to { transform: translateX(-100%); } }
 
 /* Decorative diagonal marquee band (aria-hidden) — cream ribbon, persimmon stars */
-.band { overflow: hidden; background: var(--color-cream-band); border-block: 1px solid var(--color-cream-border); margin-top: calc(var(--section-gap) / 2); transform: skewY(-2deg); }
-.band__track { display: flex; gap: 40px; white-space: nowrap; padding: 14px 0; transform: skewY(2deg); width: max-content; animation: band-scroll 40s linear infinite; }
+/* The wrapper clips the rotated ribbon's overhang so the page never scrolls sideways and
+   reserves vertical room for the tilt (tan 2deg ~ 1.75% of the width on each side), so the
+   ribbon never runs into the footer. The ribbon is rotated as a whole, text included, so
+   the words follow the tilt and stay inside the cream strip at every screen width. */
+.band-wrap { overflow: hidden; margin-top: calc(var(--section-gap) / 2); padding-block: calc(1.8vw + 16px) calc(1.8vw + 40px); }
+.band { overflow: hidden; width: 110%; margin-left: -5%; background: var(--color-cream-band); border-block: 1px solid var(--color-cream-border); transform: rotate(-2deg); }
+.band__track { display: flex; gap: 40px; white-space: nowrap; padding: 14px 0; width: max-content; animation: band-scroll 40s linear infinite; }
 .band__track span { font-family: var(--font-display); font-weight: 700; color: var(--color-ink); }
 .band__track span::after { content: "✦"; margin-left: 40px; color: var(--color-persimmon); }
-@keyframes band-scroll { to { transform: skewY(2deg) translateX(-50%); } }
+@keyframes band-scroll { to { transform: translateX(-50%); } }
 
 /* Final CTA — centered headline stack on a wide cream panel */
 .final-cta {
@@ -436,7 +441,7 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
 
 /* Footer — dark surface */
 .site-footer { background: var(--color-dark); color: rgba(255,255,255,.78); padding-block: 72px 28px; margin-top: var(--section-gap); }
-.band + .site-footer { margin-top: 0; }
+.band-wrap + .site-footer { margin-top: 0; }
 .site-footer a { color: #fff; text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; text-decoration-color: var(--color-coral); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
@@ -502,7 +507,7 @@ table.data th { background: var(--color-surface); color: var(--color-ink); font-
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .final-cta { border-radius: var(--radius-card); }
   .dock { display: none; }
-  .band { display: none; }
+  .band-wrap { display: none; }
   .logo-band { padding-block: 8px 24px; }
   .logo-band__track { gap: 40px; padding-right: 40px; animation-duration: 36s; }
   .logo-band__track li { height: 44px; }

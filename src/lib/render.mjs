@@ -417,7 +417,7 @@ const BAND_TEXT = {
 function band(locale) {
   const words = BAND_TEXT[locale];
   const run = [...words, ...words, ...words].map((w) => `<span>${esc(w)}</span>`).join("");
-  return `<div class="band" aria-hidden="true"><div class="band__track">${run}${run}</div></div>`;
+  return `<div class="band-wrap" aria-hidden="true"><div class="band"><div class="band__track">${run}${run}</div></div></div>`;
 }
 
 function footer(ctx) {
