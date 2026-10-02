@@ -23,6 +23,31 @@ export const SERVICE_V13 = {
   unsure: { tr: "Emin değilim", "zh-Hans": "尚不确定", az: "Hələ dəqiqləşdirməmişəm" }
 };
 
+// Optional Turkish request details. Labels are shared by the form and message;
+// only fields belonging to the currently selected service are included.
+export const SERVICE_DETAILS_TR = {
+  machine: [
+    { key: "equipment", label: "Makine veya hat", placeholder: "Örn. ambalaj hattı; model bilgisi henüz belli değil" },
+    { key: "stage", label: "Çalışma aşaması ve ekipler", placeholder: "Örn. kurulum, deneme ve operatör soruları; tek ekip" },
+    { key: "openDates", label: "Olası ek günler", placeholder: "Örn. ilk üç gün kesin, iki gün daha uzayabilir" }
+  ],
+  fair: [
+    { key: "fairName", label: "Fuarın adı ve varsa fazı", placeholder: "Örn. Kanton Fuarı; katılacağım fazı kontrol ediyorum" },
+    { key: "meetings", label: "Görüşme konusu", placeholder: "Örn. ambalaj makineleri; önceden seçtiğimiz stantlar" },
+    { key: "teams", label: "Birlikte mi, ayrı ekiplerle mi gezeceksiniz?", placeholder: "Örn. iki kişi birlikte; aynı anda ayrı görüşmemiz yok" }
+  ],
+  factory: [
+    { key: "factorySite", label: "Ziyaret edeceğiniz fabrika", placeholder: "Fabrika adı veya biliniyorsa ilçe ve çalışma bölgesi" },
+    { key: "agenda", label: "Görüşmenin ana konusu", placeholder: "Örn. ürün özellikleri, numune ve teslim takvimi" },
+    { key: "visits", label: "Diğer ziyaretler", placeholder: "Örn. ikinci gün başka fabrikaya geçeceğiz; adres henüz belli değil" }
+  ],
+  china: [
+    { key: "meeting", label: "Planlanmış görüşme", placeholder: "Örn. seçtiğimiz üreticiyle ürün ve teslim görüşmesi" },
+    { key: "itinerary", label: "Şehir ve çalışma noktası değişiklikleri", placeholder: "Örn. ilk gün Guangzhou; ikinci görüşmenin yeri henüz belli değil" },
+    { key: "participants", label: "Katılımcılar ve iş dili", placeholder: "Örn. iki Türkçe konuşan müşteri ve Çinli üretici ekibi" }
+  ]
+};
+
 export const LANGUAGE_V13 = {
   "turkish-ok": {
     tr: "Türkçe sözlü iletişim benim için uygundur.",
@@ -112,6 +137,14 @@ export function prepareContactV13(input) {
   ];
   if (language !== undefined) lines.push(`${copy.language}: ${LANGUAGE_V13[language][locale]}`);
   lines.push(`${copy.need}: ${need}`);
+  if (locale === "tr" && input.serviceDetails != null) {
+    if (typeof input.serviceDetails !== "object" || Array.isArray(input.serviceDetails)) throw new Error("invalid_service_details");
+    for (const field of SERVICE_DETAILS_TR[input.service] || []) {
+      const value = input.serviceDetails[field.key];
+      if (value == null || (typeof value === "string" && !value.trim())) continue;
+      lines.push(`${field.label}: ${readText(value, 1, 180, "invalid_service_details")}`);
+    }
+  }
   if (name !== null) lines.push(`${copy.name}: ${name}`);
   if (language !== undefined) lines.push("", copy.condition);
   lines.push("", copy.expenses, "", `${copy.source}: ${source.pathname}`);

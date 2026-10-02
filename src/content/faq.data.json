@@ -148,7 +148,7 @@
     "publish": true,
     "tr": {
       "q": "Daha önce benzer bir makinenin veya üretim hattının kurulumunda görev aldı mı?",
-      "a": "Bu bilgi, görevlendirilebilecek tercümanın geçmiş çalışmalarına bağlıdır. Makinenizin türünü, marka ve modelini ya da üretim hattının işlevini paylaşın; benzer bir çalışmaya ilişkin deneyim olup olmadığını seçim aşamasında teyit edelim. Doğrulanmamış makine markaları veya geçmiş proje sayıları üzerinden deneyim iddiasında bulunmuyoruz."
+      "a": "Benzer bir makinede çalışma deneyimi, görevlendirilebilecek tercümanın geçmişine bağlıdır. Makinenin türünü, marka ve modelini ya da üretim hattının işlevini paylaşın; ilgili deneyimi seçim aşamasında teyit edelim. Kurulum sırasındaki açıklamalar, test sonuçlarının konuşulması ve operatörlerin soruları farklı hazırlık gerektirebilir. Bu yüzden yalnızca makinenin adını değil, tercümanın hangi aşamalara katılacağını da yazın. Belirli bir marka veya model deneyimi sizin için zorunluysa bunu ilk mesajınızda belirtin. Benzer işlerde hangi aşamalarda görev aldığı, hangi terimleri önceden görmesi gerektiği ve programın tamamı için uygunluğu, tercüman seçerken netleştirebileceğiniz başlıca konulardır."
     },
     "zh-Hans": {
       "q": "译员之前参与过类似设备或生产线的安装口译吗？",
@@ -174,7 +174,7 @@
     "publish": true,
     "tr": {
       "q": "Arıza, test ve devreye alma aşamalarındaki teknik görüşmelerde destek verebiliyor mu?",
-      "a": "Kurulum programına bağlı arıza değerlendirmesi, test ve devreye alma görüşmelerinde sözlü iletişim desteği talep edebilirsiniz. Konuyu ve gerekli teknik hazırlığı önceden değerlendirelim. Tercüman açıklamaları aktarır; arıza teşhisi koymaz, test sonucunu onaylamaz ve ekipmanın güvenli çalışmasına ilişkin teknik sorumluluk üstlenmez."
+      "a": "Kurulum programına bağlı arıza değerlendirmesi, test ve devreye alma görüşmeleri için sözlü iletişim desteği talep edebilirsiniz. Konuyu ve gerekli hazırlığı önceden değerlendirelim. Teknik ekibin açıklayacağı noktaları, işletmenizdeki ekibin gözlemlerini ve yanıt bekleyen soruları ayrı ayrı yazmanız görüşmenin gündemini netleştirir. Örneğin test sırasında gözlenen bir durumun nasıl tarif edileceği ve hangi soruların sorulacağı önceden belirlenebilir. Tercüman ekiplerin açıklamalarını ve sorularını aktarır; arıza teşhisi koymaz, test sonucunu onaylamaz. Testin nasıl yapılacağı, sonucun yeterli olup olmadığı ve ekipmanın güvenli çalışmasına ilişkin kararlar yetkili teknik kişilere aittir."
     },
     "zh-Hans": {
       "q": "故障讨论、测试和调试阶段也可以提供口译吗？",
@@ -201,7 +201,7 @@
     "publish": true,
     "tr": {
       "q": "Kurulum planlanandan uzun sürerse tercümanlık süresini uzatabilir miyiz?",
-      "a": "Kurulumun uzayabileceğini gördüğünüzde yeni tarih ve saatleri mümkün olduğunca erken bildirin. Aynı tercümanın devam edebilmesi, sonraki günlerdeki uygunluğuna bağlıdır. Ek çalışma günleri, günlük ücretler ve ulaşım, konaklama, yeme-içme giderleri yeniden teyit edilmeden programın otomatik uzadığını varsaymayın."
+      "a": "Kurulum uzarsa ek gün için talepte bulunabilirsiniz; aynı tercümanın devam edebilmesi sonraki tarihlerdeki uygunluğuna bağlıdır. Örneğin üç günlük işinizde testlerin dördüncü güne kalma ihtimali varsa, ilk üç günü planlanan çalışma günleri, dördüncü günü olası ek gün olarak belirtin. Makine teslimi veya teknik ekibin gelişi bekleniyorsa bunu da baştan paylaşın. Program değiştiğinde yeni tarih ve saatleri mümkün olduğunca erken bildirin. Ek günler, günlük ücret ve değişebilecek ulaşım, konaklama ve yeme-içme giderleri yeniden teyit edilir. Tercümanın sahada beklemesi istenen bir gün varsa bunun ücretlendirmesini teklif aşamasında ayrıca sorun. Program kendiliğinden uzamış sayılmaz."
     },
     "zh-Hans": {
       "q": "安装超出原计划时，可以延长口译安排吗？",
@@ -919,7 +919,7 @@
     "publish": true,
     "tr": {
       "q": "Acil veya ertesi gün için Çince tercüman bulabilir misiniz?",
-      "a": "Acil veya ertesi gün başlayacak bir iş için talebinizi iletebilirsiniz; ancak tercüman bulunacağını önceden garanti etmiyoruz. Şehri, tam çalışma noktasını, başlangıç saatini ve konuşulacak konuyu birlikte paylaşın. Uygunluk teyidi gelmeden tercümanınızın kesinleştiğini varsaymayın."
+      "a": "Acil veya ertesi gün başlayacak bir iş için talebinizi iletebilirsiniz; ancak tercüman bulunacağını önceden garanti etmiyoruz. Mesajın başına takvim tarihini ve başlangıç saatini yazın; ardından gerçek çalışma konumunu ve konuşulacak konuyu ekleyin. Örneğin şu şablonu kendi bilgilerinizle doldurabilirsiniz: “[Tarih] günü [saat] itibarıyla [tesis konumu] için Çince–Türkçe tercüman arıyoruz. Çinli teknik ekiple makine kurulumu sırasında görüşülecek. İlk gün kesin, ikinci gün henüz belli değil.” Kaç gün gerektiği netleşmediyse kesin ve olası günleri ayrı belirtin. Mesajın gönderilmesi görevlendirme anlamına gelmez; uygunluk ve çalışma koşulları karşılıklı teyit edilmelidir."
     },
     "zh-Hans": {
       "q": "紧急需求或第二天开始的工作，可以安排口译吗？",
@@ -945,7 +945,7 @@
     "publish": true,
     "tr": {
       "q": "Birden fazla gün süren işlerde aynı tercümanla çalışabilecek miyiz?",
-      "a": "Birden fazla günlük işte aynı tercümanla devam etme tercihinizi baştan belirtin. Bunun mümkün olup olmadığı bütün tarih aralığındaki uygunluğa bağlıdır; yalnızca ilk günün teyit edilmesi sonraki günlerin de ayrıldığı anlamına gelmez. Program değişirse devamlılık ve olası alternatifler yeniden değerlendirilir."
+      "a": "Aynı tercümanla devam etme tercihinizi ilk talebinizde belirtin ve ihtiyaç duyacağınız tarihlerin tamamını paylaşın. İlk gün için uygunluk bulunması, sonraki günlerin de ayrıldığı anlamına gelmez; bütün programın birlikte teyit edilmesi gerekir. Bir kişi değişikliği gündeme gelirse, işin kaldığı noktayı kısa bir notla anlatmanız yararlı olur: Hangi aşama tamamlandı, ekiplerin kullandığı terimler neler, hangi sorular açık kaldı ve sonraki gün ne konuşulacak? Paylaşılmasına izin verilen bilgilerle hazırlanan bu not, ihtiyacın yeni tercümana açıklanmasını kolaylaştırabilir. Değişiklik ve olası alternatifler, ilgili tarihlerdeki uygunluğa göre ayrıca değerlendirilir."
     },
     "zh-Hans": {
       "q": "多日工作能安排同一位译员吗？",
@@ -1167,7 +1167,7 @@
     "publish": true,
     "tr": {
       "q": "CNC makine kurulumu için Çince tercüman bulunabilir mi?",
-      "a": "CNC makine kurulumu için talebinizi değerlendirebiliriz. Makinenin türünü, marka ve modelini, kontrol sistemiyle ilgili konuşulacak konuları, tesis konumunu ve tarihleri paylaşın. İlgili deneyime sahip uygun tercüman bulunması ayrıca teyit edilir; her CNC markasında geçmiş iş deneyimi veya makinenin devreye alınması konusunda teknik yetki iddia etmiyoruz."
+      "a": "CNC makine kurulumu için talebinizi değerlendirebiliriz. Makinenin türünü, marka ve modelini, biliyorsanız kontrol sistemini yazın. Ardından görüşmenin konusunu ekleyin: İlk kurulum açıklamaları mı yapılacak, bir testin sonuçları mı konuşulacak, yoksa operatörlerin kullanım soruları mı aktarılacak? “CNC tercümanı gerekiyor” ifadesi bu ayrımı tek başına anlatmaz. Önceden sorulacak birkaç soruyu veya paylaşılmasına izin verilen kısa bir terim listesini de hazırlayabilirsiniz. Tesis konumu ve tarihlerle birlikte verilen bu bilgiler, tercümanın uygunluğunun değerlendirilmesine yardımcı olur. Belirli bir marka veya kontrol sistemi deneyimi gerekiyorsa bunun ayrıca teyit edilmesini isteyin. Teknik uygulama ve onay yetkili ekibe aittir."
     },
     "zh-Hans": {
       "q": "CNC 设备安装可以咨询中文口译吗？",
@@ -1180,7 +1180,7 @@
     "publish": true,
     "tr": {
       "q": "Plastik enjeksiyon makinesi kurulumu için Çince tercüman nasıl bulunur?",
-      "a": "Plastik enjeksiyon makinesi için makine bilgilerini ve kurulumda konuşulacak başlıkları paylaşarak bize ulaşabilirsiniz. Kalıp, makine ayarlarının açıklanması veya operatör eğitimi gibi bölümleri talepte belirtin. Bunlar tercümanın hazırlık konularıdır; proses parametrelerini belirlemek veya üretim ayarlarını onaylamak tercümanın görevi değildir. Uygunluk, ilgili teknik deneyimle birlikte değerlendirilir."
+      "a": "Makinenin bilgilerini, çalışma konumunu, tarihleri ve konuşulacak başlıkları paylaşarak tercümanlık talep edebilirsiniz. Plastik enjeksiyon çalışmasında gündem; makinenin kurulumu, kalıpla ilgili açıklamalar veya operatörlerin kullanım soruları olabilir. Kalıpla ilgili bir görüşme yapılacaksa bunu makine kurulumundan ayrı bir başlık olarak belirtin. Örneğin “Kurulumdan sonra teknik ekibin kalıpla ilgili açıklamaları ve operatörlerin soruları aktarılacak” demek, yalnızca “enjeksiyon tercümanı” demekten daha açıklayıcıdır. İşe uygunluk, ilgili tercümanın deneyimi ve takvimiyle birlikte değerlendirilir. Tercüman açıklamaları ve soruları aktarır; proses parametrelerini belirlemek veya üretim ayarlarını onaylamak yetkili teknik ekibin sorumluluğundadır."
     },
     "zh-Hans": {
       "q": "注塑机安装如何咨询中土口译？",
@@ -1193,7 +1193,7 @@
     "publish": true,
     "tr": {
       "q": "Ambalaj ve paketleme makineleri için Çince teknik tercüman var mı?",
-      "a": "Ambalaj veya paketleme makinesi kurulumuna yönelik talebinizi, makine türü ve ürün grubu bilgisiyle değerlendirebiliriz. Tek bir makine mi, birbirine bağlı bir hat mı olduğunu; konuşulacak kontrol ve operatör eğitimi başlıklarını belirtin. Her marka veya hatta hazır uzmanlık iddiası yerine, işinize uygun tercümanı ve hazırlık gereksinimini önceden teyit edelim."
+      "a": "Ambalaj veya paketleme makinesi kurulumu için talebinizi değerlendirebiliriz. Makinenin türünü, ürün grubunu ve tek bir makinede mi yoksa birbirine bağlı birkaç istasyonda mı görüşme yapılacağını belirtin. Kurulum, test görüşmesi ve kullanım anlatımından hangi aşamalarda tercüman gerektiğini de yazın. Bir ekip ilk istasyonda çalışırken başka bir ekip ayrı bir noktada operatörlerle görüşecekse, eş zamanlı ihtiyacı önceden paylaşın. Tek bir tercüman iki yerde aynı anda bulunamayacağı için görüşmelerin sırası veya gereken destek ayrıca değerlendirilir. Ekipler sırayla ilerleyecekse bunu günlük programda gösterebilirsiniz. İlgili deneyim, tarihler ve çalışma koşulları birlikte teyit edilir."
     },
     "zh-Hans": {
       "q": "包装机械安装可以咨询中文技术口译吗？",
@@ -1206,7 +1206,7 @@
     "publish": true,
     "tr": {
       "q": "Tekstil makinelerinin kurulumunda çalışabilecek Çince tercüman nasıl bulunur?",
-      "a": "Tekstil makinesinin türünü ve hangi kurulum veya kullanım açıklamalarının yapılacağını belirterek tercümanlık talep edebilirsiniz. Makine marka ve modeli, üretim süreci ve teknik ekibin gündemi hazırlık için önemlidir. Uygun tercüman, tarih ve çalışma koşulları birlikte teyit edilir; bütün tekstil makinelerinde doğrulanmış deneyim bulunduğunu söylemiyoruz."
+      "a": "Makinenin üretimde hangi iş için kullanıldığını, türünü, marka ve modelini belirterek bize ulaşabilirsiniz. “Tekstil makinesi” geniş bir tanımdır; örneğin örme, dokuma veya terbiye sürecinden hangisiyle ilgili olduğu görüşmenin bağlamını açıklamaya yardımcı olur. Bunun yanına o günün gündemini ekleyin: Kurulum açıklamaları, kullanım anlatımı veya teknik ekibe sorulacak sorular. Sadece marka bilgisini vermek yerine, hangi aşamada Çince–Türkçe iletişim gerektiğini de belirtin. Tesis konumu ve tarihlerle birlikte verilen bu bilgiler üzerinden tercüman uygunluğu değerlendirilir. İlgili makine türündeki deneyim sizin için önemliyse, görevlendirilecek kişi açısından ayrıca teyit edilmesini isteyin."
     },
     "zh-Hans": {
       "q": "纺织机械安装如何寻找适合的中文口译？",
@@ -1219,7 +1219,7 @@
     "publish": true,
     "tr": {
       "q": "Endüstriyel otomasyon ve robot sistemleri için Çince tercüman bulunabilir mi?",
-      "a": "Endüstriyel otomasyon veya robot sistemi için talebinizi öncelikle teknik kapsamıyla değerlendirelim. Sistem, kontrol birimleri, konuşulacak entegrasyon konuları ve saha programını paylaşın. İlgili tercüman uygunluğu ayrıca doğrulanır. Tercümanlık; programlama, güvenlik değerlendirmesi, sistemi çalıştırma veya teknik onay verme hizmeti olarak sunulmaz."
+      "a": "Endüstriyel otomasyon veya robot sistemiyle ilgili talebinizi teknik kapsamıyla değerlendirebiliriz. Hangi sistemin ve kontrol biriminin konuşulacağını, teknik ekipte kimlerin bulunacağını ve görüşmenin amacını yazın. Kurulumun açıklanması, test sırasında gözlenen bir durumun sorulması ve operatörlere kullanım anlatımı farklı gündemlerdir. Örnek bir görüşmede Türk ekip gözlediği durumu tarif eder, Çinli teknik görevli açıklamasını yapar ve anlaşılmayan noktalar karşılıklı sorulur. Tercümanın rolü bu konuşmayı aktarmaktır. Programlama, entegrasyon, güvenlik değerlendirmesi ve teknik onay ilgili uzmanların sorumluluğundadır. Sistem bilgisi, konuşulacak konular, tesis konumu ve tarihler üzerinden ilgili tercümanın uygunluğu ayrıca teyit edilir."
     },
     "zh-Hans": {
       "q": "工业自动化和机器人系统可以咨询中文口译吗？",
