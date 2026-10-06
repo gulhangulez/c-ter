@@ -8,7 +8,7 @@ export type Tx = pg.PoolClient | pg.Pool;
 
 // DATE sütunları JS Date'e çevrilmesin; 'YYYY-MM-DD' metni olarak kalsın (saat dilimi kaymasını önler).
 pg.types.setTypeParser(1082, (v: string) => v);
-pg.types.setTypeParser(1182, (v: string) => (v === '{}' ? [] : v.slice(1, -1).split(',')));
+pg.types.setTypeParser(1182 as any, (v: string) => (v === '{}' ? [] : v.slice(1, -1).split(',')));
 // bigint (para) tamsayı olarak okunur; güvenli aralık dışı tutar beklenmez, aşılırsa hata verilir.
 pg.types.setTypeParser(20, (v: string) => {
   const n = Number(v);

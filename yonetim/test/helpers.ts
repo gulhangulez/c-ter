@@ -122,3 +122,22 @@ export async function payWebhook(w: World, p: Parameters<FakePayments['simulate'
   await storeInbox(w.ctx, 'payments:fake', ev.eventId, ev, true);
   await settle(w.ctx);
 }
+
+export const CUSTOMER = '905321112233';
+
+/** Müşteriyi eksiksiz talep + özet onayı + paylaşım izni ile MATCHING durumuna getirir. */
+export async function toMatching(w: World, from = CUSTOMER, text = "12–14 Ekim 2026 Mersin'de makine kurulumu için Çince tercüman lazım. Adım Ahmet Yılmaz") {
+  await inbound(w, from, text);
+  let j = await job(w, `customer_id=(SELECT party_id FROM contact_endpoints WHERE kind='WHATSAPP' AND value='${from}')`);
+  if (j.pending_field === 'technical_subject') await inbound(w, from, 'CNC tezgâh kurulumu');
+  await press(w, from, 'Evet, doğru');
+  await press(w, from, 'Evet, izin veriyorum');
+  j = await job(w, `id='${j.id}'`);
+  return j;
+}
+
+/** Müsait + yönlendirme kabulü (bağlantı POST). */
+export async function acceptBy(w: World, interp: string) {
+  await press(w, interp, 'Müsaitim');
+  return act(w, lastLink(w, interp), { decision: 'accept' });
+}

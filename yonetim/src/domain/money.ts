@@ -10,9 +10,26 @@ export function exponent(cur: string): number {
 }
 
 /** "250", "250.5", "250,50" -> en küçük birim (bigint yerine güvenli tamsayı). */
+/** "1.234,56", "1,234.56", "1.250" (binlik) ve "250,5" yazımlarını tek biçime çevirir. */
+function normalizeAmount(input: string): string {
+  let s = input.trim().replace(/\s/g, '');
+  const lastDot = s.lastIndexOf('.');
+  const lastComma = s.lastIndexOf(',');
+  if (lastDot >= 0 && lastComma >= 0) {
+    const dec = lastDot > lastComma ? '.' : ',';
+    const grp = dec === '.' ? ',' : '.';
+    return s.split(grp).join('').replace(dec, '.');
+  }
+  const sep = lastComma >= 0 ? ',' : lastDot >= 0 ? '.' : null;
+  if (!sep) return s;
+  const parts = s.split(sep);
+  if (parts.length > 2 || (sep === '.' && parts[1].length === 3)) return parts.join('');
+  return parts.join('.');
+}
+
 export function parseAmount(input: string, cur: string): number {
   const e = exponent(cur);
-  const s = input.trim().replace(/\s/g, '').replace(',', '.');
+  const s = normalizeAmount(input);
   if (!/^\d+(\.\d+)?$/.test(s)) throw new Error('Geçersiz tutar');
   const [int, frac = ''] = s.split('.');
   if (frac.length > e) throw new Error(`${cur} için en fazla ${e} ondalık basamak`);

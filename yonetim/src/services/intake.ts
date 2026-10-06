@@ -59,7 +59,7 @@ async function scheduleInfoReminders(c: C, ctx: Ctx, job: any): Promise<void> {
   const occ = Math.floor(now.getTime() / 1000);
   await scheduleTask(c, ctx, {
     type: 'info_reminder', jobId: job.id, targetPartyId: job.customer_id, businessVersion: job.version, occurrence: occ,
-    policyVersion: version, dueAt: addWorkingHours(now, policy.customerInfoReminderWorkingHours, CUSTOMER_TZ),
+    policyVersion: version, dueAt: addWorkingHours(now, policy.customerInfoReminderWorkingHours, CUSTOMER_TZ), payload: { n: 1 },
   });
   await scheduleTask(c, ctx, {
     type: 'info_dormant', jobId: job.id, targetPartyId: job.customer_id, businessVersion: job.version, occurrence: occ,

@@ -1,7 +1,8 @@
 // Kalıcı görev motoru: vadesi gelen görevler veritabanından alınır (FOR UPDATE SKIP LOCKED → aynı görevi iki işçi çalıştırmaz).
 // Her görev çalışmadan önce güncel iş sürümünü, durumunu ve otomasyon modunu yeniden kontrol eder.
 import { one, tx } from '../core/db.js';
-import { atLocal, addDays, localDate, formatRangeTr } from '../core/time.js';
+import { atLocal, addDays, localDate, formatRangeTr, nextMorning } from '../core/time.js';
+import { FIELD_QUESTIONS } from '../domain/extract.js';
 import { balanceOf, formatAmount } from '../domain/money.js';
 import { JOB_STATUS_TR } from '../domain/labels.js';
 import { CommandError, enqueue, openCase, scheduleTask, sendWa, transition, loadPolicy, createActionToken, type C, type Ctx } from './core.js';
@@ -25,9 +26,15 @@ function stale(task: any, job: any, allowed: string[]): string | null {
 const HANDLERS: Record<string, { statuses?: string[]; run: Handler }> = {
   info_reminder: {
     statuses: ['INFO_PENDING'],
-    async run(c, ctx, _t, job) {
+    async run(c, ctx, t, job) {
+      // 4 çalışma saati sonra kısa hatırlatma; sonraki uygun gün ikinci (son) hatırlatma.
+      if (t.payload?.n === 1) {
+        await scheduleTask(c, ctx, { type: 'info_reminder', jobId: job.id, targetPartyId: job.customer_id, businessVersion: job.version, occurrence: t.occurrence + 1, policyVersion: t.policy_version, dueAt: nextMorning(ctx.clock.now(), 'Europe/Istanbul', 9), payload: { n: 2 } });
+      }
       if (job.pending_question === 'SUMMARY') return void (await askSummary(c, ctx, job));
-      await sendWa(c, ctx, { partyId: job.customer_id, jobId: job.id, jobVersion: job.version, key: 'missing_info', proactive: true, requireVersion: true, vars: { job_code: job.code, missing_field_label: 'eksik kalan' } });
+      if (job.pending_question === 'SHARE') return 'Paylaşım izni sorusu tekrar gönderilmez';
+      await sendWa(c, ctx, { partyId: job.customer_id, jobId: job.id, jobVersion: job.version, key: 'missing_info', proactive: true, requireVersion: true,
+        vars: { job_code: job.code, missing_field_label: FIELD_QUESTIONS[job.pending_field] ?? 'eksik kalan' } });
     },
   },
   info_dormant: {

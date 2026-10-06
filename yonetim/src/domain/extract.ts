@@ -217,7 +217,7 @@ export function extractService(text: string): { type: ServiceType; evidence: str
 const OUT_OF_SCOPE_RE = /(yazili ceviri|belge cevir|noter|yeminli|evrak cevir|urun arastir|urun getir|tur paketi)/;
 
 export function extractName(text: string): string | null {
-  const m = text.match(/(?:ad[ıi]m|ismim|ben)\s+([A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:\s+[A-ZÇĞİÖŞÜ][a-zçğıöşü]+){0,2})/);
+  const m = text.match(/(?:[Aa]d[ıi]m|[İIi]smim|[Bb]en)\s+([A-ZÇĞİÖŞÜ][a-zçğıöşü]+(?:\s+[A-ZÇĞİÖŞÜ][a-zçğıöşü]+){0,2})/);
   return m ? m[1] : null;
 }
 
