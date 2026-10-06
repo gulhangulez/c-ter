@@ -9,6 +9,22 @@ import { ensureSystemTasks } from './services/tasks.js';
 import { activateAgreement, createInterpreter } from './services/admin.js';
 import { markIntegration } from './services/dispatch.js';
 
+/**
+ * Komut satırı olmayan barındırmalar (cPanel Web Apps) için: hiç kullanıcı yoksa ADMIN_BOOTSTRAP_EMAIL ve
+ * ADMIN_BOOTSTRAP_PASSWORD ile ilk yöneticiyi oluşturur. Kullanıcı varsa hiçbir şey yapmaz.
+ */
+async function bootstrapAdmin(ctx: ReturnType<typeof createContext>): Promise<void> {
+  const email = process.env.ADMIN_BOOTSTRAP_EMAIL?.trim().toLowerCase();
+  const pw = process.env.ADMIN_BOOTSTRAP_PASSWORD;
+  if (!email || !pw) return;
+  if (pw.length < 12) { console.error('ADMIN_BOOTSTRAP_PASSWORD en az 12 karakter olmalı; yönetici oluşturulmadı.'); return; }
+  const r = await ctx.db.query(
+    `INSERT INTO users (email, display_name, password_hash, roles) SELECT $1,$2,$3,ARRAY['ADMIN'] WHERE NOT EXISTS (SELECT 1 FROM users)`,
+    [email, email, hashPassword(pw)],
+  );
+  if (r.rowCount) console.log(`İlk yönetici oluşturuldu: ${email}`);
+}
+
 async function main(): Promise<void> {
   const [cmd, ...args] = process.argv.slice(2);
   const config = loadConfig();
@@ -22,6 +38,7 @@ async function main(): Promise<void> {
     case 'web': {
       await migrate(ctx.db);
       await markModes(ctx);
+      await bootstrapAdmin(ctx);
       startServer(ctx, config.port);
       console.log(`Panel http://0.0.0.0:${config.port} (WhatsApp: ${config.whatsapp.mode}, takvim: ${config.calendar.mode}, ödeme: ${config.payments.mode})`);
       if (process.env.RUN_WORKER_IN_WEB === '1') {
