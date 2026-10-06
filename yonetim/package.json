@@ -16,7 +16,8 @@
     "create-admin": "node dist/src/main.js create-admin",
     "seed": "node dist/src/main.js seed",
     "test": "node --import tsx --test --test-concurrency=1 test/*.test.ts",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test",
+    "postinstall": "tsc -p tsconfig.json || echo \"Derleme atlandı (TypeScript yok)\""
   },
   "engines": {
     "node": ">=20"
