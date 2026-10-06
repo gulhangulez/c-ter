@@ -88,3 +88,7 @@ Uygulama iki süreçten oluşur: **web** (panel + webhook) ve **worker** (zamanl
 - Geçmiş kayıtların CSV ile içe aktarılması (T42) ve önizleme onayı.
 - Bilgi çıkarma kural tabanlıdır (Türkçe tarih, şehir ve hizmet ifadeleri). Dil modeli bağdaştırıcısı eklenmedi; tanınmayan ifadede sistem tahmin etmez, soru sorar.
 - Gerçek WhatsApp, Google Takvim ve Resend hesaplarıyla canlı doğrulama yapılmadı; testlerin tamamı sahte sağlayıcılarla çalışıyor. Canlıya geçmeden önce her entegrasyon test numarası ve test takvimiyle bir kez uçtan uca denenmeli.
+
+## Derlenmiş çıktı (`dist/`)
+
+Güzel Hosting'deki "Setup Node.js App" yalnızca çalışma bağımlılıklarını kurduğu ve sunucuda derleme yapılamadığı için `dist/` klasörü depoya eklenir. Kodda değişiklik yaptıktan sonra `npm run build` çalıştırıp `dist/` ile birlikte commit edin. Sunucuda güncelleme: cPanel > Git Version Control'de depoyu güncelleyin (Pull), ardından `tmp/restart.txt` dosyasını yenileyin veya Setup Node.js App'te Restart'a basın.
