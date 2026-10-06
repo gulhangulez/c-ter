@@ -8,11 +8,11 @@ import { GOOGLE_SCOPE } from '../adapters/calendar.js';
 import { FakePayments } from '../adapters/payments.js';
 import { parseAmount } from '../domain/money.js';
 import { DEFAULT_POLICY } from '../domain/policy.js';
-import { CommandError, loadPolicy } from '../services/core.js';
+import { CommandError, hasConsent, loadPolicy } from '../services/core.js';
 import { storeInbox, waDedupeKey } from '../services/inbox.js';
 import { loadAction, performAction, agreementSummary } from '../services/actions.js';
 import { dashboard, integrationHealth, jobDetail, jobRows, financeTotals } from '../services/queries.js';
-import { activateAgreement, createInterpreter, listInterpreters, resolveCase, retryMatching } from '../services/admin.js';
+import { activateAgreement, createInterpreter, listInterpreters, resolveCase, retryMatching, updateInterpreter } from '../services/admin.js';
 import { cancelJob, requestJobChange, sendAdminMessage, setAutomationMode } from '../services/workflow.js';
 import { adjust, accountView } from '../services/finance.js';
 import { localDate } from '../core/time.js';
@@ -248,7 +248,27 @@ export function createHandler(ctx) {
             if (!i)
                 return redirect('/tercumanlar');
             const ags = await many(ctx.db, `SELECT * FROM commission_agreements WHERE interpreter_id=$1 ORDER BY agreement_version DESC`, [i.id]);
+            i.email = (await one(ctx.db, `SELECT value FROM contact_endpoints WHERE party_id=$1 AND kind='EMAIL' ORDER BY created_at LIMIT 1`, [i.id]))?.value ?? '';
+            i.consent = await hasConsent(ctx.db, i.id, 'OPERATIONAL_MESSAGES');
             return render(i.display_name, V.interpreterPage(i, ags, user.csrf, agreementSummary), user, '/tercumanlar', flash, err);
+        }
+        m = path.match(/^\/tercumanlar\/([0-9a-f-]{36})\/duzenle$/);
+        if (m && method === 'POST') {
+            if (!can(user, 'OPERATIONS'))
+                return fail(`/tercumanlar/${m[1]}`, 'Operasyon yetkiniz yok');
+            try {
+                await tx(ctx.db, (c) => updateInterpreter(c, ctx, m[1], {
+                    name: f(r, 'name'), whatsapp: f(r, 'whatsapp'), email: f(r, 'email') || undefined, timezone: f(r, 'timezone'),
+                    cities: f(r, 'cities').split(','), travelCountries: f(r, 'travel').split(','), services: fa(r, 'services'),
+                    priority: Number(f(r, 'priority') || 100), specialties: f(r, 'specialties') || undefined, messagingConsent: f(r, 'consent') === '1',
+                }, actor));
+            }
+            catch (e) {
+                if (e instanceof CommandError)
+                    return fail(`/tercumanlar/${m[1]}`, e.message);
+                throw e;
+            }
+            return back(`/tercumanlar/${m[1]}`, 'Tercüman bilgileri güncellendi');
         }
         m = path.match(/^\/tercumanlar\/([0-9a-f-]{36})\/anlasma$/);
         if (m && method === 'POST') {

@@ -31,7 +31,7 @@ npm start                   # panel + webhook uçları (PORT, varsayılan 3000)
 npm run worker              # ayrı süreç: görevler, gönderimler, takvim
 ```
 
-Testler: `TEST_DATABASE_URL=postgres://kullanici@host:port/postgres npm run check` (tip kontrolü + 43 senaryo testi). Her test geçici bir veritabanı açar ve siler.
+Testler: `TEST_DATABASE_URL=postgres://kullanici@host:port/postgres npm run check` (tip kontrolü + 44 senaryo testi). Her test geçici bir veritabanı açar ve siler.
 
 ## Ayarlar
 

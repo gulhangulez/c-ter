@@ -2,7 +2,7 @@
 import { many, one } from '../core/db.js';
 import { fold } from '../domain/extract.js';
 import { parseAmount } from '../domain/money.js';
-import { audit, CommandError, recordConsent, type C, type Ctx } from './core.js';
+import { audit, CommandError, hasConsent, recordConsent, type C, type Ctx } from './core.js';
 import { resumeReferralsForInterpreter } from './matching.js';
 
 export interface InterpreterInput {
@@ -42,6 +42,38 @@ export async function createInterpreter(c: C, ctx: Ctx, i: InterpreterInput, act
   if (i.messagingConsent) await recordConsent(c, ctx, { partyId, purpose: 'OPERATIONAL_MESSAGES', granted: true, source: `admin:${actor}`, channel: 'WHATSAPP' });
   await audit(c, ctx, { actor, command: 'CreateInterpreter', entityType: 'party', entityId: partyId });
   return partyId;
+}
+
+/** Kayıtlı tercümanın bilgilerini günceller. Geçmiş işler ve komisyon anlaşmaları değişmez. */
+export async function updateInterpreter(c: C, ctx: Ctx, partyId: string, i: InterpreterInput, actor: string): Promise<void> {
+  if (!(await one(c, 'SELECT 1 FROM interpreter_profiles WHERE party_id=$1', [partyId]))) throw new CommandError('NOT_FOUND', 'Tercüman bulunamadı');
+  if (!i.name.trim()) throw new CommandError('NAME', 'Ad soyad boş olamaz');
+  const wa = i.whatsapp.replace(/[^\d]/g, '');
+  if (wa.length < 8) throw new CommandError('PHONE', 'Geçerli bir WhatsApp numarası girin (ülke koduyla)');
+  if (!i.services.length) throw new CommandError('SERVICES', 'En az bir hizmet seçin');
+  const owner = await one(c, `SELECT party_id FROM contact_endpoints WHERE kind='WHATSAPP' AND value=$1`, [wa]);
+  if (owner && owner.party_id !== partyId) throw new CommandError('EXISTS', 'Bu WhatsApp numarası başka bir kişiye kayıtlı');
+  if (!owner) {
+    const cur = await one(c, `SELECT id FROM contact_endpoints WHERE party_id=$1 AND kind='WHATSAPP' ORDER BY preferred DESC, created_at LIMIT 1`, [partyId]);
+    if (cur) await c.query(`UPDATE contact_endpoints SET value=$2, verified=false WHERE id=$1`, [cur.id, wa]);
+    else await c.query(`INSERT INTO contact_endpoints (party_id, kind, value, verified, preferred) VALUES ($1,'WHATSAPP',$2,false,true)`, [partyId, wa]);
+  }
+  const email = (i.email ?? '').trim().toLowerCase();
+  await c.query(`DELETE FROM contact_endpoints WHERE party_id=$1 AND kind='EMAIL' AND value<>$2`, [partyId, email]);
+  if (email) {
+    const taken = await one(c, `SELECT party_id FROM contact_endpoints WHERE kind='EMAIL' AND value=$1`, [email]);
+    if (taken && taken.party_id !== partyId) throw new CommandError('EXISTS', 'Bu e-posta başka bir kişiye kayıtlı');
+    if (!taken) await c.query(`INSERT INTO contact_endpoints (party_id, kind, value) VALUES ($1,'EMAIL',$2)`, [partyId, email]);
+  }
+  await c.query(`UPDATE parties SET display_name=$2, timezone=$3 WHERE id=$1`, [partyId, i.name.trim(), i.timezone]);
+  await c.query(
+    `UPDATE interpreter_profiles SET cities=$2, travel_countries=$3, services=$4, timezone=$5, priority=$6, specialties=$7 WHERE party_id=$1`,
+    [partyId, i.cities.map((x) => fold(x).trim()).filter(Boolean), i.travelCountries.map((x) => x.trim().toUpperCase()).filter(Boolean), i.services, i.timezone, i.priority ?? 100, i.specialties || null],
+  );
+  if ((await hasConsent(c, partyId, 'OPERATIONAL_MESSAGES')) !== i.messagingConsent) {
+    await recordConsent(c, ctx, { partyId, purpose: 'OPERATIONAL_MESSAGES', granted: i.messagingConsent, source: `admin:${actor}`, channel: 'WHATSAPP' });
+  }
+  await audit(c, ctx, { actor, command: 'UpdateInterpreter', entityType: 'party', entityId: partyId });
 }
 
 export interface AgreementInput {

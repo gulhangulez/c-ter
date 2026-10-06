@@ -131,7 +131,6 @@ function financeBlock(a, csrf) {
       <label>Tutar (${a.currency})<input name="amount" required></label><label>Gerekçe<input name="reason" required></label><div><button class="btn small">Kaydet</button></div></form></details>` : ''}</div>`;
 }
 export function interpretersPage(list, csrf) {
-    const svc = Object.entries(SERVICE_LABELS);
     return h `<h1>Tercüman havuzu</h1>
   <div class="card"><div class="tbl"><table><thead><tr><th>Ad</th><th>Şehirler</th><th>Hizmetler</th><th>Öncelik</th><th>Komisyon anlaşması</th><th>Doğrulanmış iş</th></tr></thead><tbody>
   ${list.map((i) => h `<tr><td><a href="/tercumanlar/${i.id}">${i.display_name}</a>${i.active ? '' : h ` ${pill('Pasif')}`}<br><span class="small muted">${i.timezone}</span></td><td class="small">${i.cities.join(', ')}${i.travel_countries.length ? h `<br>seyahat: ${i.travel_countries.join(', ')}` : ''}</td>
@@ -139,18 +138,26 @@ export function interpretersPage(list, csrf) {
     <td>${i.agreement ? pill(`v${i.agreement.agreement_version} etkin`, 'ok') : pill('Yok — yönlendirme yapılamaz', 'bad')}</td><td>${i.completed}</td></tr>`)}
   </tbody></table></div></div>
   <div class="card"><h2 style="margin-top:0">Tercüman ekle</h2><form method="post" action="/tercumanlar">${csrfField(csrf)}
-    <div class="row"><label>Ad soyad<input name="name" required></label><label>WhatsApp (ülke koduyla)<input name="whatsapp" placeholder="+86 138..." required></label><label>E-posta<input name="email" type="email"></label></div>
-    <div class="row"><label>Saat dilimi<select name="timezone"><option>Asia/Shanghai</option><option>Europe/Istanbul</option><option>Asia/Baku</option></select></label><label>Öncelik (küçük önce)<input name="priority" type="number" value="100"></label></div>
-    <div class="row"><label>Hizmet verdiği şehirler (virgülle)<input name="cities" placeholder="Guangzhou, Foshan, Shenzhen"></label><label>Seyahat edebildiği ülkeler (TR, CN)<input name="travel" placeholder="CN"></label></div>
-    <fieldset style="border:1px solid var(--line);border-radius:10px;margin:0 0 10px"><legend class="small muted">Hizmetler</legend>${svc.map(([k, v]) => h `<label style="display:inline-block;margin-right:12px"><input type="checkbox" name="services" value="${k}" style="width:auto" checked> ${v}</label>`)}</fieldset>
-    <label>Uzmanlık notu<input name="specialties"></label>
-    <label style="color:var(--ink)"><input type="checkbox" name="consent" value="1" style="width:auto"> Tercümandan iş bildirimleri için WhatsApp mesaj izni alındı</label>
-    <button class="btn">Ekle</button></form></div>`;
+    ${interpreterFields()}<button class="btn">Ekle</button></form></div>`;
+}
+const TIMEZONES = ['Asia/Shanghai', 'Europe/Istanbul', 'Asia/Baku'];
+/** Tercüman ekleme ve düzenleme formlarının ortak alanları; `i` verilirse mevcut değerlerle dolar. */
+function interpreterFields(i) {
+    const svc = Object.entries(SERVICE_LABELS);
+    const tzs = i?.timezone && !TIMEZONES.includes(i.timezone) ? [...TIMEZONES, i.timezone] : TIMEZONES;
+    return h `<div class="row"><label>Ad soyad<input name="name" value="${i?.display_name ?? ''}" required></label><label>WhatsApp (ülke koduyla)<input name="whatsapp" value="${i?.whatsapp ? `+${i.whatsapp}` : ''}" placeholder="+86 138..." required></label><label>E-posta<input name="email" type="email" value="${i?.email ?? ''}"></label></div>
+    <div class="row"><label>Saat dilimi<select name="timezone">${tzs.map((z) => h `<option${z === i?.timezone ? h ` selected` : ''}>${z}</option>`)}</select></label><label>Öncelik (küçük önce)<input name="priority" type="number" value="${String(i?.priority ?? 100)}"></label></div>
+    <div class="row"><label>Hizmet verdiği şehirler (virgülle)<input name="cities" value="${i ? i.cities.join(', ') : ''}" placeholder="Guangzhou, Foshan, Shenzhen"></label><label>Seyahat edebildiği ülkeler (TR, CN)<input name="travel" value="${i ? i.travel_countries.join(', ') : ''}" placeholder="CN"></label></div>
+    <fieldset style="border:1px solid var(--line);border-radius:10px;margin:0 0 10px"><legend class="small muted">Hizmetler</legend>${svc.map(([k, v]) => h `<label style="display:inline-block;margin-right:12px"><input type="checkbox" name="services" value="${k}" style="width:auto"${!i || i.services.includes(k) ? h ` checked` : ''}> ${v}</label>`)}</fieldset>
+    <label>Uzmanlık notu<input name="specialties" value="${i?.specialties ?? ''}"></label>
+    <label style="color:var(--ink)"><input type="checkbox" name="consent" value="1" style="width:auto"${i?.consent ? h ` checked` : ''}> Tercümandan iş bildirimleri için WhatsApp mesaj izni alındı</label>`;
 }
 export function interpreterPage(i, agreements, csrf, summary) {
     return h `<p class="small"><a href="/tercumanlar">← Tercümanlar</a></p><h1>${i.display_name}</h1>
   <div class="card"><p class="small">WhatsApp: ${i.whatsapp ?? '—'} · ${i.timezone} · öncelik ${i.priority} · ${i.active ? 'aktif' : 'pasif'}</p>
   <form method="post" action="/tercumanlar/${i.id}/durum">${csrfField(csrf)}<input type="hidden" name="active" value="${i.active ? '0' : '1'}"><button class="btn sec small">${i.active ? 'Pasife al' : 'Aktifleştir'}</button></form></div>
+  <div class="card"><details><summary><strong>Bilgileri düzenle</strong></summary><form method="post" action="/tercumanlar/${i.id}/duzenle" style="margin-top:12px">${csrfField(csrf)}
+    ${interpreterFields(i)}<button class="btn">Kaydet</button></form></details></div>
   <div class="card"><h2 style="margin-top:0">Komisyon anlaşmaları</h2>
   ${agreements.length ? h `<ul>${agreements.map((a) => h `<li>${pill(`v${a.agreement_version} ${a.status}`, a.status === 'ACTIVE' ? 'ok' : '')}<ul class="small">${summary(a).map((s) => h `<li>${s}</li>`)}<li>Kabul kanıtı: ${a.acceptance_evidence}</li></ul></li>`)}</ul>` : h `<p class="muted">Anlaşma yok. Anlaşma olmadan bu tercümana yönlendirme yapılmaz ve borç yazılmaz.</p>`}
   <h3>Yeni anlaşma sürümü</h3><p class="small muted">Komisyon şartlarını işletme belirler; sistem varsayılan oran uydurmaz. Mevcut işlerin geçmiş hesabı değişmez.</p>

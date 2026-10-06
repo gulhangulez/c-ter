@@ -103,3 +103,47 @@ test('Panel: girişsiz yönlendirme, hatalı şifre, CSRF olmadan komut reddi, T
         await w.close();
     }
 });
+test('Panel: kayıtlı tercümanın bilgileri düzenlenir, başkasının numarası reddedilir', async () => {
+    const w = await world();
+    const srv = await serve(w);
+    try {
+        await w.ctx.db.query(`INSERT INTO users (email, display_name, password_hash, roles) VALUES ('yonetici@example.com','Yönetici',$1,ARRAY['ADMIN'])`, [hashPassword('dogru-sifre-12345')]);
+        const a = await addInterpreter(w);
+        await addInterpreter(w, { name: 'Tercüman B', whatsapp: '8613800000002' });
+        const login = await fetch(`${srv.base}/giris`, { method: 'POST', redirect: 'manual', body: new URLSearchParams({ email: 'yonetici@example.com', password: 'dogru-sifre-12345' }) });
+        const cookie = login.headers.get('set-cookie').split(';')[0];
+        const page = await (await fetch(`${srv.base}/tercumanlar/${a}`, { headers: { cookie } })).text();
+        assert.match(page, /Bilgileri düzenle/);
+        assert.match(page, /value="\+8613800000001"/);
+        const csrf = page.match(/name="csrf" value="([^"]+)"/)[1];
+        const form = (over) => {
+            const b = new URLSearchParams({ csrf, name: 'Tercüman A Yeni', whatsapp: '+86 139 0000 0009', email: 'a@example.com', timezone: 'Europe/Istanbul', priority: '5', cities: 'İzmir, Bursa', travel: 'tr', specialties: 'tekstil', ...over });
+            b.append('services', 'FACTORY_VISIT');
+            return b;
+        };
+        w.clock.advanceHours(1);
+        let r = await fetch(`${srv.base}/tercumanlar/${a}/duzenle`, { method: 'POST', redirect: 'manual', headers: { cookie }, body: form({}) });
+        assert.equal(r.status, 303);
+        assert.doesNotMatch(r.headers.get('location'), /hata=/);
+        const row = (await w.ctx.db.query(`SELECT p.display_name, ip.priority, ip.services, ip.cities, ip.travel_countries, ip.timezone,
+        (SELECT value FROM contact_endpoints WHERE party_id=p.id AND kind='WHATSAPP') AS wa,
+        (SELECT value FROM contact_endpoints WHERE party_id=p.id AND kind='EMAIL') AS email
+      FROM parties p JOIN interpreter_profiles ip ON ip.party_id=p.id WHERE p.id=$1`, [a])).rows[0];
+        assert.equal(row.display_name, 'Tercüman A Yeni');
+        assert.equal(row.priority, 5);
+        assert.deepEqual(row.services, ['FACTORY_VISIT']);
+        assert.deepEqual(row.travel_countries, ['TR']);
+        assert.equal(row.timezone, 'Europe/Istanbul');
+        assert.equal(row.wa, '8613900000009');
+        assert.equal(row.email, 'a@example.com');
+        // İzin kutusu işaretsiz gönderildi: mesaj izni geri çekilmiş olmalı.
+        const consent = (await w.ctx.db.query(`SELECT granted FROM consents WHERE party_id=$1 AND purpose='OPERATIONAL_MESSAGES' ORDER BY recorded_at DESC LIMIT 1`, [a])).rows[0];
+        assert.equal(consent.granted, false);
+        r = await fetch(`${srv.base}/tercumanlar/${a}/duzenle`, { method: 'POST', redirect: 'manual', headers: { cookie }, body: form({ whatsapp: '8613800000002' }) });
+        assert.match(decodeURIComponent(r.headers.get('location')), /başka bir kişiye kayıtlı/);
+    }
+    finally {
+        await srv.close();
+        await w.close();
+    }
+});
