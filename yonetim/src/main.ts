@@ -102,6 +102,7 @@ async function markModes(ctx: ReturnType<typeof createContext>): Promise<void> {
 }
 
 main().catch((e) => {
-  console.error(e instanceof Error ? e.message : e);
+  // AggregateError (ör. bağlantı reddi) boş mesajlı olabilir; kod ve iç hatalar da yazılır.
+  console.error(e instanceof Error ? `${e.name}: ${e.message} ${(e as any).code ?? ''} ${((e as any).errors ?? []).map((x: any) => x.message).join('; ')}` : e);
   process.exit(1);
 });

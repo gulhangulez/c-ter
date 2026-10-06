@@ -99,6 +99,7 @@ async function markModes(ctx) {
     void markIntegration;
 }
 main().catch((e) => {
-    console.error(e instanceof Error ? e.message : e);
+    // AggregateError (ör. bağlantı reddi) boş mesajlı olabilir; kod ve iç hatalar da yazılır.
+    console.error(e instanceof Error ? `${e.name}: ${e.message} ${e.code ?? ''} ${(e.errors ?? []).map((x) => x.message).join('; ')}` : e);
     process.exit(1);
 });

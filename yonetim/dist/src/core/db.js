@@ -1,18 +1,30 @@
 import pg from 'pg';
+import { Pool as NeonPool, neonConfig, types as neonTypes } from '@neondatabase/serverless';
 import { readFile, readdir } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 // DATE sütunları JS Date'e çevrilmesin; 'YYYY-MM-DD' metni olarak kalsın (saat dilimi kaymasını önler).
-pg.types.setTypeParser(1082, (v) => v);
-pg.types.setTypeParser(1182, (v) => (v === '{}' ? [] : v.slice(1, -1).split(',')));
 // bigint (para) tamsayı olarak okunur; güvenli aralık dışı tutar beklenmez, aşılırsa hata verilir.
-pg.types.setTypeParser(20, (v) => {
-    const n = Number(v);
-    if (!Number.isSafeInteger(n))
-        throw new Error(`bigint güvenli aralık dışında: ${v}`);
-    return n;
-});
+for (const t of [pg.types, neonTypes]) {
+    t.setTypeParser(1082, (v) => v);
+    t.setTypeParser(1182, (v) => (v === '{}' ? [] : v.slice(1, -1).split(',')));
+    t.setTypeParser(20, (v) => {
+        const n = Number(v);
+        if (!Number.isSafeInteger(n))
+            throw new Error(`bigint güvenli aralık dışında: ${v}`);
+        return n;
+    });
+}
+/**
+ * DB_DRIVER=neon: Neon'a 5432 yerine 443 üzerinden WebSocket ile bağlanır. Paylaşımlı hostingte giden 5432 portu
+ * kapalı olduğunda kullanılır. Havuz arayüzü pg ile aynıdır (işlemler, parametreli sorgular).
+ */
 export function createPool(url) {
+    if (process.env.DB_DRIVER === 'neon') {
+        if (typeof WebSocket !== 'undefined')
+            neonConfig.webSocketConstructor = WebSocket;
+        return new NeonPool({ connectionString: url, max: 5 });
+    }
     return new pg.Pool({ connectionString: url, max: 10 });
 }
 export async function tx(db, fn) {
